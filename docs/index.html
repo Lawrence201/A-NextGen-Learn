@@ -305,10 +305,14 @@
                           
     
                         <style>
-                            
+                            #about-tourist {
+                                margin-top: 100px;
+                                /* adjust value as needed */
+                            }
+                        
                             /*==============================
-                                                          SECTION: ABOUT HEADING STYLING
-                                                        ==============================*/
+                                                      SECTION: ABOUT HEADING STYLING
+                                                    ==============================*/
                             .about-heading {
                                 display: flex;
                                 align-items: center;
@@ -320,30 +324,30 @@
                                 letter-spacing: 1px;
                                 margin-bottom: 6px;
                             }
-    
+                        
                             .about-heading .lines {
                                 display: flex;
                                 flex-direction: column;
                                 margin-left: 8px;
                                 justify-content: center;
                             }
-    
+                        
                             .about-heading .line-short {
                                 width: 25px;
                                 height: 2px;
                                 background-color: #fd7e14;
                                 margin-bottom: 2px;
                             }
-    
+                        
                             .about-heading .line-long {
                                 width: 50px;
                                 height: 2px;
                                 background-color: #fd7e14;
                             }
-    
+                        
                             /*==============================
-                                                          SECTION: TEXT CONTENT
-                                                        ==============================*/
+                                                      SECTION: TEXT CONTENT
+                                                    ==============================*/
                             .intro-text,
                             .details-text {
                                 font-size: 15px;
@@ -351,21 +355,21 @@
                                 line-height: 1.5;
                                 margin-bottom: 16px;
                             }
-    
+                        
                             /*==============================
-                                                          SECTION: FEATURES LIST
-                                                        ==============================*/
+                                                      SECTION: FEATURES LIST
+                                                    ==============================*/
                             .features {
                                 display: flex;
                                 gap: 30px;
                                 margin-bottom: 20px;
                             }
-    
+                        
                             .features ul {
                                 list-style: none;
                                 padding: 0;
                             }
-    
+                        
                             .features li {
                                 position: relative;
                                 padding-left: 22px;
@@ -375,7 +379,7 @@
                                 color: #6e7b87;
                                 margin-bottom: 8px;
                             }
-    
+                        
                             .features li::before {
                                 content: "➔";
                                 position: absolute;
@@ -386,25 +390,25 @@
                                 animation: bounce 1.5s infinite;
                                 transform-origin: center bottom;
                             }
-    
+                        
                             /*==============================
-                                                          BOUNCE ARROW ANIMATION
-                                                        ==============================*/
+                                                      BOUNCE ARROW ANIMATION
+                                                    ==============================*/
                             @keyframes bounce {
-    
+                        
                                 0%,
                                 100% {
                                     transform: translateY(0);
                                 }
-    
+                        
                                 50% {
                                     transform: translateY(8px);
                                 }
                             }
-    
+                        
                             /*==============================
-                                                          READ MORE BUTTON
-                                                        ==============================*/
+                                                      READ MORE BUTTON
+                                                    ==============================*/
                             .read-more {
                                 background-color: #ff8d30;
                                 color: white;
@@ -415,29 +419,29 @@
                                 cursor: pointer;
                                 transition: background 0.3s ease;
                             }
-    
+                        
                             .read-more:hover {
                                 background-color: #f07006;
                             }
-    
+                        
                             /*==============================
-                                                          LARGE SCREENS: GUTTER ADJUSTMENT
-                                                        ==============================*/
+                                                      LARGE SCREENS: GUTTER ADJUSTMENT
+                                                    ==============================*/
                             @media (min-width: 992px) {
                                 #about-tourist .col-lg-6:first-child {
                                     padding-right: 40px;
                                 }
-    
+                        
                                 #about-tourist .col-lg-6:last-child {
                                     padding-left: 40px;
                                 }
                             }
-    
+                        
                             /*==============================
-                                                          MEDIA QUERY: PHONE & TABLET MODE
-                                                        ==============================*/
-                            @media (max-width: 768px) {
-    
+                                                      MEDIA QUERY: PHONE & TABLET MODE
+                                                    ==============================*/
+                            @media (max-width: 900px) {
+                        
                                 html,
                                 body {
                                     margin: 0;
@@ -445,7 +449,12 @@
                                     width: 100%;
                                     overflow-x: hidden;
                                 }
-    
+                        
+                                #about-tourist {
+                                    margin-top: 100px;
+                                    /* adjust value as needed */
+                                }
+                        
                                 .container,
                                 .wrapper,
                                 main {
@@ -455,40 +464,131 @@
                                     margin: 0 !important;
                                     box-sizing: border-box;
                                 }
-    
+                        
                                 .about-heading {
-                                    font-size: 15px;
+                                    font-size: 25px;
                                     margin-bottom: 4px;
                                 }
-    
+                        
                                 .about-heading .lines {
                                     margin-left: 6px;
                                 }
-    
+                        
                                 .about-heading .line-short {
-                                    width: 20px;
-                                    height: 2px;
-                                    margin-bottom: 1.5px;
+                                    width: 25px;
+                                    height: 25px;
+                                    margin-bottom: 1.9px;
                                 }
-    
+                        
                                 .about-heading .line-long {
-                                    width: 40px;
-                                    height: 2px;
+                                    width: 50px;
+                                    height: 3px;
                                 }
-    
+                        
                                 .features {
                                     display: grid;
                                     grid-template-columns: repeat(2, 1fr);
                                     gap: 30px;
                                     margin-bottom: 20px;
                                 }
-    
+                        
+                                .features li {
+                                    font-size: 20px;
+                                    padding-left: 23px;
+                                    margin-bottom: 8px;
+                                    position: relative;
+                                }
+                        
+                                .features li::before {
+                                    content: "➔";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    color: #ffa65e;
+                                    font-weight: 900;
+                                    animation: none;
+                                    transform-origin: initial;
+                                }
+                        
+                                .intro-text,
+                                .details-text {
+                                    font-size: 25px;
+                                    margin-bottom: 5px;
+                                }
+                        
+                                h1 {
+                                    font-size: 48px !important;
+                                }
+                        
+                                .read-more {
+                                    padding: 10px 20px;
+                                    font-size: 20px;
+                                    border-radius: 40px;
+                                    position: relative;
+                                    top: -20px;
+                                    text-align: center;
+                                }
+                            }
+                        
+                            @media (max-width: 768px) {
+                        
+                                html,
+                                body {
+                                    margin: 0;
+                                    padding: 0;
+                                    width: 100%;
+                                    overflow-x: hidden;
+                                }
+                        
+                                #about-tourist {
+                                    margin-top: 100px;
+                                    /* adjust value as needed */
+                                }
+                        
+                                .container,
+                                .wrapper,
+                                main {
+                                    width: 100% !important;
+                                    padding-left: 0 !important;
+                                    padding-right: 0 !important;
+                                    margin: 0 !important;
+                                    box-sizing: border-box;
+                                }
+                        
+                                .about-heading {
+                                    font-size: 15px;
+                                    margin-bottom: 4px;
+                                }
+                        
+                                .about-heading .lines {
+                                    margin-left: 6px;
+                                }
+                        
+                                .about-heading .line-short {
+                                    width: 20px;
+                                    height: 2px;
+                                    margin-bottom: 1.5px;
+                                }
+                        
+                                .about-heading .line-long {
+                                    width: 40px;
+                                    height: 2px;
+                                }
+                        
+                                .features {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    gap: 30px;
+                                    margin-bottom: 20px;
+                                }
+                        
                                 .features li {
                                     font-size: 15px;
                                     padding-left: 22px;
                                     margin-bottom: 8px;
+                                    position: relative;
                                 }
-    
+                        
                                 .features li::before {
                                     content: "➔";
                                     position: absolute;
@@ -497,24 +597,24 @@
                                     color: #ffa65e;
                                     font-weight: 900;
                                 }
-    
+                        
                                 .intro-text,
                                 .details-text {
                                     font-size: 16px;
                                     margin-bottom: 14px;
                                 }
-    
+                        
                                 .read-more {
                                     padding: 8px 16px;
                                     font-size: 15px;
                                     border-radius: 40px;
                                     position: relative;
                                     top: -20px;
-                                    /* moves it 5px up */
                                     text-align: center;
                                 }
                             }
                         </style>
+                          
     
                         <h5 class="about-heading">
                             About Us
@@ -572,6 +672,8 @@
             once: true      // animate only once
         });
     </script>
+
+    
 
 <div class="container-fluid py-5" style="margin-top: 150px;">
     <div class="container pt-5 pb-3">
