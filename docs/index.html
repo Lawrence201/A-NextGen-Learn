@@ -114,58 +114,106 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
+                    <a href="#" class="text-decoration-none d-block d-lg-none">
                         <style>
-                                                                             
-                            @media (max-width: 490px) {
-                              .logo-heading img {
-                                height: 70px !important;
-                                margin-right: 2px;
-                              }
-                          
-                              .logo-heading span {
-                                font-size: 1.2rem !important;
-                              }
+                            .logo-heading img {
+                                height: 70px;
+                                margin-right: 4px;
                             }
-                          
-                            @media (max-width: 370px) {
-                              .logo-heading img {
-                                height: 70px !important;
-                                margin-right: 1px;
-                              }
-                          
-                              .logo-heading span {
-                                font-size: 1.2rem !important;
-                              }
-                            }
-
-                            @media (max-width: 340px) {
-                              .logo-heading img {
-                                height: 60px !important;
-                                margin-right: 1px;
-                              }
-                          
-                              .logo-heading span {
-                                font-size: 1rem !important;
-                              }
-                            }
-                          </style>
-                          
                         
+                            .logo-heading span {
+                                font-size: 1.1rem;
+                            }
+                        
+                            @media (max-width: 850px) {
+                                .logo-heading img {
+                                    height: 90px;
+                                    margin-right: 3px;
+                                }
+                        
+                                .logo-heading span {
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        
+                            @media (max-width: 490px) {
+                                .logo-heading img {
+                                    height: 60px;
+                                    margin-right: 2px;
+                                }
+                        
+                                .logo-heading span {
+                                    font-size: 1rem;
+                                }
+                            }
+                        
+                            @media (max-width: 370px) {
+                                .logo-heading img {
+                                    height: 50px;
+                                    margin-right: 1px;
+                                }
+                        
+                                .logo-heading span {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        
+                            @media (max-width: 340px) {
+                                .logo-heading img {
+                                    height: 45px;
+                                    margin-right: 1px;
+                                }
+                        
+                                .logo-heading span {
+                                    font-size: 0.85rem;
+                                }
+                            }
+                        </style>
+                          
+                    
                         <h1 class="m-0 d-flex align-items-center logo-heading" style="overflow: hidden;">
-                            <img src="img/main.PNG" alt="A+ Logo" style="height: 95px; margin-right: 5px; object-fit: contain;">
-                            <span style="font-size: 1.5rem;">
+                            <img src="img/main.PNG" alt="A+ Logo" style="object-fit: contain;">
+                            <span>
                                 <span style="display: inline-block; line-height: 1.1; vertical-align: middle;">
                                     <span class="text-primary">A+</span>NextGen<br>
                                     Learn
                                 </span>
                             </span>
                         </h1>
-                          
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    
+                <!-- HTML -->
+                <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <!-- CSS -->
+                <style>
+                    
+                
+                    /* Medium screen adjustments */
+                    @media (max-width: 850px) {
+                        .custom-toggler {
+                            width: 60px;
+                            height: 60px;
+                            font-size: 1.5rem;
+                            padding: 0.15rem 0.3rem;
+                        }
+                    }
+                
+                    /* Small screen adjustments */
+                    @media (max-width: 450px) {
+                        .custom-toggler {
+                            width: 45px;
+                            height: 45px;
+                            font-size: 1.0rem;
+                            padding: 0.15rem 0.3rem;
+                        }
+                    }
+                </style>
+                
+                  
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -184,10 +232,56 @@
                         <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
                     </div>
                 </nav>
+                
             </div>
         </div>
     </div>
     <!-- Navbar End -->
+    <style>
+
+         @media (max-width: 850px) {
+          #navbarCollapse .nav-link {
+            font-size: 1.2rem; /* slightly smaller font on smaller screens */
+          }
+      
+          #navbarCollapse .btn {
+            font-size: 1.2rem; /* smaller Join Now button font */
+            padding: 0.4rem 0.8rem; /* adjust padding for smaller screens */
+          }
+      
+          .navbar-nav.py-0 > .nav-item {
+            margin-bottom: 14px; /* slightly bigger spacing on smaller screens */
+          }
+        }
+        
+
+       @media (max-width: 450px) {
+        #navbarCollapse .nav-link {
+          font-size: 0.95rem; /* smaller font for nav links */
+        }
+      
+        #navbarCollapse .btn {
+          font-size: 0.95rem; /* smaller font for the Join Now button */
+        }
+      
+        .navbar-nav.py-0 {
+          display: flex;
+          flex-direction: column; /* stack vertically */
+        }
+      
+        .navbar-nav.py-0 > .nav-item {
+          margin-bottom: 10px; /* space between items */
+        }
+      
+        .navbar-nav.py-0 > .nav-item:last-child {
+          margin-bottom: 0; /* no extra space after last item */
+        }
+
+       }
+       
+      </style>
+      
+      
 
 
     <!-- Carousel Start -->
@@ -475,16 +569,15 @@
                                 }
                         
                                 .about-heading .line-short {
-                                    width: 25px;
-                                    height: 25px;
-                                    margin-bottom: 1.9px;
+                                    width: 20px;
+                                    height: 2px;
+                                    margin-bottom: 1.5px;
                                 }
                         
                                 .about-heading .line-long {
-                                    width: 50px;
-                                    height: 3px;
+                                    width: 40px;
+                                    height: 2px;
                                 }
-                        
                                 .features {
                                     display: grid;
                                     grid-template-columns: repeat(2, 1fr);
@@ -675,7 +768,7 @@
 
     
 
-<div class="container-fluid py-5" style="margin-top: 150px;">
+<div class="container-fluid py-5" style="margin-top: 30px;">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
             <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;"
