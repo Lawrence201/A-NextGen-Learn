@@ -667,21 +667,21 @@ pre code {
 
 @media (max-width: 850px) {
   #header-carousel {
-    height: 90vh !important;
+    height: 100vh !important;
   }
 
   #header-carousel .carousel-item {
-    height: 90vh !important;
-    min-height: 90vh !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
   }
 
   #header-carousel .carousel-item img {
-    height: 90vh !important;
+    height: 100vh !important;
     object-fit: cover;
   }
 
   #header-carousel .carousel-caption {
-    height: 90vh !important;
+    height: 100vh !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
