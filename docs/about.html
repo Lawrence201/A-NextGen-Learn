@@ -729,6 +729,51 @@
                                     text-align: center;
                                 }
                             }
+
+                            
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 370px) {
+  .about-heading {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+
+                            
+
+                            
                         </style>
     
     
@@ -740,7 +785,8 @@
                             </span>
                         </h5>
     
-                        <h1 style="font-size: 38px;">Welcome to <span style="color: #ff9844;">A+ NexGen Learn</span></h1>
+                        <h1>Welcome to <span style="color: #ff9844;">A+ NexGen Learn</span></h1>
+
                     </div>
     
                     <p class="intro-text">
@@ -1186,6 +1232,46 @@
   }
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  .about-header {
+    padding: 30px 15px;
+  }
+  .about-header h1 {
+    font-size: 1.5rem;
+  }
+  .about-header p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .about-header {
+    padding: 50px 30px;
+  }
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+  .about-header p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (901px and above) */
+@media (min-width: 901px) {
+  .about-header {
+    padding: 70px 40px;
+  }
+  .about-header h1 {
+    font-size: 3rem;
+  }
+  .about-header p {
+    font-size: 1.2rem;
   }
 }
 
