@@ -9916,8 +9916,10 @@ h6,
 }
 
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/page-header.jpeg) no-repeat center center;
   background-size: cover;
+  height: 70vh;
 }
 
 .cat-item img {
