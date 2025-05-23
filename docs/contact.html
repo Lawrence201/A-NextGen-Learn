@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ECOURSES - Online Courses HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
+    <title>A+ SOFTECK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A+ SOFTECK is a learning platform offering tech tutorials, educational videos, document downloads, and booking for training sessions.">
+    <!-- Optional keywords tag (not important for SEO) -->
+    <meta name="keywords"
+        content="online learning, tech tutorials, educational videos, training, A+ SOFTECK, software education">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/Logo2.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,6 +24,7 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -199,6 +204,14 @@
                     data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+                <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+                <script>
+                    AOS.init({
+                        duration: 1100,
+                        once: true
+                    });
+                   </script>
 
 
                 <!-- CSS -->
@@ -248,6 +261,7 @@
     </div>
 </div>
 <!-- Navbar End -->
+
 <style>
     @media (max-width: 850px) {
         #navbarCollapse .nav-link {
@@ -300,8 +314,9 @@
 </style>
 
 
+
     <!-- Header Start -->
-    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+    <div class="container-fluid page-header" style="margin-bottom: 0;">
         <div class="container h-100">
             <div class="d-flex flex-column justify-content-center align-items-center text-center h-100" data-aos="fade-up"
                 data-aos-delay="0" data-aos-duration="800">
@@ -318,48 +333,903 @@
     <!-- Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Contact</h5>
-                <h1>Contact For Any Query</h1>
+    <!-- Main Container -->
+    <div class="container" style="margin-top: 80px;">
+    
+        <!-- Contact Info Section -->
+        <section class="contact-info"> 
+            <!-- Location Box -->
+            <div class="info-box location" data-aos="fade-up" data-aos-delay="0">
+                <div class="overlay"></div>
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 style="color: white;">Our Location</h3>
+                <p>Accra-Ghana.</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form bg-secondary rounded p-5">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+            
+            <!-- Contact Row -->
+            <div class="contact-row">
+                <!-- Phone Box -->
+                <div class="info-box phone" data-aos="fade-up" data-aos-delay="150">
+                    <div class="overlay"></div>
+                    <i class="fas fa-phone-alt"></i>
+                    <h3 style="color: white;">Phone Number</h3>
+                    <p>+233 534829203<br>+233 24494630</p>
+                </div>
+                <!-- Email Box -->
+                <div class="info-box email" data-aos="fade-up" data-aos-delay="300">
+                    <div class="overlay"></div>
+                    <i class="fas fa-envelope"></i>
+                    <h3 style="color: white;">Email Address</h3>
+                    <p>info@example.com<br>info@exgen.com</p>
                 </div>
             </div>
-        </div>
+            <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+            <script>
+                AOS.init({
+                    duration: 1100,
+                    once: true // animation runs only once
+                });
+            </script>
+
+           
+        </section>
+        
+        
+    
+    
+        <!-- Contact Form Section -->
+        <section class="custom-contact-section">
+            <form class="custom-form" data-aos="fade-right" data-aos-duration="1100" data-aos-once="true">
+                <div class="custom-input-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="custom-input-group">
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                </div>
+                <div class="custom-input-group">
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="custom-button">Send Now</button>
+            </form>
+            
+            <div class="custom-form-image" data-aos="fade-left" data-aos-duration="1100" data-aos-once="true">
+                <img src="img/Call 2.jpg" alt="Church Image">
+            </div>
+            
+        </section>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1100,
+                once: true
+            });
+        </script>
+    
+    
     </div>
-    <!-- Contact End -->
+
+    <style>
+        /* Container */
+        .container {
+       max-width: 1200px;
+       margin: 0 auto 0 auto; /* Adds 20px space at the top, auto centers horizontally */
+       padding: 20px;            /* Adds space inside the container */
+       border-radius: 12px;
+      }
+
+    
+        /* Main header styling */
+        .contact-header {
+            position: relative;
+            height: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    
+        /* Background with blur effect */
+        .contact-header .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Image10.jpg');
+            /* Replace with your actual background image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px);
+            /* Applies blur to the background image */
+            z-index: 0;
+            /* Background behind content */
+        }
+    
+        /* Content container */
+        .contact-header .content {
+            position: relative;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            /* Ensures content appears above the background */
+        }
+    
+        /* Navigation */
+        .contact-header nav ul {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+    
+        .contact-header nav ul li {
+            display: inline-block;
+            color: white;
+            /* White color for "Home" */
+            font-weight: bold;
+        }
+    
+        .contact-header nav ul li span {
+            color: #ff4c4c;
+            /* Color for "Contact" */
+        }
+    
+        .contact-header nav ul li a {
+            color: white;
+            /* Set the link color to white */
+            text-decoration: none;
+            /* Optional: Removes underline */
+        }
+    
+        .contact-header nav ul li a:hover {
+            color: rgb(145, 145, 73);
+            /* Optional: Add a hover effect to change the color */
+        }
+    
+        /* Title styling */
+        .contact-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+    
+        /* Icon styling */
+        .contact-header .icon {
+            margin-top: 20px;
+        }
+    
+        .contact-header .icon img {
+            width: 50px;
+            /* Adjust the size of the icon as needed */
+            height: auto;
+        }
+    
+    
+    
+        /* Contact Info Section (Desktop) */
+        /* Ensure the contact info section is in a row on desktop */
+        .contact-info {
+            display: flex;
+            flex-direction: row;
+            /* Make sure items are in a row */
+            justify-content: center;
+            /* Center items */
+            align-items: stretch;
+            /* Ensure uniform height */
+            flex-wrap: nowrap;
+            /* Prevent wrapping */
+            gap: 20px;
+            /* Add spacing between boxes */
+        }
+    
+    
+    
+        /* Info Box Style */
+        .info-box {
+            flex: 1;
+            /* Make each box take equal space */
+            position: relative;
+            width: 30%;
+            padding: 30px;
+            /* Reduced padding */
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            /* Reduced shadow */
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 320px;
+            /* Reduced height */
+        }
+    
+        /* Ensure the phone and email boxes are in the same row */
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            /* Keep them side by side */
+            width: 65%;
+            /* Adjust width so they don’t shrink too much */
+            gap: 20px;
+            /* Add spacing */
+        }
+    
+        /* Add the scale transform on hover */
+        .info-box:hover {
+            transform: scale(1.05);
+            /* Slightly enlarged on hover */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow on hover */
+        }
+    
+        /* Background images for the boxes */
+        .location {
+            background-image: url('img/Map 1.jpg');
+        }
+    
+    
+        .phone {
+            background-image: url('img/Call 1.jpg');
+        }
+    
+        .email {
+            background-image: url('img/Email 1.jpg');
+        }
+    
+        /* Transparent overlay for 'Our Location' */
+        .location .overlay {
+        background-color: rgba(255, 165, 0, 0.4); /* Light orange with 40% opacity */
+        position: absolute;
+        top: 0;
+        left: 0;
+       right: 0;
+       bottom: 0;
+        z-index: 1;
+      }
+
+        /* Transparent overlay for 'Phone Number' and 'Email Address' */
+        .phone .overlay,
+        .email .overlay {
+            background-color: rgba(42, 58, 75, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    
+        /* The content should stay above the overlay */
+        .info-box i,
+        .info-box h3,
+        .info-box p {
+            position: relative;
+            z-index: 2;
+        }
+    
+        /* Moderate size for icons, titles, and text */
+        .info-box i {
+            font-size: 40px;
+            /* Moderate icon size */
+            margin-bottom: 15px;
+            /* Moderate margin */
+        }
+    
+        .info-box h3 {
+            margin-bottom: 12px;
+            /* Moderate margin */
+            font-size: 24px;
+            /* Moderate font size */
+        }
+    
+        .info-box p {
+            font-size: 18px;
+            /* Moderate font size */
+            line-height: 1.5;
+            /* Slightly increased line-height */
+        }
+    
+        @media screen and (max-width: 1028px) {
+            .container {
+                max-width: 90%;
+                /* Adjust width for better fit */
+                padding: 15px;
+                /* Reduce padding */
+            }
+    
+            .contact-header {
+                height: 250px;
+                /* Reduce height */
+            }
+    
+            .contact-header h1 {
+                font-size: 2.5em;
+                /* Adjust font size */
+            }
+    
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                /* Stack location first */
+                align-items: center;
+                gap: 20px;
+            }
+    
+            /* Make "Location" box slightly larger, increase height and make edges more curved */
+            .info-box.location {
+                width: 100%;
+                /* Increase width */
+                min-height: 270px;
+                /* Set min-height instead of height */
+                border-radius: 20px;
+                /* Increased border-radius for more curved edges */
+            }
+    
+            /* Create a flex container for Phone & Email */
+            .contact-row {
+                display: flex;
+                justify-content: space-between;
+                /* Spread items */
+                width: 100%;
+                /* Ensure full width */
+            }
+    
+            /* Ensure Phone and Email are on the same row */
+            .info-box.phone,
+            .info-box.email {
+                width: 48%;
+                /* Each takes almost half the width */
+                border-radius: 20px;
+                /* Increased border-radius for more curved edges */
+            }
+        }
+    
+        /* Adjust font sizes for smaller screens */
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 90%;
+                /* Adjust width for better fit */
+                padding: 10px;
+                /* Reduce padding */
+            }
+    
+            .contact-header {
+                height: 220px;
+                /* Further reduce height for smaller screens */
+            }
+    
+            .contact-header h1 {
+                font-size: 2em;
+                /* Adjust font size */
+            }
+    
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                /* Stack all items vertically */
+                align-items: center;
+                gap: 20px;
+                /* Adjust gap for smaller screens */
+            }
+    
+            /* Make "Location" box slightly larger, increase height and make edges more curved */
+            .info-box.location {
+                width: 100%;
+                /* Full width */
+                min-height: 250px;
+                /* Adjust height */
+                border-radius: 25px;
+                /* More curved edges */
+            }
+    
+            /* Ensure Phone and Email are stacked vertically */
+            .contact-row {
+                display: flex;
+                flex-direction: column;
+                /* Stack Phone and Email vertically */
+                width: 100%;
+                /* Ensure full width */
+                gap: 20px;
+                /* Adjust gap */
+            }
+    
+            /* Phone and Email take full width */
+            .info-box.phone,
+            .info-box.email {
+                width: 100%;
+                /* Full width for each box */
+                border-radius: 25px;
+                /* More curved edges */
+            }
+    
+            /* Decrease font sizes inside the info-box */
+            .info-box i {
+                font-size: 30px;
+                /* Smaller icon size */
+            }
+    
+            .info-box h3 {
+                font-size: 18px;
+                /* Smaller title font size */
+                margin-bottom: 10px;
+                /* Reduce margin */
+            }
+    
+            .info-box p {
+                font-size: 14px;
+                /* Smaller text size */
+                line-height: 1.4;
+                /* Adjust line height for better readability */
+            }
+        }
+    
+    
+        /* For screens 480px and below */
+        @media screen and (max-width: 480px) {
+            .container {
+                max-width: 95%;
+                /* Adjust width for better fit */
+                padding: 5px;
+                /* Further reduce padding */
+            }
+    
+            .contact-header {
+                height: 180px;
+                /* Further reduce height for smaller screens */
+            }
+    
+            .contact-header h1 {
+                font-size: 1.8em;
+                /* Further reduce font size */
+            }
+    
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                /* Stack all items vertically */
+                align-items: center;
+                gap: 15px;
+                /* Adjust gap for smaller screens */
+            }
+    
+            .info-box.location {
+                width: 100%;
+                /* Full width */
+                min-height: 220px;
+                /* Adjust height */
+                border-radius: 20px;
+                /* Slightly more curved edges */
+            }
+    
+            .contact-row {
+                display: flex;
+                flex-direction: column;
+                /* Stack Phone and Email vertically */
+                width: 100%;
+                /* Ensure full width */
+                gap: 15px;
+                /* Adjust gap */
+            }
+    
+            .info-box.phone,
+            .info-box.email {
+                width: 100%;
+                /* Full width for each box */
+                border-radius: 20px;
+                /* Slightly more curved edges */
+            }
+    
+            .info-box i {
+                font-size: 28px;
+                /* Smaller icon size */
+            }
+    
+            .info-box h3 {
+                font-size: 16px;
+                /* Smaller title font size */
+                margin-bottom: 8px;
+                /* Reduce margin */
+            }
+    
+            .info-box p {
+                font-size: 12px;
+                /* Smaller text size */
+                line-height: 1.3;
+                /* Adjust line height for better readability */
+            }
+        }
+    
+        /* For screens 360px and below */
+        @media screen and (max-width: 360px) {
+            .container {
+                max-width: 100%;
+                /* Full width for smaller screens */
+                padding: 3px;
+                /* Further reduce padding */
+            }
+    
+            .contact-header {
+                height: 160px;
+                /* Further reduce height for smaller screens */
+            }
+    
+            .contact-header h1 {
+                font-size: 1.6em;
+                /* Reduce font size */
+            }
+    
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                /* Stack all items vertically */
+                align-items: center;
+                gap: 10px;
+                /* Adjust gap for smaller screens */
+            }
+    
+            .info-box.location {
+                width: 100%;
+                /* Full width */
+                min-height: 200px;
+                /* Adjust height */
+                border-radius: 15px;
+                /* More curved edges */
+            }
+    
+            .contact-row {
+                display: flex;
+                flex-direction: column;
+                /* Stack Phone and Email vertically */
+                width: 100%;
+                /* Ensure full width */
+                gap: 10px;
+                /* Adjust gap */
+            }
+    
+            .info-box.phone,
+            .info-box.email {
+                width: 100%;
+                /* Full width for each box */
+                border-radius: 15px;
+                /* More curved edges */
+            }
+    
+            .info-box i {
+                font-size: 26px;
+                /* Smaller icon size */
+            }
+    
+            .info-box h3 {
+                font-size: 14px;
+                /* Smaller title font size */
+                margin-bottom: 6px;
+                /* Reduce margin */
+            }
+    
+            .info-box p {
+                font-size: 10px;
+                /* Smaller text size */
+                line-height: 1.2;
+                /* Adjust line height for better readability */
+            }
+        }
+    
+    
+    
+        /* Updated Contact Form Section */
+        .custom-contact-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+            /* Added gap for better spacing */
+        }
+    
+        .custom-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            /* Softer edges */
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            /* Larger shadow for a more floating effect */
+            width: 45%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .custom-form:hover {
+            transform: translateY(-5px);
+            /* Adds a lifting effect when hovering over the form */
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow on hover */
+        }
+    
+        .custom-input-group {
+            margin-bottom: 20px;
+        }
+    
+        .custom-input-group input,
+        .custom-input-group textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            /* More space between inputs */
+            border-radius: 8px;
+            /* Softer edges */
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+    
+        .custom-input-group input:focus,
+        .custom-input-group textarea:focus {
+       outline: none;
+       border: 1px solid orange; /* or use #FFA500 for a standard orange */
+       box-shadow: 0px 0px 8px rgba(255, 165, 0, 0.3); /* Soft orange shadow */
+      }
+
+    
+        .custom-input-group textarea {
+            resize: none;
+            height: 180px;
+            /* Slightly larger height for better usability */
+        }
+    
+        /* Button Styling */
+        .custom-button {
+       background-color: rgb(249, 168, 19); /* or use #FFA500 for standard orange */
+       color: white;
+       padding: 15px 20px;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+     }
+
+       .custom-button:hover {
+       background-color: #FFB84D; /* lighter orange on hover */
+       transform: scale(1.05);
+      }
+
+    
+        .custom-form-image {
+            width: 45%;
+        }
+    
+        .custom-form-image img {
+            width: 100%;
+            height: 540px;
+            /* Set the desired height */
+            object-fit: cover;
+            /* Ensures the image is properly scaled */
+            border-radius: 8px;
+        }
+    
+        @media screen and (max-width: 1028px) {
+            .custom-contact-section {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .custom-form {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+    
+            .custom-input-group {
+                width: 48%;
+                /* Makes input groups appear side by side */
+            }
+    
+            .custom-input-group textarea {
+                width: 100%;
+                /* Full width for textarea */
+            }
+    
+            .custom-button {
+                width: 100%;
+                /* Button stays full width */
+            }
+    
+            .custom-form-image {
+               width: 100%;
+               display: flex; /* allows flexibility, but not strictly needed here unless you add other flex children */
+           }
+
+                 .custom-form-image img {
+             width: 100%;          /* image fills the entire container width */
+              height: 500px;        /* fixed height */
+            object-fit: cover;    /* crops/scales image to fill area without distortion */
+              display: block;       /* removes inline spacing under the image */
+        }
+
+    
+        }
+    
+    
+     
+    
+        @media screen and (max-width: 768px) {
+            .custom-contact-section {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .custom-form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 6px;
+                /* Further reduced gap */
+            }
+    
+            .custom-input-group {
+                width: 100%;
+                /* Name, Phone, and Email on the same column */
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                /* Further reduced gap */
+            }
+    
+            .custom-input-group textarea {
+                width: 100%;
+                /* Ensure textarea is full width */
+                height: 180px;
+                /* Reduced height */
+            }
+    
+            .custom-button {
+                width: 40%;
+                /* Full width button */
+            }
+    
+            .custom-form-image {
+               width: 100%;
+               display: flex; /* allows flexibility, but not strictly needed here unless you add other flex children */
+           }
+
+                 .custom-form-image img {
+             width: 100%;          /* image fills the entire container width */
+              height: 500px;        /* fixed height */
+            object-fit: cover;    /* crops/scales image to fill area without distortion */
+              display: block;       /* removes inline spacing under the image */
+        }
+
+    
+        }
+    
+        @media screen and (max-width: 480px) {
+            .custom-form {
+                width: 100%;
+                gap: 4px;
+                /* Reduced gap */
+            }
+    
+            .custom-input-group {
+                width: 100%;
+                gap: 4px;
+                /* Reduced gap */
+            }
+    
+            .custom-input-group textarea {
+                height: 160px;
+                /* Further reduced height */
+            }
+    
+            
+            .custom-form-image {
+               width: 100%;
+               display: flex; /* allows flexibility, but not strictly needed here unless you add other flex children */
+           }
+
+                 .custom-form-image img {
+             width: 100%;          /* image fills the entire container width */
+              height: 500px;        /* fixed height */
+            object-fit: cover;    /* crops/scales image to fill area without distortion */
+              display: block;       /* removes inline spacing under the image */
+        }
+        }
+    
+        @media screen and (max-width: 360px) {
+            .custom-form {
+                width: 100%;
+                gap: 3px;
+                /* Further reduced gap */
+            }
+    
+            .custom-input-group {
+                width: 100%;
+                gap: 3px;
+                /* Further reduced gap */
+            }
+    
+            .custom-input-group textarea {
+                height: 150px;
+                /* Further reduced height */
+            }
+    
+            
+            .custom-form-image {
+               width: 100%;
+               display: flex; /* allows flexibility, but not strictly needed here unless you add other flex children */
+           }
+
+                 .custom-form-image img {
+             width: 100%;          /* image fills the entire container width */
+              height: 450px;        /* fixed height */
+            object-fit: cover;    /* crops/scales image to fill area without distortion */
+              display: block;       /* removes inline spacing under the image */
+        }
+    
+            .custom-button {
+                width: 60%;
+                /* Full width button */
+            }
+        }
+    </style>
+    
+    
+   
+    
+    
+        
+
+            
+
+    
+    <script>
+        // Object-Oriented Approach for Map Interaction
+        class MapHandler {
+            constructor(mapContainerId, iframeId) {
+                this.mapContainer = document.getElementById(mapContainerId);
+                this.mapIframe = document.getElementById(iframeId);
+
+                // Automatically load the map on page load
+                this.loadMap();
+            }
+
+            // Method to load the map dynamically
+            loadMap() {
+                this.mapIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.734226243923!2d-0.2876434!3d5.5745357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf990009468271%3A0x41421df7ff7693d!2sM%20Arslan!5e0!3m2!1sen!2sgh!4v1681802323498!5m2!1sen!2sgh";
+                this.mapContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize the MapHandler class to automatically load the map
+        const mapHandler = new MapHandler('mapContainer', 'mapIframe');
+
+        // Back to Top Button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Show the button when user scrolls down 100px
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top when the button is clicked
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 
 <!-- Footer Start -->
-<div class="container-fluid bg-charcoal text-white py-5 px-sm-4 px-lg-5" style="background-color: #2c2c2c;">
+<div class="container-fluid bg-charcoal text-white py-5 px-sm-4 px-lg-5"
+    style="background-color: #2c2c2c; margin-top: 50px;">
     <div class="row">
         <!-- Contact Info -->
         <div class="col-lg-4 mb-4">
