@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>A+ SOFTECK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A+ SOFTECK is a learning platform offering tech tutorials, educational videos, document downloads, and booking for training sessions.">
+    <!-- Optional keywords tag (not important for SEO) -->
+    <meta name="keywords"
+        content="online learning, tech tutorials, educational videos, training, A+ SOFTECK, software education">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    
+    
+    <!-- Favicon -->
+    <link href="Logo2.png" rel="icon">
+    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- Top banner -->
+    <div class="top-banner">
+        <span>Learn more from </span><a href="#">A+Softek</a>
+    </div>
+
+    <!-- Header section -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="text-section">
+                <h1>
+                    Learn HTML
+                    <i class="material-icons bookmark">bookmark_border</i>
+                </h1>
+                <div class="sub-progress-row">
+                    <div class="text-block">
+                        <p class="subtitle">
+                            This HTML course for web developers provides a solid overview for developers,<br />
+                            from novice to expert level HTML.
+                        </p>
+                        <p class="activities">22 activities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="web_img.png" alt="Progress Image" class="progress-image" />
+            </div>
+        </div>
+    </header>
+      
+    
+
+    <!-- Activities timeline -->
+    <main class="timeline">
+        <!-- Activity #1 -->
+        <section class="item">
+            <div class="circle">1</div>
+            <div class="item-content">
+                <div class="item-header">
+                    <h2>Welcome to Learn HTML!</h2>
+                    <i class="material-icons expand">keyboard_arrow_down</i>
+                </div>
+                <div class="item-type">
+                    <i class="material-icons">article</i> Course
+                </div>
+                <div class="details">
+                    <p>
+                        This HTML course for web developers provides a solid overview<br>
+                        for developers, from novice to expert level HTML.
+                    </p>
+                    <button class="action-btn">Read course</button>
+                </div>
+            </div>
+              
+        </section>
+          
+          
+
+        <!-- Activity #2 -->
+        <section class="item">
+            <div class="circle incomplete">2</div>
+            <div class="item-content">
+                <h2>Overview of HTML</h2>
+                <div class="item-type">
+                    <i class="material-icons">article</i> Course
+                </div>
+        
+                <!-- Move .details inside .item-content -->
+                <div class="details">
+                    <p>
+                        This HTML course for web developers provides a solid overview<br>
+                        for developers, from novice to expert level HTML.
+                    </p>
+                    <button class="action-btn">Read course</button>
+                </div>
+            </div>
+        
+            <i class="material-icons expand">keyboard_arrow_down</i>
+        </section>
+
+        <!-- Activity #3 -->
+        <section class="item">
+            <div class="circle incomplete">3</div>
+            <div class="item-content">
+                <h2>Document structure</h2>
+                <div class="item-type">
+                    <i class="material-icons">article</i> Course
+                </div>
+        
+                <!-- Move .details inside .item-content -->
+                <div class="details">
+                    <p>
+                        This HTML course for web developers provides a solid overview<br>
+                        for developers, from novice to expert level HTML.
+                    </p>
+                    <button class="action-btn">Read course</button>
+                </div>
+            </div>
+        
+            <i class="material-icons expand">keyboard_arrow_down</i>
+        </section>
+
+     
+
+        <!-- Activity #4 -->
+      
+        <section class="item">
+            <div class="circle incomplete">4</div>
+            <div class="item-content">
+                <h2>META DATA</h2>
+                <div class="item-type">
+                    <i class="material-icons">article</i> Course
+                </div>
+        
+                <!-- Move .details inside .item-content -->
+                <div class="details">
+                    <p>
+                        This HTML course for web developers provides a solid overview<br>
+                        for developers, from novice to expert level HTML.
+                    </p>
+                    <button class="action-btn">Read course</button>
+                </div>
+            </div>
+        
+            <i class="material-icons expand">keyboard_arrow_down</i>
+        </section>
+
+        <!-- (…and so on for all 22 items) -->
+    </main>
+
+    <script>
+        document.querySelectorAll('.expand').forEach(icon => {
+            icon.addEventListener('click', e => {
+                e.stopPropagation();
+
+                const item = icon.closest('.item');
+                const wasOpen = item.classList.contains('expanded');
+
+                // 1) Close all items & reset all circles to inactive
+                document.querySelectorAll('.item.expanded').forEach(openItem => {
+                    openItem.classList.remove('expanded');
+                    openItem.querySelector('.expand').textContent = 'keyboard_arrow_down';
+                });
+                document.querySelectorAll('.item .circle').forEach(circ => {
+                    circ.classList.add('incomplete');
+                });
+
+                // 2) If this one wasn’t open, open it and activate its circle
+                if (!wasOpen) {
+                    item.classList.add('expanded');
+                    icon.textContent = 'keyboard_arrow_up';
+
+                    const myCircle = item.querySelector('.circle');
+                    myCircle.classList.remove('incomplete');
+                }
+            });
+        });
+
+        // only close when clicking outside any .item
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.item')) {
+                document.querySelectorAll('.item.expanded').forEach(openItem => {
+                    openItem.classList.remove('expanded');
+                    openItem.querySelector('.expand').textContent = 'keyboard_arrow_down';
+                });
+                document.querySelectorAll('.item .circle').forEach(circ => {
+                    circ.classList.add('incomplete');
+                });
+            }
+        });
+    </script>
+      
+      
+    <!-- Footer Start -->
+    <div class="container-fluid bg-charcoal text-white py-5 px-sm-4 px-lg-5" style="background-color: #2c2c2c;">
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-lg-4 mb-4">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Accra-Ghana</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+233 534829203</p>
+                <p><i class="fa fa-envelope mr-2"></i>A+ SOFTEK@gmail.com</p>
+                <div class="mt-4">
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="col-lg-4 mb-4">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>System
+                            Administrator</a></li>
+                    <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Software
+                            Developer</a></li>
+                    <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Network
+                            Engineer</a></li>
+                    <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Cybersecurity
+                            Analyst</a></li>
+                    <li><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Technical Support
+                            Specialist</a></li>
+                </ul>
+    
+            </div>
+    
+            <!-- Newsletter Signup -->
+            <div class="col-lg-4 mb-4">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Newsletter</h5>
+                <p>Stay updated with our latest news, courses, and special offers. Subscribe to our newsletter today.</p>
+                <form class="mt-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control border-light" placeholder="Your Email Address"
+                            style="padding: 15px;" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="container-fluid bg-charcoal text-white py-3" style="background-color: #232323;">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+                <small>&copy; 2025 <a href="#" class="text-primary">YourDomain</a>. All Rights Reserved.</small>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <ul class="nav justify-content-center justify-content-md-end">
+                    <li class="nav-item"><a class="nav-link text-white py-0" href="#">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link text-white py-0" href="#">Terms of Use</a></li>
+                    <li class="nav-item"><a class="nav-link text-white py-0" href="#">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white py-0" href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <script>
+        // Show button on scroll
+        window.onscroll = function () {
+            const btn = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Ease-in scroll to top
+        document.querySelector('.back-to-top').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const start = window.pageYOffset;
+            const duration = 800; // in milliseconds
+            const startTime = performance.now();
+
+            function easeIn(t) {
+                return t * t; // Quadratic ease-in (starts slow, speeds up)
+            }
+
+            function scrollStep(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeIn(progress);
+
+                window.scrollTo(0, start * (1 - ease));
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scrollStep);
+                }
+            }
+
+            requestAnimationFrame(scrollStep);
+        });
+    </script>
+      
+
+</body>
+
+</html>
