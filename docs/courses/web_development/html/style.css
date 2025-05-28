@@ -244,9 +244,11 @@ a {
     grid-template-rows: auto auto;
     grid-template-areas:
         "circle content expand ."
-        ".       .       button .";
+        "circle .       button .";
+    /* Keep circle fixed in the first column on both rows */
     gap: 16px 8px;
-    align-items: center;
+    align-items: start;
+    /* KEY FIX: Prevent vertical stretching */
     padding: 40px 0;
     position: relative;
 }
@@ -262,8 +264,9 @@ a {
     line-height: 48px;
     font-size: 20px;
     font-weight: 700;
+    align-self: start;
+    /* Ensure the circle stays at the top */
 }
-
 .circle.incomplete {
     background: #3c4043;
 }
