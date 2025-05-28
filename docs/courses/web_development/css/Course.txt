@@ -1,0 +1,126 @@
+Module 1: Introduction to CSS
+What is CSS?
+
+CSS vs HTML
+
+CSS Syntax and Selectors
+
+Ways to Apply CSS: Inline, Internal, External
+
+The Cascade and Specificity
+
+Comments and Best Practices
+
+Module 2: CSS Selectors and Properties
+Basic Selectors (Type, Class, ID)
+
+Grouping and Combining Selectors
+
+Attribute Selectors
+
+Pseudo-classes (:hover, :nth-child, etc.)
+
+Pseudo-elements (::before, ::after)
+
+Module 3: Colors, Fonts, and Text Styling
+Using Color Names, Hex, RGB, HSL
+
+font-family, font-size, font-weight
+
+Google Fonts Integration
+
+Line Height, Letter Spacing
+
+Text Alignment and Decoration
+
+text-shadow and Advanced Typography
+
+Module 4: Box Model and Layout Basics
+Margin, Border, Padding, Content
+
+box-sizing
+
+Display Property (block, inline, inline-block, none)
+
+Width, Height, Min/Max
+
+Module 5: Positioning and Z-Index
+static, relative, absolute, fixed, sticky
+
+Z-index layering
+
+Practical layout scenarios
+
+Module 6: Flexbox
+Flex Container and Flex Items
+
+Direction, Wrapping
+
+Justify Content, Align Items
+
+Align Self, Order
+
+Real-world Flexbox Layouts
+
+Module 7: Grid Layout
+Grid Container and Grid Items
+
+Creating Rows and Columns
+
+Grid Template Areas
+
+gap, fr, auto-fit, auto-fill
+
+Building Responsive Grids
+
+Module 8: Responsive Design
+Media Queries
+
+Units: em, rem, %, vw, vh
+
+Responsive Typography
+
+Mobile-First Design
+
+Hiding/Showing Elements Responsively
+
+Module 9: Transitions and Animations
+CSS Transitions (transition, duration, timing-function)
+
+CSS Animations (@keyframes, animation, etc.)
+
+Hover and Focus Effects
+
+Transform: scale, rotate, translate
+
+Building Interactive UI
+
+Module 10: Advanced Topics
+Custom Properties (CSS Variables)
+
+calc(), clamp(), and advanced functions
+
+Dark Mode with CSS
+
+Layered Backgrounds
+
+Accessibility and Print Styles
+
+Module 11: CSS Frameworks and Tools
+Introduction to Bootstrap / Tailwind CSS
+
+Using Preprocessors (SASS/SCSS)
+
+Using DevTools for Debugging CSS
+
+Organizing and Structuring Large CSS Projects
+
+Module 12: Final Project
+Build a fully responsive website using only HTML and CSS
+
+Implement layouts using Flexbox and Grid
+
+Apply transitions and animations
+
+Apply responsive design principles
+
