@@ -1,0 +1,235 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-y: auto;
+    /* Global scrollbar */
+    font-family: 'Roboto', sans-serif;
+    color: #202124;
+}
+
+/* Layout */
+body {
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: auto;
+    /* Let body height grow */
+}
+
+/* Sidebars */
+nav,
+aside {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    padding: 16px;
+}
+
+/* Main takes dynamic content height */
+main {
+    padding: 32px 48px;
+}
+
+/* Other styles remain */
+a {
+    color: #202124;
+    text-decoration: none;
+}
+.page-header a {
+    color: #202124;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+    /* Increase spacing between items */
+    font-size: 15px;
+    /* Default font size for regular list items */
+}
+
+/* Specifically target the first <li> with the <strong> */
+nav li:first-child strong {
+    font-size: 15px;
+    /* Bigger font for the welcome message */
+    color: orange;
+    /* Optional: make it slightly darker */
+    display: block;
+    /* Ensures it takes up full width */
+}
+
+nav {
+ 
+    padding: 40px 16px 24px;
+    /* 👈 Added extra top padding only for inner content */
+    overflow-y: auto;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Creates spacing between icon and input */
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid orange;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.filter svg {
+    flex-shrink: 0;
+    /* Prevents SVG from shrinking */
+    fill: orange;
+    width: 16px;
+    height: 16px;
+}
+
+.filter input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    background: transparent;
+}
+
+.page-header {
+    background: rgb(246, 182, 63);
+    border-radius: 4px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+
+
+h1 {
+    color: orange;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* spacing between text and button */
+}
+
+/* Typing effect */
+.typing {
+    white-space: nowrap;
+    /* keep text in one line */
+    overflow: hidden;
+    /* hide overflowing text */
+    width: 0;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 45px;
+    line-height: 1.2;
+    color: orange;
+    display: inline-block;
+    animation: typing 3s steps(23, end) forwards;
+    position: relative;
+    /* for ::after positioning */
+}
+
+/* Add blinking underscore cursor */
+.typing::after {
+    content: "_";
+    position: absolute;
+    right: 0;
+    animation: blink-underscore 0.75s step-end infinite;
+    color: orange;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 23ch;
+    }
+}
+
+/* Blinking underscore */
+@keyframes blink-underscore {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.bookmark-btn {
+    color: orange;
+    vertical-align: middle;
+    width: 26px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.right-nav {
+    padding: 24px 16px;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.right-nav h4 {
+    color: orange !important;
+}
+
+.right-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-nav li {
+    margin-bottom: 20px;
+    /* More space between items */
+    font-size: 15px;
+    /* Slightly bigger font size */
+}
+
+/* Optionally, make the heading stand out */
+.right-nav h4 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #202124;
+}
