@@ -299,14 +299,20 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '⮞';
+        content: '»';
         /* arrow right when sidebar is hidden */
         font-size: 18px;
+        margin-left: 5px;
+            /* moves the arrow slightly to the right */
+            color: white;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '⮜';
+        content: '«';
+            /* open state (pointing left) */
         /* arrow left when sidebar is shown */
+        margin-left: -5px;
+        color: white;
     }
 
         main {
@@ -404,12 +410,17 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '⮞';
-        font-size: 16px;
+        content: '»';
+            /* closed state (pointing right) */
+            font-size: 18px;
+            color: white;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '⮜';
+        content: '«';
+            /* open state (pointing left) */
+            font-size: 18px;
+            color: white;
     }
 
     main {
@@ -505,16 +516,21 @@ h1 {
             transform: translateY(-50%);
         }
     
-        .sidebar-handle::before {
-            content: '⮞';
-            font-size: 18px;
-            color: white;
-        }
+                .sidebar-handle::before {
+                    content: '»';
+                    /* closed state (pointing right) */
+                    font-size: 20px;
+                    color: white;
+                    margin-left: 8px;
+                    /* moves the arrow slightly to the right */
+                }
     
         .sidebar-wrapper.active .sidebar-handle::before {
-            content: '⮜';
+            content: '«';
+                /* open state (pointing left) */
             color: white;
-            font-size: 18px;
+            font-size: 20px;
+            margin-left: -8px;
         }
           
     main {
@@ -624,15 +640,18 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '⮞';
-        font-size: 16px;
+        content: '»';
+            /* closed state (pointing right) */
+        font-size: 18px;
         color: white;
+        margin-left: 2px;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '⮜';
+        content: '»';
         color: white;
-        font-size: 16px;
+        font-size: 18px;
+        margin-left: -2px;
     }
 
     main {
