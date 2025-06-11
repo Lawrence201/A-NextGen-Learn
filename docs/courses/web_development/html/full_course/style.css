@@ -506,7 +506,7 @@ h1 {
         }
     
         .sidebar-handle::before {
-            content: 'rrr';
+            content: '⮞';
             font-size: 18px;
             color: white;
         }
