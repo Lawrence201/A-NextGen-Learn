@@ -113,8 +113,14 @@ nav {
     background: rgb(246, 182, 63);
     border-radius: 4px;
     padding: 16px 24px;
-    margin-bottom: 24px;
+    margin-bottom: 5px;
     font-size: 14px;
+
+    
+    top: 0;
+    left: 24px;
+    /* same as the horizontal padding of main */
+    z-index: 1001;
 }
 
 
@@ -233,26 +239,82 @@ h1 {
     font-weight: 600;
     color: #202124;
 }
+@media (min-width: 1029px) {
+    .sidebar-handle {
+        display: none;
+    }
+}
 
 @media (max-width: 1028px) {
     body {
-        grid-template-columns: 200px 1fr;
-        /* Reduce sidebar width, remove right sidebar */
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
     }
 
     aside.right-nav {
         display: none;
-        /* Hide right sidebar on smaller screens */
     }
 
+    /* WRAPPER for nav and handle */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-280px);
+        /* hide offscreen with 20px handle visible */
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+        /* slide in */
+    }
+
+    /* SIDEBAR STYLES */
     nav {
+        width: 300px;
+        background-color: #f4f4f4;
         padding: 24px 12px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
     }
 
-    main {
-        padding: 24px;
+    /* TOGGLE HANDLE STYLES */
+    .sidebar-handle {
+        width: 20px;
+        height: 60px;
+        background: #ccc;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
+    .sidebar-handle::before {
+        content: '▶';
+        /* arrow right when sidebar is hidden */
+        font-size: 18px;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '◀';
+        /* arrow left when sidebar is shown */
+    }
+
+        main {
+            padding: 24px;
+            transition: margin-left 0.3s ease;
+            margin-left: 10px;
+            /* shift right slightly when sidebar is collapsed */  
+         }
     .filter {
         padding: 6px 10px;
         margin-bottom: 16px;
@@ -277,7 +339,7 @@ h1 {
     }
 
     nav li {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .bookmark-btn {
@@ -291,66 +353,170 @@ h1 {
 
 @media (max-width: 770px) {
     body {
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
     }
 
+    aside.right-nav {
+        display: none;
+    }
+
+    /* WRAPPER for nav and handle */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-280px);
+        /* keep hidden by default */
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+    }
+
+    /* SIDEBAR STYLES */
     nav {
-        width: 100%;
-        padding: 20px;
+        width: 270px;
+        background-color: #f4f4f4;
+        padding: 20px 10px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
     }
 
-    aside,
-    .right-nav {
-        width: 200px;
-        /* or any fixed width that fits */
-        flex-shrink: 0;
-        padding: 16px;
-        border-top: none;
-        border-right: 1px solid #e0e0e0;
+    /* TOGGLE HANDLE STYLES */
+    .sidebar-handle {
+        width: 18px;
+        height: 50px;
+        background: #ccc;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '▶';
+        font-size: 16px;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '◀';
     }
 
     main {
-        flex: 1;
-        padding: 20px;
+        padding: 18px;
+        margin-left: 8px;
+        transition: margin-left 0.3s ease;
     }
 
     .filter {
-        flex-direction: row;
-        width: 100%;
+        padding: 5px 8px;
+        margin-bottom: 14px;
     }
 
-    .page-header {
-        margin-top: 0;
+    .filter input {
+        font-size: 12px;
+        width: 100%;
     }
 
     h1,
     .typing {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .page-header {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    nav li {
+        font-size: 15px;
+    }
+
+    .bookmark-btn {
+        width: 20px;
+        height: 28px;
     }
 }
 
 
 @media (max-width: 490px) {
     body {
-        flex-direction: column;
-    }
-
-    nav {
-        width: 100%;
-        padding: 16px;
-    }
-
-    aside,
-    .right-nav {
-        width: 100%;
-        padding: 16px;
-        order: 1;
-        /* Ensures it comes first (on top of main) */
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
+            grid-template-columns: 1fr;
+            overflow-x: hidden;
+        }
+    
+        aside.right-nav {
+            display: none;
+        }
+    
+        /* Sidebar Wrapper */
+        .sidebar-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            display: flex;
+            transform: translateX(-260px);
+            /* hidden by default */
+            transition: transform 0.3s ease;
+            z-index: 1100;
+        }
+    
+        .sidebar-wrapper.active {
+            transform: translateX(0);
+        }
+    
+        /* Sidebar */
+        nav {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 16px 10px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+    
+        /* Toggle Handle */
+        .sidebar-handle {
+            width: 18px;
+            height: 50px;
+            background: orange;
+            border-radius: 0 6px 6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    
+        .sidebar-handle::before {
+            content: '▶';
+            font-size: 18px;
+            color: white;
+        }
+    
+        .sidebar-wrapper.active .sidebar-handle::before {
+            content: '◀';
+            color: white;
+            font-size: 18px;
+        }
+          
     main {
         width: 100%;
         padding: 16px;
@@ -358,16 +524,158 @@ h1 {
     }
 
     .filter {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        /* Makes items stay on a row */
+        align-items: center;
+        /* Vertically center them */
+        gap: 8px;
+        /* Space between icon and input */
+        width: 100%;
+    }
+
+        .page-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            margin: 0;
+            padding: 10px 14px;
+            font-size: 12px;
+            background: rgb(246, 182, 63);
+            border-radius: 0 0 4px 4px;
+            z-index: 1000;
+        }
+
+                main {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+        
+                h1 {
+                    font-size: 35px;
+                    margin: 40px 0 0 0;
+                    /* top: 30px, others: 0 */
+                    padding: 0;
+                    width: 100%;
+                }
+        
+                .content p {
+                    font-size: 16px;
+                    margin: 20px 0 0 0;
+                }
+        
+                .bookmark-btn svg {
+                    width: 20px;
+                    height: 20px;
+                }
+}
+
+@media (max-width: 380px) {
+    body {
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+    }
+
+    aside.right-nav {
+        display: none;
+    }
+
+    /* Sidebar Wrapper */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-260px);
+        transition: transform 0.3s ease;
+        z-index: 1100;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+    }
+
+    /* Sidebar */
+    nav {
+        width: 250px;
+        background-color: #f4f4f4;
+        padding: 14px 8px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    /* Toggle Handle */
+    .sidebar-handle {
+        width: 18px;
+        height: 45px;
+        background: orange;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '▶';
+        font-size: 16px;
+        color: white;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '◀';
+        color: white;
+        font-size: 16px;
+    }
+
+    main {
+        width: 100%;
+        padding: 14px 0;
+        order: 2;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
         width: 100%;
     }
 
     .page-header {
-        margin-top: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 11px;
+        background: rgb(246, 182, 63);
+        border-radius: 0 0 4px 4px;
+        z-index: 1000;
     }
 
-    h1,
-    .typing {
-        font-size: 24px;
+    h1 {
+        font-size: 30px;
+        margin: 36px 0 0 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .content p {
+        font-size: 15px;
+        margin: 16px 0 0 0;
+    }
+
+    .bookmark-btn svg {
+        width: 18px;
+        height: 18px;
     }
 }

@@ -23,41 +23,46 @@
 </head>
 
 <body>
+    
 
     <!-- Left sidebar -->
-    <nav>
-        <div class="filter">
-            <!-- simple filter icon -->
-            <svg viewBox="0 0 24 24">
-                <path d="M3,5h18v2H3V5z M6,11h12v2H6V11z M10,17h4v2h-4V17z" />
-            </svg>
-            <input type="text" placeholder="Filter..." />
-        </div>
-        <ul>
-            <li><strong>Welcome to Learn HTML!</strong></li>
-            <li>Overview of HTML</li>
-            <li>Introduction to HTML</li>
-            <li>Basic HTML Elements</li>
-            <li>Semantic HTML</li>
-            <li>Headings and sections</li>
-            <li>Working with Links and URLs</li>
-            <li>Adding Media</li>
-            <li>HTML Tables</li>
-            <li>HTML Forms</li>
-            <li>HTML Layout and Semantic Elements</li>
-            <li>HTML Attributes and Global Attributes</li>
-            <li>HTML Meta Tags & Section</li>
-            <li>HTML & CSS Integration</li>
-         
+    <div class="sidebar-wrapper">
+        <nav>
+            <div class="filter">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3,5h18v2H3V5z M6,11h12v2H6V11z M10,17h4v2h-4V17z" />
+                </svg>
+                <input type="text" placeholder="Filter..." />
+            </div>
+            <ul>
+                <li><strong>Welcome to Learn HTML!</strong></li>
+                <li>Overview of HTML</li>
+                <li>Introduction to HTML</li>
+                <li>Basic HTML Elements</li>
+                <li>Semantic HTML</li>
+                <li>Headings and sections</li>
+                <li>Working with Links and URLs</li>
+                <li>Adding Media</li>
+                <li>HTML Tables</li>
+                <li>HTML Forms</li>
+                <li>HTML Layout and Semantic Elements</li>
+                <li>HTML Attributes and Global Attributes</li>
+                <li>HTML Meta Tags & Section</li>
+                <li>HTML & CSS Integration</li>
+            </ul>
+        </nav>
+        <div class="sidebar-handle" onclick="toggleMenu()" id="handle"></div>
+    </div>
+      
 
-        </ul>
-    </nav>
-
+  
     <!-- Main content -->
     <main>
+        
         <div class="page-header">
             <span>Learn more from </span><a>A+Softek</a>
         </div>
+        
         <h1>
             <span class="typing">Welcome to Learn HTML!
             <button class="bookmark-btn" aria-label="Bookmark">
@@ -124,7 +129,17 @@
             <li>Tables</li>
         </ul>
     </aside>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('.sidebar-handle').addEventListener('click', function () {
+                document.querySelector('.sidebar-wrapper').classList.toggle('active');
+            });
+        });
+    </script>
+      
+    
+    
+    
 </body>
 
 </html>
