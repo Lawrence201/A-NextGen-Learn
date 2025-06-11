@@ -233,3 +233,141 @@ h1 {
     font-weight: 600;
     color: #202124;
 }
+
+@media (max-width: 1028px) {
+    body {
+        grid-template-columns: 200px 1fr;
+        /* Reduce sidebar width, remove right sidebar */
+    }
+
+    aside.right-nav {
+        display: none;
+        /* Hide right sidebar on smaller screens */
+    }
+
+    nav {
+        padding: 24px 12px;
+    }
+
+    main {
+        padding: 24px;
+    }
+
+    .filter {
+        padding: 6px 10px;
+        margin-bottom: 16px;
+    }
+
+    .filter input {
+        font-size: 13px;
+    }
+
+    h1,
+    .typing {
+        font-size: 32px;
+    }
+
+    .page-header {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    nav li {
+        font-size: 14px;
+    }
+
+    .bookmark-btn {
+        width: 22px;
+        height: 30px;
+    }
+}
+
+
+
+
+@media (max-width: 770px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+        padding: 20px;
+    }
+
+    aside,
+    .right-nav {
+        width: 200px;
+        /* or any fixed width that fits */
+        flex-shrink: 0;
+        padding: 16px;
+        border-top: none;
+        border-right: 1px solid #e0e0e0;
+    }
+
+    main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .filter {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .page-header {
+        margin-top: 0;
+    }
+
+    h1,
+    .typing {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 490px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        padding: 16px;
+    }
+
+    aside,
+    .right-nav {
+        width: 100%;
+        padding: 16px;
+        order: 1;
+        /* Ensures it comes first (on top of main) */
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    main {
+        width: 100%;
+        padding: 16px;
+        order: 2;
+    }
+
+    .filter {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .page-header {
+        margin-top: 0;
+    }
+
+    h1,
+    .typing {
+        font-size: 24px;
+    }
+}
