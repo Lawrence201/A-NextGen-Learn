@@ -38,7 +38,7 @@
     <!-- Header section -->
     <header class="main-header">
         <div class="header-content">
-            <div class="text-section">
+            <div class="text-section" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                 <h1>
                     Learn CSS
                     <i class="material-icons bookmark">bookmark_border</i>
@@ -54,12 +54,19 @@
                 </div>
             </div>
             
-            <div class="image-section">
+            <div class="image-section" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">>
                 <img src="mary.webp" alt="Progress Image" class="progress-image" />
             </div>
         </div>
     </header>
-
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1100,
+            once: true
+        });
+    </script>
 
 
     <!-- Activities timeline -->
