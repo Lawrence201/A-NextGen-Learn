@@ -299,13 +299,13 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '▶';
+        content: '⮞';
         /* arrow right when sidebar is hidden */
         font-size: 18px;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '◀';
+        content: '⮜';
         /* arrow left when sidebar is shown */
     }
 
@@ -404,12 +404,12 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '▶';
+        content: '⮞';
         font-size: 16px;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '◀';
+        content: '⮜';
     }
 
     main {
@@ -506,13 +506,13 @@ h1 {
         }
     
         .sidebar-handle::before {
-            content: '▶';
+            content: '⮞';
             font-size: 18px;
             color: white;
         }
     
         .sidebar-wrapper.active .sidebar-handle::before {
-            content: '◀';
+            content: '⮜';
             color: white;
             font-size: 18px;
         }
@@ -624,13 +624,13 @@ h1 {
     }
 
     .sidebar-handle::before {
-        content: '▶';
+        content: '⮞';
         font-size: 16px;
         color: white;
     }
 
     .sidebar-wrapper.active .sidebar-handle::before {
-        content: '◀';
+        content: '⮜';
         color: white;
         font-size: 16px;
     }
