@@ -59,9 +59,21 @@ a {
     font-size: 15px;
         
         display: block;
+        cursor: pointer;
         
 }
 
+#course-nav li {
+    cursor: pointer;
+}
+
+#course-nav li:hover {
+    transform: scale(1.05);
+    color: orange;
+    background-color: #fef4e5;
+    /* soft orange highlight */
+    border-radius: 5px;
+}
 
 .intro-video {
     width: 750px;
