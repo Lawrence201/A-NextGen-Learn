@@ -48,6 +48,21 @@ a {
     text-decoration: none;
 }
 
+
+.full_course>div {
+    display: none;
+}
+
+#course-nav li.active {
+    color: orange;
+    font-weight: bold;
+    font-size: 15px;
+        
+        display: block;
+        
+}
+
+
 .intro-video {
     width: 750px;
     height: 400px;
@@ -181,14 +196,7 @@ nav li {
 }
 
 /* Specifically target the first <li> with the <strong> */
-nav li:first-child strong {
-    font-size: 15px;
-    /* Bigger font for the welcome message */
-    color: orange;
-    /* Optional: make it slightly darker */
-    display: block;
-    /* Ensures it takes up full width */
-}
+
 
 nav {
 
