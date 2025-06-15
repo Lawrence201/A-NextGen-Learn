@@ -38,30 +38,39 @@
     <!-- Header section -->
     <header class="main-header">
         <div class="header-content">
-            <div class="text-section">
+            <div class="text-section" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                 <h1>
-                    Learn CSS
+                    Learn JavaScript
                     <i class="material-icons bookmark">bookmark_border</i>
                 </h1>
                 <div class="sub-progress-row">
                     <div class="text-block">
                         <p class="subtitle">
-                            This CSS course for web developers covers everything you need to style websites
-                            beautifully,<br />
-                            from beginner basics to advanced layout and animation techniques.
+                            This JavaScript course for web developers covers everything you need to build interactive
+                            websites,<br />
+                            from beginner fundamentals to advanced concepts like DOM manipulation, APIs, and asynchronous
+                            programming.
                         </p>
                         <p class="activities">10+ courses</p>
                     </div>
                 </div>
             </div>
+            
 
-            <div class="image-section">
-                <img src="jss.jpg" alt="Progress Image" class="progress-image" />
+            <div class="image-section" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+                <img src="js (2).PNG" alt="Progress Image" class="progress-image" />
             </div>
         </div>
     </header>
 
-
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1100,
+            once: true
+        });
+    </script>
 
     <!-- Activities timeline -->
     <main class="timeline">
@@ -70,7 +79,7 @@
             <div class="circle">1</div>
             <div class="item-content">
                 <div class="item-header">
-                    <h2>Welcome to Learn CSS!</h2>
+                    <h2>Welcome to Learn JavaScript!</h2>
                     <i class="material-icons expand">keyboard_arrow_down</i>
                 </div>
                 <div class="item-type">
@@ -78,283 +87,221 @@
                 </div>
                 <div class="details">
                     <p>
-                        Dive into the world of web design by learning how to style your websites with CSS.<br>
-                        Perfect for beginners looking to bring their HTML to life with beautiful layouts and designs!
+                        Begin your JavaScript journey and learn how to make websites interactive.<br>
+                        Perfect for beginners eager to add behavior and logic to web pages.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
         </section>
-
-
-
-
+    
         <!-- Activity #2 -->
         <section class="item">
             <div class="circle incomplete">2</div>
             <div class="item-content">
-                <h2>Introduction to CSS</h2>
+                <h2>JavaScript Basics</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Get started with CSS by learning how to style text, colors, and layouts.<br>
-                        A perfect foundation for designing beautiful web pages.
+                        Learn the building blocks of JavaScript including variables, data types, and basic syntax.
                     </p>
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
-        <!-- Activity #3 -->
+    
         <section class="item">
             <div class="circle incomplete">3</div>
             <div class="item-content">
-                <h2>CSS Selectors and Properties</h2>
+                <h2>Operators and Expressions</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Discover how to target HTML elements with CSS selectors and apply powerful styling using various
-                        properties.
+                        Understand how to perform operations with arithmetic, comparison, and logical operators.
                     </p>
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
-
-
-        <!-- Activity #4 -->
-
+    
         <section class="item">
             <div class="circle incomplete">4</div>
             <div class="item-content">
-                <h2>Colors, Fonts, and Text Styling</h2>
+                <h2>Control Flow</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Learn how to enhance your website's look with custom colors, fonts, and stylish text formatting
-                        techniques.
+                        Learn how to use <code>if</code>, <code>else</code>, <code>switch</code>, and loops to control your
+                        code's flow.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">5</div>
             <div class="item-content">
-                <h2>Box Model and Layout Basics</h2>
+                <h2>Functions</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Understand the CSS box model and master layout essentials like margin, padding, borders, and
-                        sizing.
+                        Discover how to create and invoke functions, use parameters, and return values in JavaScript.
                     </p>
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">6</div>
             <div class="item-content">
-                <h2>Positioning and Z-Index</h2>
+                <h2>Arrays and Objects</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Learn how to position elements with <code>relative</code>, <code>absolute</code>, and
-                        <code>fixed</code>.<br>
-                        Control stacking order using <code>z-index</code> to layer elements on top of each other.
+                        Learn how to store collections of data using arrays and organize them using objects.
                     </p>
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">7</div>
             <div class="item-content">
-                <h2>Layout with Flexibility</h2>
+                <h2>DOM Manipulation</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Master Flexbox to create flexible, responsive layouts easily.<br>
-                        Align, distribute, and reorder elements dynamically with simple CSS properties like
-                        <code>justify-content</code> and
-                        <code>align-items</code>.
+                        Access and modify HTML elements using the Document Object Model (DOM) with JavaScript.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">8</div>
             <div class="item-content">
-                <h2>Flexbox</h2>
+                <h2>Event Handling</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Use Flexbox to build responsive layouts that adapt seamlessly.<br>
-                        Control the direction, alignment, and spacing of items within a container with ease.
+                        Make your website interactive by handling user events like clicks, keypresses, and mouse movements.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">9</div>
             <div class="item-content">
-                <h2>Grid Layout</h2>
+                <h2>ES6 and Modern JavaScript</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Learn CSS Grid to design complex, two-dimensional layouts with rows and columns.<br>
-                        Easily control placement and sizing of elements using grid areas, tracks, and gaps.
+                        Learn the latest JavaScript features like <code>let</code>/<code>const</code>, arrow functions,
+                        template strings, and destructuring.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">10</div>
             <div class="item-content">
-                <h2>Responsive Design</h2>
+                <h2>Asynchronous JavaScript</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Make your websites look great on all devices using media queries and flexible units.<br>
-                        Design mobile-first and adapt layouts seamlessly to different screen sizes.
+                        Understand callbacks, promises, and async/await for managing asynchronous operations in JavaScript.
                     </p>
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">11</div>
             <div class="item-content">
-                <h2>Transitions and Animations</h2>
+                <h2>APIs and Fetch</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Add smooth visual effects with CSS transitions and animations.<br>
-                        Bring your site to life by animating colors, sizes, and positions effortlessly.
+                        Learn how to send and receive data from web servers using the Fetch API and external APIs.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">12</div>
             <div class="item-content">
-                <h2>Advanced Topics</h2>
+                <h2>Debugging and Developer Tools</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Explore advanced CSS features like custom properties, functions, and dark mode.<br>
-                        Learn techniques for scalable, maintainable, and accessible stylesheets.
+                        Use browser dev tools and console logs to debug and troubleshoot JavaScript code.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">13</div>
             <div class="item-content">
-                <h2>CSS Frameworks and Tools</h2>
+                <h2>JavaScript Frameworks Overview</h2>
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Discover popular CSS frameworks like Bootstrap and Tailwind for faster development.<br>
-                        Learn how preprocessors like SASS streamline your CSS workflow.
+                        Get introduced to modern frameworks like React, Vue, and Angular to build powerful web apps.
                     </p>
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
+    
         <section class="item">
             <div class="circle incomplete">14</div>
             <div class="item-content">
@@ -362,26 +309,18 @@
                 <div class="item-type">
                     <i class="material-icons">article</i> Course
                 </div>
-
-                <!-- Move .details inside .item-content -->
                 <div class="details">
                     <p>
-                        Apply everything you’ve learned by building a complete, responsive website.<br>
-                        Showcase your skills with a project that combines layout, styling, and interactivity.
+                        Apply all your JavaScript skills to build a fully functional interactive web application.<br>
+                        This project will be your portfolio showcase.
                     </p>
-
-
                     <button class="action-btn">Read course</button>
                 </div>
             </div>
-
             <i class="material-icons expand">keyboard_arrow_down</i>
         </section>
-
-
-
-        <!-- (…and so on for all 22 items) -->
     </main>
+    
 
     <script>
         document.querySelectorAll('.expand').forEach(icon => {
@@ -424,6 +363,275 @@
             }
         });
     </script>
+
+
+
+
+<!-- Courses Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;"
+                data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Left side orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+                <!-- Center orange text -->
+                <h5 class="text-uppercase mb-0" style="letter-spacing: 2px; color: #FFA500; font-weight: bold;">Courses
+                </h5>
+
+                <!-- Right side orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+            </div>
+
+            <!-- Main heading -->
+            <h1 style="font-weight: 700; color: #2c3e50; font-size: 2.3rem;" data-aos="fade-up" data-aos-delay="200">Our
+                Premium Courses</h1>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="0">
+                <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
+                    <!-- 1) Image + 50% Off Badge -->
+                    <img class="img-fluid" src="python.png" alt="">
+
+
+
+
+                    <span class="badge badge-danger position-absolute"
+                        style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
+                        20% Off
+                    </span>
+
+                    <!-- 2) Card Body -->
+                    <div class="bg-secondary p-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>´+25 Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>04h 45m</small>
+                        </div>
+
+                        <a class="h6 d-block mb-2" href=""
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
+                            Python 6 in 1 Bundle from Zero to Hero
+                        </a>
+
+
+                        <div class="border-top mt-3 pt-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="m-0" style="font-size: 0.9rem;">
+                                    <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+                                <!-- 3) Price: strikethrough old + new -->
+                                <div class="d-flex align-items-baseline">
+                                    <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">
+                                        GH₵750
+                                    </h6>
+                                    <h5 class="m-0">GH₵600</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4) Purchase Now Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="150">
+
+
+                <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
+                    <!-- Course Image -->
+                    <img class="img-fluid" src="javascripts.jpg" alt="">
+
+                    <!-- Discount Badge -->
+                    <span class="badge badge-danger position-absolute"
+                        style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
+                        20% Off
+                    </span>
+
+                    <!-- Course Content -->
+                    <div class="bg-secondary p-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>+25 Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>03h 50m</small>
+                        </div>
+                        <a class="h6 d-block mb-2" href=""
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
+
+                            Javascript & Web Design 6 in 1 Bundle
+                        </a>
+
+                        <div class="border-top mt-3 pt-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="m-0" style="font-size: 0.9rem;">
+                                    <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+
+                                <!-- Price: Original and Discounted -->
+                                <div class="d-flex align-items-baseline">
+                                    <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">GH₵750</h6>
+                                    <h5 class="m-0">GH₵600</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purchase Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="300">
+                <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
+                    <!-- Course Image -->
+                    <img class="img-fluid" src="java.png" alt="">
+
+                    <!-- Discount Badge -->
+                    <span class="badge badge-danger position-absolute"
+                        style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
+                        23.5% Off
+                    </span>
+
+                    <!-- Course Content -->
+                    <div class="bg-secondary p-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>70+ Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>05h 43m</small>
+                        </div>
+
+                        <a class="h6 d-block mb-2" href=""
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
+
+                            Java and Advanced Java full course
+                        </a>
+
+                        <div class="border-top mt-3 pt-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="m-0" style="font-size: 0.9rem;">
+                                    <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+
+                                <!-- Price Section -->
+                                <div class="d-flex align-items-baseline">
+                                    <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">GH₵650</h6>
+                                    <h5 class="m-0">GH₵500</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purchase Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="450">
+                <div class="rounded overflow-hidden mb-2 hover-lift">
+                    <img class="img-fluid" src="enter.png" alt="">
+                    <div class="bg-secondary p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>40+ Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>02h 30m</small>
+                        </div>
+                        <a class="h5" href="">Principles of Entrepreneurship</a>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+                                <h5 class="m-0">Free</h5>
+                            </div>
+                        </div>
+
+                        <!-- Purchase Now Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-4 py-2">Download</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="600">
+                <div class="rounded overflow-hidden mb-2 hover-lift">
+                    <img class="img-fluid" src="resource.jpg" alt="">
+                    <div class="bg-secondary p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                        </div>
+                        <a class="h5" href="">Human Resource </a>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+                                <h5 class="m-0">Free</h5>
+                            </div>
+                        </div>
+                        <!-- Purchase Now Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-4 py-2">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out"
+                data-aos-duration="1000" data-aos-delay="1000">
+                <div class="rounded overflow-hidden mb-2 hover-lift">
+                    <img class="img-fluid" src="C++.jpg" alt="">
+                    <div class="bg-secondary p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>155+ Students</small>
+                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>15h 30m</small>
+                        </div>
+                        <a class="h5" href="">High Level programming </a>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
+                                </h6>
+                                <h5 class="m-0">Available</h5>
+                            </div>
+                        </div>
+                        <!-- Download Now Button -->
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-primary px-4 py-2">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // animation duration
+        once: true,     // animation only happens once
+    });
+</script>
 
 
     <!-- Footer Start -->
