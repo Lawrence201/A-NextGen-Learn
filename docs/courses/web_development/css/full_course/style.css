@@ -1,0 +1,903 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #202124;
+    overflow-y: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    min-height: calc(100vh - 200px);
+    /* subtract footer height estimate */
+}
+
+/* Sidebars */
+nav,
+aside {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    padding: 16px;
+}
+
+/* Main takes dynamic content height */
+main {
+    padding: 32px 48px;
+}
+
+/* Other styles remain */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-head a {
+    color: #202124;
+    text-decoration: none;
+}
+
+
+.full_course>div {
+    display: none;
+}
+
+#course-nav li.active {
+    color: rgb(2, 15, 48);
+    font-weight: bold;
+    font-size: 15px;
+        
+        display: block;
+        cursor: pointer;
+        
+}
+
+#course-nav li {
+    cursor: pointer;
+}
+
+#course-nav li:hover {
+    transform: scale(1.05);
+    color: rgb(3, 14, 42);
+    background-color: #fef4e5;
+    /* soft orange highlight */
+    border-radius: 5px;
+}
+
+.intro-video {
+    width: 750px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    /* ensures it behaves like a block element */
+    margin: 20px auto;
+    /* centers it horizontally */
+}
+
+.video-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Tablet screens (768px and below) */
+/* Tablets and below */
+@media (max-width: 768px) {
+    .video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-video {
+        width: 90%;
+        height: auto;
+    }
+
+    .video-description {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+   
+    .video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 40px;
+        margin: 0;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .intro-video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .video-description {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+}
+
+
+/* Very small phones (380px and below) */
+@media (max-width: 380px) {
+    .video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 40px;
+        margin: 0 auto;
+        width: 94%;
+        box-sizing: border-box;
+    }
+
+    .intro-video {
+        width: 950%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-radius: 6px;
+        /* Optional: adds soft corners */
+    }
+
+    .video-description {
+        font-size: 13px;
+        padding: 0 6px;
+        line-height: 1.5;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+    /* Increase spacing between items */
+    font-size: 15px;
+    /* Default font size for regular list items */   }
+
+a:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+    /* Increase spacing between items */
+    font-size: 15px;
+    /* Default font size for regular list items */
+}
+
+/* Specifically target the first <li> with the <strong> */
+
+
+nav {
+
+    padding: 40px 16px 24px;
+    /* 👈 Added extra top padding only for inner content */
+    overflow-y: auto;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Creates spacing between icon and input */
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #000a23ff;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.filter svg {
+    flex-shrink: 0;
+    /* Prevents SVG from shrinking */
+    fill: #000a23ff;
+    width: 16px;
+    height: 16px;
+}
+
+.filter input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    background: transparent;
+}
+
+.page-head {
+    background: rgb(1, 14, 45);
+    border-radius: 4px;
+    padding: 16px 24px;
+    margin-bottom: 5px;
+    font-size: 14px;
+
+
+    top: 0;
+    left: 24px;
+    /* same as the horizontal padding of main */
+    z-index: 1001;
+}
+
+
+
+h1 {
+    color: #000a23ff;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* spacing between text and button */
+}
+
+/* Typing effect */
+.typing {
+    white-space: nowrap;
+    /* keep text in one line */
+    overflow: hidden;
+    /* hide overflowing text */
+    width: 0;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 45px;
+    line-height: 1.2;
+    color: rgb(2, 14, 43);
+    display: inline-block;
+    animation: typing 3s steps(23, end) forwards;
+    position: relative;
+    /* for ::after positioning */
+}
+
+/* Add blinking underscore cursor */
+.typing::after {
+    content: "_";
+    position: absolute;
+    right: 0;
+    animation: blink-underscore 0.75s step-end infinite;
+    color: #000a23ff;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 23ch;
+    }
+}
+
+/* Blinking underscore */
+@keyframes blink-underscore {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.bookmark-btn {
+    color: rgb(2, 14, 43);
+    vertical-align: middle;
+    width: 26px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: -35px;
+    /* move up */
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.right-nav {
+    padding: 24px 16px;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.right-nav h4 {
+    color: #000a23ff;
+}
+
+.right-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-nav li {
+    margin-bottom: 20px;
+    /* More space between items */
+    font-size: 15px;
+    /* Slightly bigger font size */
+}
+
+/* Optionally, make the heading stand out */
+.right-nav h4 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #202124;
+}
+
+@media (min-width: 1029px) {
+    .sidebar-handle {
+        display: none;
+    }
+}
+
+@media (max-width: 1028px) {
+    .grid-container {
+            grid-template-columns: 1fr;
+        }
+    
+        body {
+            overflow-x: hidden;
+        }
+    aside.right-nav {
+        display: none;
+    }
+
+    /* WRAPPER for nav and handle */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-280px);
+        /* hide offscreen with 20px handle visible */
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+        /* slide in */
+    }
+
+    /* SIDEBAR STYLES */
+    nav {
+        width: 300px;
+        background-color: #f4f4f4;
+        padding: 24px 12px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    /* TOGGLE HANDLE STYLES */
+    .sidebar-handle {
+        width: 20px;
+        height: 60px;
+        background: #ccc;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '»';
+        /* arrow right when sidebar is hidden */
+        font-size: 18px;
+        margin-left: 5px;
+        /* moves the arrow slightly to the right */
+        color: white;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '«';
+        /* open state (pointing left) */
+        /* arrow left when sidebar is shown */
+        margin-left: -5px;
+        color: white;
+    }
+
+    main {
+        padding: 24px;
+        transition: margin-left 0.3s ease;
+        margin-left: 10px;
+        /* shift right slightly when sidebar is collapsed */
+    }
+
+    .filter {
+        padding: 6px 10px;
+        margin-bottom: 16px;
+    }
+
+    .filter input {
+        font-size: 13px;
+    }
+
+    h1,
+    .typing {
+        font-size: 32px;
+    }
+
+    .page-head {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+
+    .bookmark-btn {
+        width: 22px;
+        height: 30px;
+        margin-top: -20px;
+    }
+}
+
+
+
+
+@media (max-width: 770px) {
+    .grid-container {
+            grid-template-columns: 1fr;
+        }
+    
+        body {
+            overflow-x: hidden;
+        }
+    aside.right-nav {
+        display: none;
+    }
+
+    /* WRAPPER for nav and handle */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-280px);
+        /* keep hidden by default */
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+    }
+
+    /* SIDEBAR STYLES */
+    nav {
+        width: 270px;
+        background-color: #f4f4f4;
+        padding: 20px 10px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    /* TOGGLE HANDLE STYLES */
+    .sidebar-handle {
+        width: 18px;
+        height: 50px;
+        background: #ccc;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '»';
+        /* closed state (pointing right) */
+        font-size: 18px;
+        color: white;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '«';
+        /* open state (pointing left) */
+        font-size: 18px;
+        color: white;
+    }
+
+    main {
+        padding: 18px;
+        margin-left: 8px;
+        transition: margin-left 0.3s ease;
+    }
+
+    .filter {
+        padding: 5px 8px;
+        margin-bottom: 14px;
+    }
+
+    .filter input {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    h1,
+    .typing {
+        font-size: 26px;
+    }
+
+    .page-head {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    nav li {
+        font-size: 15px;
+    }
+
+    .bookmark-btn {
+        width: 20px;
+        height: 28px;
+        margin-top: -20px;
+    }
+}
+
+
+@media (max-width: 490px) {
+    .grid-container {
+            grid-template-columns: 1fr;
+        }
+    
+        body {
+            overflow-x: hidden;
+        }
+
+    aside.right-nav {
+        display: none;
+    }
+
+    /* Sidebar Wrapper */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-260px);
+        /* hidden by default */
+        transition: transform 0.3s ease;
+        z-index: 1100;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+    }
+
+    /* Sidebar */
+    nav {
+        width: 250px;
+        background-color: #f4f4f4;
+        padding: 16px 10px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    /* Toggle Handle */
+    .sidebar-handle {
+        width: 18px;
+        height: 50px;
+        background: #000a23ff;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '»';
+        /* closed state (pointing right) */
+        font-size: 20px;
+        color: white;
+        margin-left: 8px;
+        /* moves the arrow slightly to the right */
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '«';
+        /* open state (pointing left) */
+        color: white;
+        font-size: 20px;
+        margin-left: -8px;
+    }
+
+    main {
+        width: 100%;
+        padding: 16px;
+        order: 2;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        /* Makes items stay on a row */
+        align-items: center;
+        /* Vertically center them */
+        gap: 8px;
+        /* Space between icon and input */
+        width: 100%;
+    }
+
+    .page-head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin: 0;
+        padding: 10px 14px;
+        font-size: 12px;
+        background: rgb(246, 182, 63);
+        border-radius: 0 0 4px 4px;
+        z-index: 1000;
+    }
+
+    main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin: 40px 0 0 0;
+        /* top: 30px, others: 0 */
+        padding: 0;
+        width: 100%;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin: 20px 0 0 0;
+    }
+
+    .bookmark-btn svg {
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid-container {
+            grid-template-columns: 1fr;
+        }
+    
+        body {
+            overflow-x: hidden;
+        }
+
+    aside.right-nav {
+        display: none;
+    }
+
+    /* Sidebar Wrapper */
+    .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        transform: translateX(-260px);
+        transition: transform 0.3s ease;
+        z-index: 1100;
+    }
+
+    .sidebar-wrapper.active {
+        transform: translateX(0);
+    }
+
+    /* Sidebar */
+    nav {
+        width: 250px;
+        background-color: #f4f4f4;
+        padding: 14px 8px;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+
+    /* Toggle Handle */
+    .sidebar-handle {
+        width: 18px;
+        height: 45px;
+        background: #000a23ff;
+        border-radius: 0 6px 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sidebar-handle::before {
+        content: '»';
+        /* closed state (pointing right) */
+        font-size: 18px;
+        color: white;
+        margin-left: 2px;
+    }
+
+    .sidebar-wrapper.active .sidebar-handle::before {
+        content: '»';
+        color: white;
+        font-size: 18px;
+        margin-left: -2px;
+    }
+
+    main {
+        width: 100%;
+        padding: 14px 0;
+        order: 2;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .page-head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 11px;
+        background: rgb(246, 182, 63);
+        border-radius: 0 0 4px 4px;
+        z-index: 1000;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 36px 0 0 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .content p {
+        font-size: 15px;
+        margin: 16px 0 0 0;
+    }
+
+    .bookmark-btn svg {
+        width: 18px;
+        height: 18px;
+        margin-top: 10px;
+    }
+}
+
+
+
+.list-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 1rem 1.5rem;
+    /* row and column gap */
+}
+
+.list-section li {
+    position: relative;
+    padding-left: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    border-left: 3px solid #000a23ff;
+    padding: 10px 15px 10px 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.list-section li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #000a23ff;
+    font-weight: bold;
+}
+
+.list-section li:hover {
+    background-color: #fff3e0;
+    border-left-color: #000a23ff;
+}
+
+/* Optional: Make it stack in one column on small screens */
+@media (max-width: 600px) {
+    .list-section ul {
+        grid-template-columns: 1fr;
+    }
+}
