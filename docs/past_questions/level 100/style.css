@@ -195,6 +195,14 @@ header {
     }
 }
 
+.container-fluid.py-5 {
+    display: none;
+}
+
+.container-fluid.py-5.active {
+    display: block;
+}
+
 /* ── HEADER ────────────────────────────────────────────────────────────── */
 .main-header {
     display: flex;
