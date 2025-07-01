@@ -3117,6 +3117,10 @@ input[type="button"].btn-block {
   border-radius: 8px;
 }
 
+.dropdown-menu .dropdown-item {
+  white-space: nowrap;
+}
+
 .dropdown-menu-left {
   right: auto;
   left: 0;

@@ -27,7 +27,7 @@ body {
 
 
 body {
-    font-family: 'Google Sans', sans-serif;
+  
     font-size: var(--base-font);
     color: #202124;
     background: #fff;
@@ -154,22 +154,23 @@ header {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 70px;
     color: #222;
 }
 @media (max-width: 768px) {
     .frontend-title {
         font-size: 32px;
-        margin-bottom: 30px;
-        margin-top: 100px;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .frontend-title {
-        font-size: 26px;
-        margin-bottom: 20px;
+        font-size: 30px;
         margin-top: 100px;
+        margin-bottom: 20px;
     }
 }
 
@@ -229,8 +230,12 @@ header {
 }
 
 .header-image img {
-    max-width: 100%;
+    max-width: 140%;
     height: auto;
+    margin-left: 50px;
+    /* Move it slightly to the right */
+    border-radius: 15px;
+    /* Curved borders */
 }
 
 @media (max-width: 500px) {
@@ -417,10 +422,11 @@ header {
 
 /* ── CARDS GRID ───────────────────────────────────────────────────────── */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: var(--gap);
-    justify-content: center;
+    justify-items: center;
 }
 
 /* ── COURSE CARD ──────────────────────────────────────────────────────── */
@@ -501,6 +507,9 @@ header {
     color: #fff;
     /* White text on hover */
 }
+
+
+
 
 /* ── RESPONSIVE ───────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {

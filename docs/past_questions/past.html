@@ -25,21 +25,22 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    
     <!-- Topbar Start -->
     <div class="container-fluid d-none d-lg-block">
         <div class="row align-items-center py-2 px-xl-5"> <!-- Reduced vertical padding -->
             <div class="col-lg-3">
                 <a href="" class="text-decoration-none">
                     <h1 class="m-0 d-flex align-items-center" style="overflow: hidden;">
-                        <img src="img/main.PNG" alt="A+ Logo" style="height: 95px; margin-right: 5px; object-fit: contain;">
+                        <img src="main.PNG" alt="A+ Logo"
+                            style="height: 95px; margin-right: 5px; object-fit: contain;">
                         <!-- Reduced image height -->
                         <span style="font-size: 1.5rem;">
                             <span style="display: inline-block; line-height: 1.1; vertical-align: middle;">
@@ -78,7 +79,7 @@
                 </div>
             </div>
         </div>
-    
+
     </div>
     <!-- Topbar End -->
 
@@ -136,12 +137,12 @@
                                 display: inline-flex;
                                 align-items: center;
                             }
-    
+
                             /* Space between text and dropdown icon */
                             .nav-link i {
                                 margin-left: 7px;
                             }
-    
+
                             /* Dropdown item base style */
                             .dropdown-item {
                                 position: relative;
@@ -154,9 +155,8 @@
                                 /* allow wrapping to next line */
                                 transition: color 0.3s ease, background-color 0.3s ease;
                             }
-    
+
                             /* Bullet before each dropdown item */
-    
                             .dropdown-item::before {
                                 content: "•";
                                 position: absolute;
@@ -170,8 +170,7 @@
                                 transition: color 0.3s ease;
                                 pointer-events: none;
                             }
-    
-    
+
                             /* Hover styles for dropdown item */
                             .dropdown-item:hover {
                                 color: white;
@@ -179,13 +178,13 @@
                                 background-color: #ff6600;
                                 /* orange background */
                             }
-    
+
                             /* Bullet color on hover */
                             .dropdown-item:hover::before {
                                 color: white !important;
                             }
                         </style>
-    
+
                         <a href="" class="nav-item nav-link">Bsc Information Systems</a>
                         <a href="" class="nav-item nav-link">Bsc Computer Engineering</a>
                         <a href="" class="nav-item nav-link">Bsc Cybersecurity</a>
@@ -203,7 +202,7 @@
                                 padding: 0;
                                 border: 0;
                             }
-    
+
                             /* Remove top border or shadow from navbar and related containers */
                             .col-lg-9,
                             .navbar,
@@ -215,56 +214,56 @@
                                 padding-top: 0 !important;
                             }
                         </style>
-    
+
                         <style>
                             @media (max-width: 850px) {
                                 .logo-heading img {
                                     height: 90px;
                                     margin-right: 3px;
                                 }
-    
+
                                 .logo-heading span {
                                     font-size: 1.8rem;
                                 }
                             }
-    
+
                             @media (max-width: 490px) {
                                 .logo-heading img {
                                     height: 65px;
                                     margin-right: 2px;
                                 }
-    
+
                                 .logo-heading span {
                                     font-size: 1.2rem;
                                 }
                             }
-    
+
                             @media (max-width: 370px) {
                                 .logo-heading img {
                                     height: 50px;
                                     margin-right: 1px;
                                 }
-    
+
                                 .logo-heading span {
                                     font-size: 0.9rem;
                                 }
                             }
-    
+
                             @media (max-width: 340px) {
                                 .logo-heading img {
                                     height: 45px;
                                     margin-right: 1px;
                                 }
-    
+
                                 .logo-heading span {
                                     font-size: 0.85rem;
                                 }
                             }
                         </style>
-    
-    
+
+
                         <h1 class="m-0 d-flex align-items-center logo-heading" style="overflow: hidden;">
-                            <img src="img/main.PNG" alt="A+ Logo" style="object-fit: contain;">
+                            <img src="main.PNG" alt="A+ Logo" style="object-fit: contain;">
                             <span>
                                 <span style="display: inline-block; line-height: 1.1; vertical-align: middle;">
                                     <span class="text-primary">A+</span>NextGen<br>
@@ -273,14 +272,14 @@
                             </span>
                         </h1>
                     </a>
-    
+
                     <!-- HTML -->
                     <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse"
                         data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-    
-    
+
+
                     <!-- CSS -->
                     <style>
                         /* Medium screen adjustments */
@@ -292,7 +291,7 @@
                                 padding: 0.15rem 0.3rem;
                             }
                         }
-    
+
                         /* Small screen adjustments */
                         @media (max-width: 450px) {
                             .custom-toggler {
@@ -303,33 +302,34 @@
                             }
                         }
                     </style>
-    
-    
+
+
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link ">About</a>
+                            <a href="../index.html" class="nav-item nav-link ">Home</a>
+                            <a href="../about.html" class="nav-item nav-link">About</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                    style="color: orange;">Categories</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="course.html" class="dropdown-item">Courses</a>
-                                    <a href="past_questions/past.html" class="dropdown-item">Past Questions</a>
+                                    <a href="../course.html" class="dropdown-item ">Courses</a>
+                                    <a href="past.html" class="dropdown-item active">Past Questions</a>
                                 </div>
                             </div>
-                            <a href="teacher.html" class="nav-item nav-link">Teachers</a>
+                            <a href="../teacher.html" class="nav-item nav-link">Teachers</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Blog</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Blog List</a>
-                                    <a href="single.html" class="dropdown-item active">Blog Detail</a>
+                                    <a href="../blog.html" class="dropdown-item">Our Blog</a>
+                                    <a href="../single.html" class="dropdown-item">Blog Detail</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="../contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
                     </div>
                 </nav>
-    
+
             </div>
         </div>
     </div>
@@ -340,310 +340,348 @@
                 font-size: 1.2rem;
                 /* slightly smaller font on smaller screens */
             }
-    
+
             #navbarCollapse .btn {
                 font-size: 1.2rem;
                 /* smaller Join Now button font */
                 padding: 0.4rem 0.8rem;
                 /* adjust padding for smaller screens */
             }
-    
+
             .navbar-nav.py-0>.nav-item {
                 margin-bottom: 14px;
                 /* slightly bigger spacing on smaller screens */
             }
         }
-    
-    
+
+
         @media (max-width: 450px) {
             #navbarCollapse .nav-link {
                 font-size: 0.95rem;
                 /* smaller font for nav links */
             }
-    
+
             #navbarCollapse .btn {
                 font-size: 0.95rem;
                 /* smaller font for the Join Now button */
             }
-    
+
             .navbar-nav.py-0 {
                 display: flex;
                 flex-direction: column;
                 /* stack vertically */
             }
-    
+
             .navbar-nav.py-0>.nav-item {
                 margin-bottom: 10px;
                 /* space between items */
             }
-    
+
             .navbar-nav.py-0>.nav-item:last-child {
                 margin-bottom: 0;
                 /* no extra space after last item */
             }
-    
+
+        }
+    </style>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header"
+        style="margin-bottom: 50px; background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image.jpg') no-repeat center center; background-size: cover; height: 70vh;">
+        <div class="container h-100">
+            <div class="d-flex flex-column justify-content-center align-items-center text-center h-100"
+                data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+                <h3 class="display-4 text-white text-uppercase" style="font-size: 3rem;">Past Questions</h3>
+                <div class="d-inline-flex text-white" style="font-size: 1.2rem;">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="docs/index.html">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase" style="color: #6f42c1;">Categories</p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase" style="color: orange;">Questions</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            once: true      // animate only once
+        });
+    </script>
+    <!-- Header End -->
+    <style>
+        @media (max-width: 390px) {
+            .d-flex.h-100 h3 {
+                font-size: 1.8rem !important;
+            }
+
+            .d-inline-flex.text-white {
+                font-size: 0.7rem !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.25rem;
+            }
+
+            .d-inline-flex.text-white p,
+            .d-inline-flex.text-white i {
+                margin: 0 2px;
+            }
         }
     </style>
 
 
   
-    <!-- Header Start -->
-    <div class="container-fluid page-header" style="margin-bottom: 90px;">
-        <div class="container h-100">
-            <div class="d-flex flex-column justify-content-center align-items-center text-center h-100" data-aos="fade-up"
-                data-aos-delay="0" data-aos-duration="800">
-                <h3 class="display-4 text-white text-uppercase" style="font-size: 3rem;">BLOG</h3>
-                <div class="d-inline-flex text-white" style="font-size: 1.2rem;">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase" style="color: orange;">BLOG DETAILS</p>
-                </div>
-            </div>
-    
+
+    <style>
+        /* View More Button Styles */
+        .view-more-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2a2a2a;
+            /* Orange */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more-btn:hover {
+            background-color: #1e1e1e;
+            color: #fff;
+            /* Darker orange on hover */
+        }
+
+        @media (max-width: 576px) {
+            .view-more-btn {
+                font-size: 14px;
+                padding: 10px 24px;
+            }
+        }
+
+        /* Category Item and Subject Row Styles */
+        .cat-item {
+            height: 180px;
+            width: 100%;
+            /* Let it stretch fully in column */
+            margin-bottom: 0px;
+            /* Remove spacing from item */
+        }
+
+        .cat-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .cat-overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Reduce gap between grid items */
+        .subject-row {
+            margin-left: -100px;
+            /* Or whatever small gutter you actually want */
+            margin-right: -100px;
+            row-gap: 0;
+        }
+
+        .subject-row>.col-lg-3,
+        .subject-row>.col-md-6 {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 0px;
+        }
+
+        /* Responsive adjustments for small screens */
+        @media (max-width: 768px) {
+            .cat-item {
+                width: 100%;
+                /* Less than full width */
+                margin: 0 auto;
+                /* Center it horizontally */
+            }
+
+            .subject-row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .subject-row>.col-md-6 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        /* Responsive Heading */
+        .responsive-heading {
+            font-size: 45px;
+        }
+
+        @media (max-width: 992px) {
+            .responsive-heading {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .responsive-heading {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .responsive-heading {
+                font-size: 35px;
+            }
+        }
+    </style>
+
+
+<div class="contain" style="margin-top: 80px;">
+    <header class="main-header">
+        <div class="text-content" data-aos="fade-right">
+            <h1>Access All <br />Exams Past Questions</h1>
+            <p class="bounce-text">
+                Get instant access to a comprehensive collection of past exam questions across various subjects and courses.
+                This resource helps you prepare effectively by practicing real questions used in previous exams.
+                Ideal for students who want to boost their confidence, improve their understanding, and achieve academic
+                success.
+                Start exploring past questions today and stay ahead in your studies!
+            </p>
         </div>
-    </div>
-    <!-- Header End -->
-
-
-    <!-- Detail Start -->
-    <div class="container-fluid py-5" style="margin-top: -80px;">
-
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="mb-5">
-                        <h6 class="text-primary mb-3">June 11, 2025</h6>
-                        <h1 class="mb-5">Why A+ NextGen Learn is Redefining the Future of Digital Education</h1>
-                        <img class="img-fluid rounded w-100 mb-4" src="img/learning.jpg" alt="Image" data-aos="zoom-in">
-                        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-                        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-                        <script>
-                            AOS.init({
-                                duration: 1100,
-                                once: true
-                            });
-                        </script>
-                        <p>
-                            In a world evolving at the speed of code, traditional education is simply not enough. That’s where<strong style="color: orange;">A+ Nextgen Learn</strong>
-                            steps in — not just as a learning platform, but as a movement. We’re not here to do what
-                            others have done. We’re here to flip the script and teach the next generation of learners the smart way — the
-                            <em style="color: orange;">next-gen</em> way.                       
-                         </p>
-                        <p>
-                            At A+ NextGen Learn, we combine <strong style="color: orange;">coding, creativity, and community</strong> to craft a learning experience
-                            that’s more than just academic — it’s <em style="color: orange;">revolutionary</em>. Whether you're learning how to build your first
-                            website, diving deep into app development, or exploring data science, we make it engaging, interactive, and
-                            real-world focused.                        
-                        </p>
-                        <h2 class="mb-4">What Makes A+ Nextgen Learn Different?</h2>
-                        <img class="img-fluid rounded w-50 float-left mr-4 mb-3 responsive-float-img" src="img/Prog.webp" alt="Image"
-                            style="height: 450px; object-fit: cover;" data-aos="fade-right">
-                           <style>
-                            @media (max-width: 768px) {
-                            .responsive-float-img {
-                            float: none !important;
-                            display: block;
-                            margin: 0 auto 20px auto !important;
-                            width: 100% !important;
-                            height: auto !important;
-                            }
-                            }
-                        </style>
-                                               
-                   
-
-                            <p>
-                                Unlike other platforms that overload students with theory and long lectures, we simplify concepts and bring them to
-                                life through:
-                            <ul>
-                                <li><strong style="color: orange;">Hands-on Projects:</strong> From your first line of HTML to building real apps, you’ll build, break, and
-                                    rebuild.</li>
-                                <li><strong style="color: orange;">Gamified Lessons:</strong> We make learning fun. Earn XP, unlock achievements, and level up like you’re
-                                    in a video game.</li>
-                                <li><strong style="color: orange;">Multilingual Support:</strong> Sometimes you need things explained in a way you understand. That’s why
-                                    we mix formal English with friendly, even Nigerian Pidgin like: <em style="color: orange;">“No worry, we go break am down for
-                                        you.”</em></li>
-                            </ul>                           
-                         </p>
-                        <p>
-                            We’re also big on community. With our <strong style="color: orange;"></strong>>student support system</strong>, you’re never alone. Stuck on a bug?
-                            Need motivation? Just ask. Our community is full of learners like you — passionate, focused, and ready to grow
-                            together.
-                        </p>
-    
-                    </div>
-
-                    <!-- Comment List -->
-                    <div class="mb-5">
-                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">3 Comments</h3>
-                    
-                        <div class="media mb-4" data-aos="fade-up" data-aos-delay="100">
-                            <img src="img/see.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
-                            <div class="media-body">
-                                <h6>Emmanuel Koomson <small><i>05 June 2050 at 9:15am</i></small></h6>
-                                <p>This article was a game changer for me. I love how
-                                    <strong style="color: orange;">A+ Nextgen Learn</strong> breaks complex topics into digestible parts.
-                                    The real-life examples made everything easier to understand. Keep it up!
-                                </p>
-                                <button class="btn btn-sm btn-secondary">Reply</button>
-                            </div>
-                        </div>
-                    
-                        <div class="media mb-4" data-aos="fade-up" data-aos-delay="200">
-                            <img src="img/Abekah.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
-                            <div class="media-body">
-                                <h6>Samuel Egyin <small><i>04 June 2050 at 4:45pm</i></small></h6>
-                                <p>I’ve followed a lot of learning platforms, but
-                                    <strong style="color: orange;">A+ Nextgen Learn</strong> is on a different level.
-                                    The style is engaging, and I really appreciate the mix of fun and professionalism.
-                                    This is how education should feel!
-                                </p>
-                                <button class="btn btn-sm btn-secondary">Reply</button>
-                    
-                                <div class="media mt-4" data-aos="fade-up" data-aos-delay="300">
-                                    <img src="img/John.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
-                                    <div class="media-body">
-                                        <h6>John Mensah <small><i>04 June 2050 at 5:10pm</i></small></h6>
-                                        <p>Absolutely agree with you, Samuel! The way this platform combines visuals,
-                                            examples, and even a bit of humor is so refreshing. I’ve already recommended
-                                            it to my classmates!
-                                        </p>
-                                        <button class="btn btn-sm btn-secondary">Reply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-
-                    <!-- Comment Form -->
-                    <div class="bg-secondary rounded p-5" data-aos="fade-right" data-aos-delay="100">
-
-                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Leave a comment</h3>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" class="form-control border-0" id="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" class="form-control border-0" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="website">Website</label>
-                                <input type="url" class="form-control border-0" id="website">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control border-0"></textarea>
-                            </div>
-                            <div class="form-group mb-0">
-                                <input type="submit" value="Leave Comment" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-5 mt-lg-0">
-                    <!-- Author Bio -->
-                    <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4" data-aos="fade-left" data-aos-delay="100">
-
-               
-                        <img src="img/Sam.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
-                        <h3 class="text-primary mb-3">Samuel Egyin</h3>
-                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
-                        <p class="text-white m-0">A+ NextGen Learn is a very good website. very inspiring Educative and simple to learn</p>
-                    </div>
-
-                <!-- Search Form -->
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg" placeholder="Keyword">
-                            <div class="input-group-append">
-                                <span class="input-group-text bg-transparent text-primary"><i class="fa fa-search"></i></span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                
-                <!-- Category List -->
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Categories</h3>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <a href="" class="text-decoration-none h6 m-0">Programming</a>
-                            <span class="badge badge-primary badge-pill">150</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <a href="" class="text-decoration-none h6 m-0">Web Development </a>
-                            <span class="badge badge-primary badge-pill">131</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <a href="" class="text-decoration-none h6 m-0">Operating System</a>
-                            <span class="badge badge-primary badge-pill">78</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <a href="" class="text-decoration-none h6 m-0">Computer Engineering</a>
-                            <span class="badge badge-primary badge-pill">56</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <a href="" class="text-decoration-none h6 m-0">Database</a>
-                            <span class="badge badge-primary badge-pill">98</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Recent Post -->
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Recent Post</h3>
-                    <a class="d-flex align-items-center text-decoration-none mb-3" href="">
-                        <img class="img-fluid rounded" src="img/blog-80x80.jpg" alt="">
-                        <div class="pl-3">
-                            <h6 class="m-1">Simple tips to manage stress in tech life</h6>
-                            <small>Jan 01, 2025</small>
-                        </div>
-                    </a>
-                    <a class="d-flex align-items-center text-decoration-none mb-3" href="">
-                        <img class="img-fluid rounded" src="img/blog-80x80.jpg" alt="">
-                        <div class="pl-3">
-                            <h6 class="m-1">How to stay productive as a developer</h6>
-                            <small>July 15, 2025</small>
-                        </div>
-                    </a>
-                    <a class="d-flex align-items-center text-decoration-none mb-3" href="">
-                        <img class="img-fluid rounded" src="img/blog-80x80.jpg" alt="">
-                        <div class="pl-3">
-                            <h6 class="m-1">Turning challenges to code in the IT Journey</h6>
-                            <small>Jun 01, 2025</small>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Tag Cloud -->
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
-                    <div class="d-flex flex-wrap m-n1">
-                        <a href="" class="btn btn-outline-primary m-1">Software Engineer</a>
-                        <a href="" class="btn btn-outline-primary m-1">Web Developer</a>
-                        <a href="" class="btn btn-outline-primary m-1">UI/UX Designer</a>
-                        <a href="" class="btn btn-outline-primary m-1">System Analyst</a>
-                        <a href="" class="btn btn-outline-primary m-1">Database Admin</a>
-                        <a href="" class="btn btn-outline-primary m-1">Network Engineer</a>
-
-                    </div>
-                </div>
-
-                </div>
-            </div>
+        
+        <div class="header-image" data-aos="fade-left">
+            <img src="image4.jpg" alt="Web Dev Illustration" />
         </div>
-    </div>
-    <!-- Detail End -->
+    </header>
+    <!-- Include AOS JS before </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // 1 second
+            once: true // animate only once
+        });
+    </script>
+
+    <style>
+        .start-course-btn {
+            text-decoration: none;
+        }
+
+        .start-course-btn:hover {
+            text-decoration: none;
+        }
+    </style>
 
 
-    <!-- Footer Start -->
+
+    <div class="frontend-title">ALL PAST QUESTIONS</div>
+    <section class="cards" style="margin-top: 40px;">
+        <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-image">
+                <img src="level 100.jpg" alt="Level 100 Past Questions">
+            </div>
+            <p class="course-label">Past Questions</p>
+            <h2 class="course-title">Level 100<br> Past Questions</h2>
+            <p class="course-desc">
+                Access a comprehensive collection of Level 100 past exam questions to help you prepare and excel in your
+                assessments.
+            </p>
+            <a href="level100/past_questions.html" class="start-course-btn" rel="noopener noreferrer">
+                View Questions
+            </a>
+        </div>
+        
+        <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-image">
+                <img src="level_200.jpg" alt="Level 200 Past Questions">
+            </div>
+            <p class="course-label">Past Questions</p>
+            <h2 class="course-title">Level 200<br>  Past Questions</h2>
+            <p class="course-desc">
+                Browse Level 200 past exam papers covering multiple subjects to enhance your study and revision.
+            </p>
+            <a href="level200/past_questions.html" class="start-course-btn" rel="noopener noreferrer">
+                View Questions
+            </a>
+        </div>
+        
+        <div class="course-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-image">
+                <img src="level_300.avif" alt="Level 300 Past Questions">
+            </div>
+            <p class="course-label">Past Questions</p>
+            <h2 class="course-title">Level 300<br> Past Questions</h2>
+            <p class="course-desc">
+                Prepare for your Level 300 exams with a rich archive of previous years' question papers.
+            </p>
+            <a href="level300/past_questions.html" class="start-course-btn" rel="noopener noreferrer">
+                View Questions
+            </a>
+        </div>
+
+        <div class="course-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-image">
+                <img src="level_400.jpg" alt="Level 400 Past Questions">
+            </div>
+            <p class="course-label">Past Questions</p>
+            <h2 class="course-title">Level 400<br>Past Questions</h2>
+            <p class="course-desc">
+                Get ready for your Level 400 exams with a comprehensive collection of past question papers to help you revise
+                effectively.
+            </p>
+            <a href="level400/past_questions.html" class="start-course-btn" rel="noopener noreferrer">
+                View Questions
+            </a>
+        </div>
+        
+        
+    </section>
+
+   
+
+    <script>
+
+
+
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+    </script>
+
+</div>
+
+
+
+   
+
+
     <!-- Footer Start -->
     <div class="container-fluid bg-charcoal text-white py-5 px-sm-4 px-lg-5" style="background-color: #2c2c2c;">
         <div class="row">
@@ -660,7 +698,7 @@
                     <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-    
+
             <!-- Quick Links -->
             <div class="col-lg-4 mb-4">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Quick Links</h5>
@@ -676,13 +714,14 @@
                     <li><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Technical Support
                             Specialist</a></li>
                 </ul>
-    
+
             </div>
-    
+
             <!-- Newsletter Signup -->
             <div class="col-lg-4 mb-4">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Newsletter</h5>
-                <p>Stay updated with our latest news, courses, and special offers. Subscribe to our newsletter today.</p>
+                <p>Stay updated with our latest news, courses, and special offers. Subscribe to our newsletter today.
+                </p>
                 <form class="mt-3">
                     <div class="input-group">
                         <input type="email" class="form-control border-light" placeholder="Your Email Address"
@@ -695,7 +734,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Bottom Bar -->
     <div class="container-fluid bg-charcoal text-white py-3" style="background-color: #232323;">
         <div class="row align-items-center">
@@ -713,7 +752,6 @@
         </div>
     </div>
     <!-- Footer End -->
-    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -727,11 +765,11 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="../mail/jqBootstrapValidation.min.js"></script>
+    <script src="../mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
