@@ -901,7 +901,8 @@
     
 
     
-                    <button class="read-more">Read More</button>
+                    <button id="read-more-btn" class="read-more">Read More</button>
+
                 </div>
     
     
@@ -910,6 +911,19 @@
     
     </section>
     
+    <script>
+        document.getElementById("read-more-btn").addEventListener("click", function () {
+            var aboutSection = document.getElementById("about-content");
+            if (aboutSection.style.display === "none") {
+                aboutSection.style.display = "block";
+                this.textContent = "Hide"; // Optional: change button text
+            } else {
+                aboutSection.style.display = "none";
+                this.textContent = "Read More";
+            }
+        });
+    </script>
+      
     
     <!-- About End -->
     
@@ -922,182 +936,209 @@
     </script>
     <!-- About End -->
 
+    <div id="about-content" style="display: none;">
 
-    <section id="about-us" class="about-container">
-        <header class="about-header" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
-            <h1>A+ Next Gen Learn</h1>
-            <p>Empowering the Next Generation with Cutting-Edge Learning Solutions</p>
-        </header>
+        <section id="about-us" class="about-container">
+            <header class="about-header" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+                <h1>A+ Next Gen Learn</h1>
+                <p>Empowering the Next Generation with Cutting-Edge Learning Solutions</p>
+            </header>
         
-    
-        <div class="about-mv">
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="svg-icon">
-                    <!-- Target / Goal SVG Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 12v.01M9.172 14.828a4 4 0 0 1 5.656 0M7.05 16.95a8 8 0 0 1 9.9 0M4.222 19.778a12 12 0 0 1 15.556 0M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-13.414l.707.707m12.02 12.02l-.707.707" />
-                    </svg>
-                </div>
-                <h2>Our Mission</h2>
-                <p>
-                    To deliver innovative, accessible, and high-quality educational resources that inspire lifelong learning
-                    and empower students worldwide.
-                    We believe in blending technology with creativity to make learning engaging and effective.
-                </p>
-            </article>
-            
-    
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="svg-icon">
-                    <!-- Telescope / Vision SVG Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 2l-7 7m-2.5 1.5L9 12 3 21l9-6 1.5-2.5M16.5 3.5L20.5 7.5" />
-                    </svg>
-                </div>
-                <h2>Our Vision</h2>
-                <p>
-                    To become the leading platform for next-gen learning by continuously evolving with technology and
-                    fostering a community of curious minds.
-                    We envision a world where education knows no boundaries and every learner has the tools to succeed.
-                </p>
-            </article>
-            
-    
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="svg-icon">
-                    <!-- Values / Balance / Justice Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 3v2m0 0c3.866 0 7 3.134 7 7 0 2.623-1.42 4.915-3.5 6.32M12 5a7 7 0 00-7 7c0 2.623 1.42 4.915 3.5 6.32M5 21h14" />
-                    </svg>
-                </div>
-                <h2>Our Values</h2>
-                <ul>
-                    <li><strong>Innovation:</strong> Embracing the latest technology to enhance learning experiences.</li>
-                    <li><strong>Inclusivity:</strong> Making education accessible to everyone, everywhere.</li>
-                    <li><strong>Integrity:</strong> Building trust through transparency and quality content.</li>
-                    <li><strong>Passion:</strong> Driving change through dedication to education.</li>
-                </ul>
-            </article>
-            
-           
-              
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="400">
-                <div class="svg-icon">
-                    <!-- Graduation Cap Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-7" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 21v-7" />
-                    </svg>
-                </div>
-                <h2>Our Commitment</h2>
-                <p>
-                    We provide innovative and accessible educational tools designed to empower learners at every stage.
-                    Through cutting-edge technology and engaging content, we aim to unlock potential and foster lifelong learning.
-                </p>
-            </article>
-            
-    
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="500">
-                <div class="svg-icon" style="margin-bottom: 1rem;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V7l-8-4-8 4v5c0 6 8 10 8 10z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
-                </div>
-                  
-                <h2>Why Choose Us?</h2>
-                <ul class="choose-list">
-                    <li><strong>Expert Educators:</strong> Our team consists of passionate professionals dedicated to your
-                        success.
-                    </li>
-                    <li><strong>Advanced Technology:</strong> We use the latest tools to deliver interactive and adaptive
+        
+            <div class="about-mv">
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="svg-icon">
+                        <!-- Target / Goal SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 12v.01M9.172 14.828a4 4 0 0 1 5.656 0M7.05 16.95a8 8 0 0 1 9.9 0M4.222 19.778a12 12 0 0 1 15.556 0M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-13.414l.707.707m12.02 12.02l-.707.707" />
+                        </svg>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <p>
+                        To deliver innovative, accessible, and high-quality educational resources that inspire lifelong learning
+                        and empower students worldwide.
+                        We believe in blending technology with creativity to make learning engaging and effective.
+                    </p>
+                </article>
+        
+        
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="svg-icon">
+                        <!-- Telescope / Vision SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 2l-7 7m-2.5 1.5L9 12 3 21l9-6 1.5-2.5M16.5 3.5L20.5 7.5" />
+                        </svg>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>
+                        To become the leading platform for next-gen learning by continuously evolving with technology and
+                        fostering a community of curious minds.
+                        We envision a world where education knows no boundaries and every learner has the tools to succeed.
+                    </p>
+                </article>
+        
+        
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="svg-icon">
+                        <!-- Values / Balance / Justice Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2m0 0c3.866 0 7 3.134 7 7 0 2.623-1.42 4.915-3.5 6.32M12 5a7 7 0 00-7 7c0 2.623 1.42 4.915 3.5 6.32M5 21h14" />
+                        </svg>
+                    </div>
+                    <h2>Our Values</h2>
+                    <ul>
+                        <li><strong>Innovation:</strong> Embracing the latest technology to enhance learning experiences.</li>
+                        <li><strong>Inclusivity:</strong> Making education accessible to everyone, everywhere.</li>
+                        <li><strong>Integrity:</strong> Building trust through transparency and quality content.</li>
+                        <li><strong>Passion:</strong> Driving change through dedication to education.</li>
+                    </ul>
+                </article>
+        
+        
+        
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="svg-icon">
+                        <!-- Graduation Cap Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21v-7" />
+                        </svg>
+                    </div>
+                    <h2>Our Commitment</h2>
+                    <p>
+                        We provide innovative and accessible educational tools designed to empower learners at every stage.
+                        Through cutting-edge technology and engaging content, we aim to unlock potential and foster lifelong
                         learning.
-                    </li>
-                    <li><strong>Student-Centered Approach:</strong> Personalized learning paths to suit every student’s
-                        needs.
-                    </li>
-                </ul>
-            </article>
-
-            <article class="mv-box" data-aos="fade-up" data-aos-delay="600">
-                <div class="svg-icon">
-                    <!-- Target / Goal SVG Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="#ffa65e"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 21v-6l-3 3 1.5-7.5 7.5-1.5-3 3h6l-9 9z" />
-                        <path d="M13 7l4-4" />
-                        <path d="M16 3l2 2" />     
-                     </svg>
-                </div>
-                <h2>Experience</h2>
-                <p>
-                    The A+ NEXTGEN PROJECT has been an enriching journey, filled with innovative collaborations, real-world
-                    challenges,
-                    and impactful learning moments. Through teamwork, creativity, and problem-solving, we explored advanced
-                    technologies
-                    and developed solutions that address real educational needs. This experience has empowered us to grow as
-                    forward-thinking
-                    professionals ready to shape the future of learning.
-                </p>
-            </article>
-            
-
-           
-    
-        </div>
-    
-        <section class="team-section" aria-label="Meet the Team">
-            <h2 data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">Meet Our Team</h2>
-
-            <div class="team-grid">
-                <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="img/unkown.jpg" alt="John Doe, CEO" />
-                    <h3>Sampson A+</h3>
-                    <p>Founder & CEO</p>
-                </div>
-                <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="img/unkown.jpg" alt="Jane Smith, CTO" />
-                    <h3>Lawrence Egyin</h3>
-                    <p>Programmer</p>
-                </div>
-                <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="img/unkown.jpg" alt="Mark Lee, Head of Design" />
-                    <h3>Eugene</h3>
-                    <p>Head of Design</p>
-                </div>
-                <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="img/unkown.jpg" alt="Emily Davis, Marketing Lead" />
-                    <h3>Samuel</h3>
-                    <p>Web Developer</p>
-                </div>
+                    </p>
+                </article>
+        
+        
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="500">
+                    <div class="svg-icon" style="margin-bottom: 1rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 22s8-4 8-10V7l-8-4-8 4v5c0 6 8 10 8 10z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+        
+                    <h2>Why Choose Us?</h2>
+                    <ul class="choose-list">
+                        <li><strong>Expert Educators:</strong> Our team consists of passionate professionals dedicated to your
+                            success.
+                        </li>
+                        <li><strong>Advanced Technology:</strong> We use the latest tools to deliver interactive and adaptive
+                            learning.
+                        </li>
+                        <li><strong>Student-Centered Approach:</strong> Personalized learning paths to suit every student’s
+                            needs.
+                        </li>
+                    </ul>
+                </article>
+        
+                <article class="mv-box" data-aos="fade-up" data-aos-delay="600">
+                    <div class="svg-icon">
+                        <!-- Target / Goal SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
+                            stroke="#ffa65e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21v-6l-3 3 1.5-7.5 7.5-1.5-3 3h6l-9 9z" />
+                            <path d="M13 7l4-4" />
+                            <path d="M16 3l2 2" />
+                        </svg>
+                    </div>
+                    <h2>Experience</h2>
+                    <p>
+                        The A+ NEXTGEN PROJECT has been an enriching journey, filled with innovative collaborations, real-world
+                        challenges,
+                        and impactful learning moments. Through teamwork, creativity, and problem-solving, we explored advanced
+                        technologies
+                        and developed solutions that address real educational needs. This experience has empowered us to grow as
+                        forward-thinking
+                        professionals ready to shape the future of learning.
+                    </p>
+                </article>
+        
+        
+        
+        
             </div>
-            
-            <!-- Make sure you have these included: -->
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script>
-                AOS.init({
-                    duration: 1000,
-                    once: true
-                });
-            </script>
+        
             
         </section>
+
+    </div>
+
+    <section class="team-section" aria-label="Meet the Team">
+        <h2 data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">Meet Our Team</h2>
     
-        <div class="cta-section">
-            <button class="cta-btn" onclick="exploreCourses()">Explore Our Courses</button>
+        <div class="team-grid">
+            <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="100">
+                <img src="img/unkown.jpg" alt="John Doe, CEO" />
+                <h3>Sampson A+</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="200">
+                <img src="img/unkown.jpg" alt="Jane Smith, CTO" />
+                <h3>Lawrence Egyin</h3>
+                <p>Programmer</p>
+            </div>
+            <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="300">
+                <img src="img/unkown.jpg" alt="Mark Lee, Head of Design" />
+                <h3>Eugene</h3>
+                <p>Head of Design</p>
+            </div>
+            <div class="team-member" tabindex="0" data-aos="zoom-in" data-aos-delay="400">
+                <img src="img/unkown.jpg" alt="Emily Davis, Marketing Lead" />
+                <h3>Samuel</h3>
+                <p>Web Developer</p>
+            </div>
         </div>
+    
+        <!-- Make sure you have these included: -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
+    
     </section>
+    
+    <div class="cta-section">
+        <a href="course.html" class="cta-btn">Explore Our Courses</a>
+    </div>
+    <style>
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    
+        .cta-btn:hover {
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+      
+      
+
+  
     
     <style>
         /* === GLOBAL CONTAINER === */
