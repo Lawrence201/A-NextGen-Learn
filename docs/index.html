@@ -1622,13 +1622,21 @@
         </div>
     </div>
 
-    <div id="videoModal" class="video-modal">
-        <div class="video-overlay" onclick="closeVideoModal()"></div>
-        <div class="video-box">
-            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
-            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
+<!-- Video Modal -->
+<div id="videoModal" class="video-modal">
+    <!-- Dimmed Background -->
+    <div class="video-overlay" onclick="closeVideoModal()"></div>
+
+    <!-- Video Box (centered) -->
+    <div class="video-box">
+        <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+
+        <!-- YouTube iframe with fullscreen and autoplay support -->
+        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
     </div>
+</div>
+
 
     <!-- Courses End -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
