@@ -1056,7 +1056,7 @@
     </div>
 </div>
 
-<!-- Include AOS JS before </body> -->
+<!-- Include AOS JS before  -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init({
@@ -1217,150 +1217,334 @@
                 </div>
             
                 <!-- Main heading -->
-                <h1 style="font-weight: 700; color: #2c3e50; font-size: 2.3rem;" data-aos="fade-up" data-aos-delay="200">Our Premium Courses</h1>
+                <h1 style="font-weight: 700; color: #2c3e50; font-size: 2.3rem;" data-aos="fade-up" data-aos-delay="200">OUR TOP VIDEOS</h1>
             </div>
             
               
-              
+            <style>
+                /* ------------------------------
+                               Fullscreen Video Modal Styles
+                            ------------------------------ */
+            
+                /* Modal Container */
+                .video-modal {
+                    display: none;
+                    position: fixed;
+                    inset: 0;
+                    z-index: 9999;
+                }
+            
+                /* Dimmed Overlay */
+                .video-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.9);
+                }
+            
+                /* Centered Video Box */
+                .video-box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 90vw;
+                    max-width: 960px;
+                    height: 55vh;
+                    background: #000;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    z-index: 10000;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+                }
+            
+                /* Iframe inside video box */
+                .video-box iframe {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            
+                /* Close Button */
+                .close-btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    color: white;
+                    font-size: 28px;
+                    font-weight: bold;
+                    z-index: 10001;
+                    cursor: pointer;
+                }
+            
+                /* ------------------------------
+                               Responsive Styles
+                            ------------------------------ */
+            
+                /* Tablets and small laptops */
+                @media (max-width: 1028px) {
+                    .video-box {
+                        width: 95vw;
+                        height: 60vh;
+                        border-radius: 8px;
+                    }
+            
+                    .close-btn {
+                        font-size: 24px;
+                        top: 8px;
+                        right: 12px;
+                    }
+                }
+            
+                /* Smartphones */
+                @media (max-width: 480px) {
+                    .video-box {
+                        width: 98vw;
+                        height: 50vh;
+                        border-radius: 6px;
+                    }
+            
+                    .close-btn {
+                        font-size: 22px;
+                        top: 6px;
+                        right: 10px;
+                    }
+                }
+            
+                /* Extra small devices */
+                @media (max-width: 380px) {
+                    .video-box {
+                        width: 100vw;
+                        height: 45vh;
+                        border-radius: 4px;
+                    }
+            
+                    .close-btn {
+                        font-size: 20px;
+                        top: 5px;
+                        right: 8px;
+                    }
+                }
+            </style>
+            
            
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="300"
                     data-aos-delay="0">
                     <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
-                        <!-- 1) Image + 50% Off Badge -->
-                        <img class="img-fluid" src="img/python.png" alt="">
-                        <span class="badge badge-danger position-absolute"
-                            style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
-                            20% Off
-                        </span>
-                    
+                     
+                       
+                        <!-- Clickable Video Preview -->
+                        <div class="ratio ratio-16x9" style="height: 190px; cursor: pointer;"
+                            onclick="openVideoModal('https://www.youtube.com/embed/OJzaauQKMLI?autoplay=1')">
+                            <div style="position: relative; width: 100%; height: 100%;">
+                                <img src="https://img.youtube.com/vi/OJzaauQKMLI/hqdefault.jpg" alt="Video Thumbnail"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                    <i class="fa fa-play-circle" style="font-size: 48px; color: white;"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                
                         <!-- 2) Card Body -->
                         <div class="bg-secondary p-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>´+25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>04h 45m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>150+ Views</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 02m</small>
                             </div>
-                    
-                            <a class="h6 d-block mb-2" href="" style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
-                                Python 6 in 1 Bundle from Zero to Hero
+
+                            <a class="h6 d-block mb-2" style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;text-decoration: none;">
+                                How to Calculate GPA, CGPA & FGPA at GCTU
                             </a>
-                            
-                    
+                
                             <div class="border-top mt-3 pt-3">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="m-0" style="font-size: 0.9rem;">
-                                        <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                    </h6>
-                                    <!-- 3) Price: strikethrough old + new -->
-                                    <div class="d-flex align-items-baseline">
-                                        <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">
-                                            GH₵750
-                                        </h6>
-                                        <h5 class="m-0">GH₵600</h5>
-                                    </div>
+                                    <a href="https://youtu.be/OJzaauQKMLI?si=QZ3QRxDd-cJEuoSz" target="_blank"
+                                        style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-thumbs-up mr-1"></i>Like 
+                                    </a>
+                                      
+                                    <a href="#" onclick="shareVideo(event)" style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-share-alt mr-1"></i>Share
+                                    </a>
+                                    
+                                    <script>
+                                        function shareVideo(event) {
+                                            event.preventDefault();
+                                            if (navigator.share) {
+                                                navigator.share({
+                                                    title: "Watch this video on GPA, CGPA & FGPA at GCTU",
+                                                    url: "https://youtu.be/OJzaauQKMLI?si=QZ3QRxDd-cJEuoSz"
+                                                })
+                                                    .then(() => console.log('Shared successfully'))
+                                                    .catch((error) => console.log('Sharing failed', error));
+                                            } else {
+                                                alert("Sharing is not supported on this browser. Please copy the link manually.");
+                                            }
+                                        }
+                                    </script>
+                                    
                                 </div>
                             </div>
-                    
-                            <!-- 4) Purchase Now Button -->
+                
                             <div class="text-center mt-3">
-                                <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                                <button class="btn btn-primary px-3 py-2"
+                                    onclick="openVideoModal('https://www.youtube.com/embed/OJzaauQKMLI?autoplay=1')">
+                                    Watch Now
+                                </button>
                             </div>
+                            
+                         
+
+                            
                         </div>
                     </div>
-                      
-                    
                 </div>
+                <!-- FULLSCREEN VIDEO MODAL -->
+                
+                
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="450"
                     data-aos-delay="200">
 
 
                     <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
-                        <!-- Course Image -->
-                        <img class="img-fluid" src="img/javascripts.jpg" alt="">
+                        <!-- 1) YouTube Video Embed (replacing the image) -->
+                        <!-- Clickable YouTube Thumbnail for Ldk3-uFguLM -->
+                        <div class="ratio ratio-16x9" style="height: 190px; cursor: pointer;"
+                            onclick="openVideoModal('https://www.youtube.com/embed/Ldk3-uFguLM?autoplay=1')">
+                            <div style="position: relative; width: 100%; height: 100%;">
+                                <img src="https://img.youtube.com/vi/Ldk3-uFguLM/hqdefault.jpg" alt="Video Thumbnail"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                    <i class="fa fa-play-circle" style="font-size: 48px; color: white;"></i>
+                                </div>
+                            </div>
+                        </div>
+
                     
-                        <!-- Discount Badge -->
-                        <span class="badge badge-danger position-absolute"
-                            style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
-                            20% Off
-                        </span>
-                    
-                        <!-- Course Content -->
+                        <!-- 2) Card Body -->
                         <div class="bg-secondary p-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>+25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>03h 50m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>180+ Views</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>07m 10s</small>
                             </div>
-                            <a class="h6 d-block mb-2" href="" style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
-                            
-                                Javascript & Web Design 6 in 1 Bundle
+                    
+                            <a class="h6 d-block mb-2"
+                                style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;text-decoration: none;">
+                                NEVER LOOSE YOUR WHATSAPP DATA AGAIN ! NO MATTER THE SITUATION !
                             </a>
                     
                             <div class="border-top mt-3 pt-3">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="m-0" style="font-size: 0.9rem;">
-                                        <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                    </h6>
-                    
-                                    <!-- Price: Original and Discounted -->
-                                    <div class="d-flex align-items-baseline">
-                                        <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">GH₵750</h6>
-                                        <h5 class="m-0">GH₵600</h5>
-                                    </div>
+                                    <a href="https://youtu.be/Ldk3-uFguLM?si=3YacvCa-Bhw-VJ23" target="_blank"
+                                        style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-thumbs-up mr-1"></i>Like
+                                    </a>
+                            
+                                    <a href="#" onclick="shareVideo(event)" style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-share-alt mr-1"></i>Share
+                                    </a>
+                            
+                                    <script>
+                                        function shareVideo(event) {
+                                            event.preventDefault();
+                                            if (navigator.share) {
+                                                navigator.share({
+                                                    title: "Watch this video on GPA, CGPA & FGPA at GCTU",
+                                                    url: "https://youtu.be/Ldk3-uFguLM?si=3YacvCa-Bhw-VJ23"
+                                                })
+                                                    .then(() => console.log('Shared successfully'))
+                                                    .catch((error) => console.log('Sharing failed', error));
+                                            } else {
+                                                alert("Sharing is not supported on this browser. Please copy the link manually.");
+                                            }
+                                        }
+                                    </script>
                                 </div>
                             </div>
+                            
                     
-                            <!-- Purchase Button -->
+                            <!-- 4) Watch Now Button links to YouTube -->
                             <div class="text-center mt-3">
-                                <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                                <button class="btn btn-primary px-3 py-2"
+                                    onclick="openVideoModal('https://www.youtube.com/embed/Ldk3-uFguLM?autoplay=1')">Watch Now</button>
+
                             </div>
+                    
+                    
+                    
                         </div>
                     </div>
                     
                 </div>
+
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="550"
                     data-aos-delay="400">
+
                     <div class="rounded overflow-hidden mb-2 position-relative hover-lift">
-                        <!-- Course Image -->
-                        <img class="img-fluid" src="img/java.png" alt="">
+                        <!-- 1) YouTube Thumbnail triggers modal -->
+                        <div class="ratio ratio-16x9" style="height: 190px; cursor: pointer;"
+                            onclick="openVideoModal('https://www.youtube.com/embed/dXlAq76kl3w?autoplay=1')">
+                            <div style="position: relative; width: 100%; height: 100%;">
+                                <img src="https://img.youtube.com/vi/dXlAq76kl3w/hqdefault.jpg" alt="Video Thumbnail"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                    <i class="fa fa-play-circle" style="font-size: 48px; color: white;"></i>
+                                </div>
+                            </div>
+                        </div>
                     
-                        <!-- Discount Badge -->
-                        <span class="badge badge-danger position-absolute"
-                            style="top: 15px; left: 15px; font-size: 0.9rem; padding: 0.4em 0.6em;">
-                            23.5% Off
-                        </span>
-                    
-                        <!-- Course Content -->
+                        <!-- 2) Card Body -->
                         <div class="bg-secondary p-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>70+ Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>05h 43m</small>
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>150+ Views</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>19m 56s</small>
                             </div>
                     
-                            <a class="h6 d-block mb-2" href="" style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem;">
-                            
-                                Java and Advanced Java full course
+                            <a class="h6 d-block mb-2"
+                                style="line-height: 1.4; font-weight: bolder; font-size: 1.0rem; text-decoration: none;">
+                                Watch Online Videos Offline Using VLC | No Extra Tools Needed!
                             </a>
                     
+                            <!-- 3) Like + Share -->
                             <div class="border-top mt-3 pt-3">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="m-0" style="font-size: 0.9rem;">
-                                        <i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                    </h6>
+                                    <a href="https://youtu.be/dXlAq76kl3w?si=pfkgdga4wg9-kdsD" target="_blank"
+                                        style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-thumbs-up mr-1"></i>Like
+                                    </a>
                     
-                                    <!-- Price Section -->
-                                    <div class="d-flex align-items-baseline">
-                                        <h6 class="text-muted m-0 mr-2" style="text-decoration: line-through;">GH₵650</h6>
-                                        <h5 class="m-0">GH₵500</h5>
-                                    </div>
+                                    <a href="#" onclick="shareVideo(event)" style="color: #44425A; text-decoration: none;">
+                                        <i class="fa fa-share-alt mr-1"></i>Share
+                                    </a>
+                    
+                                    <script>
+                                        function shareVideo(event) {
+                                            event.preventDefault();
+                                            if (navigator.share) {
+                                                navigator.share({
+                                                    title: "Watch this video on GPA, CGPA & FGPA at GCTU",
+                                                    url: "https://youtu.be/dXlAq76kl3w?si=pfkgdga4wg9-kdsD"
+                                                })
+                                                    .then(() => console.log('Shared successfully'))
+                                                    .catch((error) => console.log('Sharing failed', error));
+                                            } else {
+                                                alert("Sharing is not supported on this browser. Please copy the link manually.");
+                                            }
+                                        }
+                                    </script>
                                 </div>
                             </div>
                     
-                            <!-- Purchase Button -->
+                            <!-- 4) Watch Now Button -->
                             <div class="text-center mt-3">
-                                <a href="#" class="btn btn-primary px-3 py-2">Purchase Now</a>
+                                <button class="btn btn-primary px-3 py-2"
+                                    onclick="openVideoModal('https://www.youtube.com/embed/dXlAq76kl3w?autoplay=1')">Watch Now</button>
                             </div>
                         </div>
                     </div>
+                    
                     
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="650"
@@ -1437,6 +1621,15 @@
             </div>
         </div>
     </div>
+
+    <div id="videoModal" class="video-modal">
+        <div class="video-overlay" onclick="closeVideoModal()"></div>
+        <div class="video-box">
+            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <!-- Courses End -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -1457,7 +1650,35 @@
     
 </style>
 
+<script>
+    function openVideoModal(videoUrl) {
+        const modal = document.getElementById("videoModal");
+        const iframe = document.getElementById("videoFrame");
 
+        iframe.src = videoUrl;
+        modal.style.display = "block";
+
+        // ✅ Lock scroll on both <body> and <html>
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+    }
+
+    function closeVideoModal() {
+        const modal = document.getElementById("videoModal");
+        const iframe = document.getElementById("videoFrame");
+
+        iframe.src = "";
+        modal.style.display = "none";
+
+        // ✅ Restore scroll on both <body> and <html>
+        document.body.style.overflow = "auto";
+        document.documentElement.style.overflow = "auto";
+    }
+
+</script>
+
+    
+    
 
 
     <!-- Registration Start -->
