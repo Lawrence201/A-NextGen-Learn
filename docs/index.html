@@ -368,12 +368,33 @@
                             .dropdown-submenu .dropdown-item {
                                 padding-left: 2rem;
                             }
+                            .dropdown-submenu .dropdown-menu .dropdown-item {
+                               color: gray !important;            /* Default text color */
+                               background-color: transparent !important;  /* No background */
+                            }
+
+                            .dropdown-submenu .dropdown-menu .dropdown-item:hover {
+                               color: orange !important;          /* Text color on hover */
+                               background-color: transparent !important;  /* Prevent orange background */
+                            }
+
+
+
                         }
                     
                         /* Adjustments for smaller screens (≤480px) */
                         @media (max-width: 480px) {
                             .dropdown-submenu .dropdown-item {
                                 padding-left: 1.5rem;
+                            }
+                            .dropdown-submenu .dropdown-menu .dropdown-item {
+                               color: gray !important;            /* Default text color */
+                               background-color: transparent !important;  /* No background */
+                            }
+
+                            .dropdown-submenu .dropdown-menu .dropdown-item:hover {
+                               color: orange !important;          /* Text color on hover */
+                               background-color: transparent !important;  /* Prevent orange background */
                             }
                         }
                     
@@ -383,6 +404,15 @@
                                 padding-left: 1.5rem;
                                 font-size: 0.9rem;
                                 /* optional: smaller text on tiny screens */
+                            }
+                            .dropdown-submenu .dropdown-menu .dropdown-item {
+                               color: gray !important;            /* Default text color */
+                               background-color: transparent !important;  /* No background */
+                            }
+
+                            .dropdown-submenu .dropdown-menu .dropdown-item:hover {
+                               color: orange !important;          /* Text color on hover */
+                               background-color: transparent !important;  /* Prevent orange background */
                             }
                         }
                     </style>
@@ -403,10 +433,10 @@
                                     <!-- Pasco Submenu -->
                                     <!-- Pasco Submenu -->
                                     <div class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="past_questions/past.html" role="button" aria-haspopup="true"
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-haspopup="true"
                                             aria-expanded="false">Past Questions</a>
                                         <div class="dropdown-menu">
-                                            <a href="pasco/pasco-courses.html" class="dropdown-item">Past Question Papers</a>
+                                            <a href="past_questions/past.html" class="dropdown-item">Past Question Papers</a>
                                             <a href="pasco/pasco-exams.html" class="dropdown-item">Past Questions Interactive Videos</a>
                                         </div>
                                     </div>
