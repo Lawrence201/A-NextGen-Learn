@@ -193,12 +193,13 @@
                     <a href="" class="text-decoration-none d-block d-lg-none">
                         <style>
                             /* Remove default margin, padding, and border */
-                            html, body {
+                            html,
+                            body {
                                 margin: 0;
                                 padding: 0;
                                 border: 0;
                             }
-                        
+                    
                             /* Remove top border or shadow from navbar and related containers */
                             .col-lg-9,
                             .navbar,
@@ -210,57 +211,53 @@
                                 padding-top: 0 !important;
                             }
                         </style>
-                        
+                    
                         <style>
-                            
-    
-
-                        
                             @media (max-width: 850px) {
                                 .logo-heading img {
                                     height: 90px;
                                     margin-right: 3px;
                                 }
-                        
+                    
                                 .logo-heading span {
                                     font-size: 1.8rem;
                                 }
                             }
-                        
+                    
                             @media (max-width: 490px) {
                                 .logo-heading img {
                                     height: 65px;
                                     margin-right: 2px;
                                 }
-                        
+                    
                                 .logo-heading span {
                                     font-size: 1.2rem;
                                 }
                             }
-                        
+                    
                             @media (max-width: 370px) {
                                 .logo-heading img {
                                     height: 50px;
                                     margin-right: 1px;
                                 }
-                        
+                    
                                 .logo-heading span {
                                     font-size: 0.9rem;
                                 }
                             }
-                        
+                    
                             @media (max-width: 340px) {
                                 .logo-heading img {
                                     height: 45px;
                                     margin-right: 1px;
                                 }
-                        
+                    
                                 .logo-heading span {
                                     font-size: 0.85rem;
                                 }
                             }
                         </style>
-                          
+                    
                     
                         <h1 class="m-0 d-flex align-items-center logo-heading" style="overflow: hidden;">
                             <img src="img/main.PNG" alt="A+ Logo" style="object-fit: contain;">
@@ -273,50 +270,161 @@
                         </h1>
                     </a>
                     
-                <!-- HTML -->
-                <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                
-                <!-- CSS -->
-                <style>
+                    <!-- HTML -->
+                    <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     
-                
-                    /* Medium screen adjustments */
-                    @media (max-width: 850px) {
-                        .custom-toggler {
-                            width: 60px;
-                            height: 60px;
-                            font-size: 1.5rem;
-                            padding: 0.15rem 0.3rem;
+                    
+                    <!-- CSS -->
+                    <style>
+                        /* Medium screen adjustments */
+                        @media (max-width: 850px) {
+                            .custom-toggler {
+                                width: 60px;
+                                height: 60px;
+                                font-size: 1.5rem;
+                                padding: 0.15rem 0.3rem;
+                            }
                         }
-                    }
-                
-                    /* Small screen adjustments */
-                    @media (max-width: 450px) {
-                        .custom-toggler {
-                            width: 50px;
-                            height: 50px;
-                            font-size: 1.0rem;
-                            padding: 0.15rem 0.3rem;
+                    
+                        /* Small screen adjustments */
+                        @media (max-width: 450px) {
+                            .custom-toggler {
+                                width: 50px;
+                                height: 50px;
+                                font-size: 1.0rem;
+                                padding: 0.15rem 0.3rem;
+                            }
                         }
-                    }
-                </style>
-                
-                  
+                    </style>
+                    <style>
+                        /* General Dropdown Menu Styling */
+                        .dropdown-menu {
+                            margin-top: 0 !important;
+                            border-top: none;
+                            border-radius: 0;
+                            transition: opacity 0.3s ease;
+                        }
+                    
+                        /* Pasco Submenu Container */
+                        .dropdown-submenu {
+                            position: relative;
+                        }
+                    
+                        /* Submenu Hidden by Default */
+                        .dropdown-submenu .dropdown-menu {
+                            top: 0;
+                            left: 100%;
+                            margin-top: -1px;
+                            margin-left: 0;
+                            display: none;
+                            position: absolute;
+                        }
+                    
+                        /* Show Submenu on Hover */
+                        .dropdown-submenu:hover .dropdown-menu {
+                            display: block !important;
+                        }
+                    
+                        /* Invisible Hover Bridge */
+                        .dropdown-submenu::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: -1px;
+                            width: 2px;
+                            height: 100%;
+                            background: transparent;
+                            z-index: 1000;
+                        }
+                    
+                        /* Mobile/Tablet View (≤1028px) */
+                        @media (max-width: 1028px) {
+                    
+                            /* Bootstrap adds `.show` class when dropdown is opened */
+                            .nav-item.dropdown .dropdown-menu {
+                                display: none;
+                            }
+                    
+                            .nav-item.dropdown.show .dropdown-menu {
+                                display: block;
+                                position: static;
+                                box-shadow: none;
+                                margin: 0;
+                            }
+                    
+                            /* Pasco submenu - hidden by default */
+                            .dropdown-submenu .dropdown-menu {
+                                display: none !important;
+                                position: static;
+                            }
+                    
+                            /* Pasco submenu shows on hover */
+                            .dropdown-submenu:hover .dropdown-menu {
+                                display: block !important;
+                            }
+                    
+                            .dropdown-submenu .dropdown-item {
+                                padding-left: 2rem;
+                            }
+                        }
+                    
+                        /* Adjustments for smaller screens (≤480px) */
+                        @media (max-width: 480px) {
+                            .dropdown-submenu .dropdown-item {
+                                padding-left: 1.5rem;
+                            }
+                        }
+                    
+                        /* Adjustments for very small screens (≤380px) */
+                        @media (max-width: 380px) {
+                            .dropdown-submenu .dropdown-item {
+                                padding-left: 1.5rem;
+                                font-size: 0.9rem;
+                                /* optional: smaller text on tiny screens */
+                            }
+                        }
+                    </style>
+                    
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
+                    
+                            <!-- Categories with Pasco Submenu -->
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Categories</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="course.html" class="dropdown-item">Courses</a>
-                                    <a href="past_questions/past.html" class="dropdown-item">Past Questions</a>
+                                    
+                    
+                                    <!-- Pasco Submenu -->
+                                    <!-- Pasco Submenu -->
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="past_questions/past.html" role="button" aria-haspopup="true"
+                                            aria-expanded="false">Past Questions</a>
+                                        <div class="dropdown-menu">
+                                            <a href="pasco/pasco-courses.html" class="dropdown-item">Past Question Papers</a>
+                                            <a href="pasco/pasco-exams.html" class="dropdown-item">Past Questions Interactive Videos</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="past_questions/past.html" role="button" aria-haspopup="true"
+                                            aria-expanded="false">Lecture Materials</a>
+                                        <div class="dropdown-menu">
+                                            <a href="pasco/pasco-courses.html" class="dropdown-item">Lecture Slides and Textbooks</a>
+                                            <a href="pasco/pasco-exams.html" class="dropdown-item">Lecture Interactive Videos</a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
+                    
                             <a href="teacher.html" class="nav-item nav-link">Instructors</a>
+                    
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                                 <div class="dropdown-menu rounded-0 m-0">
@@ -324,15 +432,40 @@
                                     <a href="single.html" class="dropdown-item">Blog Detail</a>
                                 </div>
                             </div>
+                    
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
                     </div>
+
                 </nav>
                 
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Check if current screen is desktop
+            if (window.innerWidth > 1028) {
+                // Prevent Pasco submenu link from navigating on desktop
+                $('.dropdown-submenu > a').on("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevents closing the parent dropdown
+                });
+
+                // Optional: Close submenu when parent dropdown closes
+                $('.dropdown').on('hidden.bs.dropdown', function () {
+                    $('.dropdown-submenu .dropdown-menu').hide();
+                });
+            }
+        });
+    </script>
+    
+    
     <!-- Navbar End -->
     <style>
 
@@ -592,8 +725,8 @@
                             }
                 
                             /*==============================
-                                                                                                                                      SECTION: TEXT CONTENT
-                                                                                                                                    ==============================*/
+                                                                       SECTION: TEXT CONTENT
+                                                                    ==============================*/
                             .intro-text,
                             .details-text {
                                 font-size: 15px;
@@ -2264,8 +2397,7 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 

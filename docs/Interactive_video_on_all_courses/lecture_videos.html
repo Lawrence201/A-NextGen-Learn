@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation with Pasco Hover Submenu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Solution 1: Remove gaps and add proper hover states */
+        .dropdown-menu {
+            margin-top: 0 !important;
+            border-top: none;
+            border-radius: 0;
+        }
+        
+        /* Solution 2: Only show Pasco submenu on hover */
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+            margin-left: 0; /* Remove any gap */
+            display: none;
+            position: absolute;
+        }
+        
+        /* Solution 3: Show Pasco submenu only on hover - CSS only approach */
+        .dropdown-submenu:hover .dropdown-menu {
+            display: block !important;
+        }
+        
+        /* Ensure submenu stays open when hovering over it */
+        .dropdown-submenu .dropdown-menu:hover {
+            display: block !important;
+        }
+        
+        /* Create invisible bridge to prevent hover break */
+        .dropdown-submenu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -1px;
+            width: 2px;
+            height: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+        
+        /* Solution 4: Add transition for smoother interaction */
+        .dropdown-menu {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Fix for mobile responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-submenu .dropdown-menu {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: #f8f9fa;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    
+                    <!-- Categories Dropdown with Pasco Submenu -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="course.html" class="dropdown-item">Courses</a>
+                            <a href="past_questions/past.html" class="dropdown-item">Past Questions</a>
+                            
+                            <!-- Pasco Submenu -->
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pasco</a>
+                                <div class="dropdown-menu">
+                                    <a href="pasco/pasco-courses.html" class="dropdown-item">Pasco Courses</a>
+                                    <a href="pasco/pasco-exams.html" class="dropdown-item">Pasco Exams</a>
+                                    <a href="pasco/pasco-resources.html" class="dropdown-item">Pasco Resources</a>
+                                    <a href="pasco/pasco-results.html" class="dropdown-item">Pasco Results</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="teacher.html" class="nav-item nav-link">Instructors</a>
+                    
+                    <!-- Blog Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Our Blog</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Simplified solution - Let CSS handle the hover, minimal JS
+        $(document).ready(function() {
+            // Only prevent default click behavior on Pasco
+            $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+            
+            // Close submenu when main dropdown is hidden
+            $('.dropdown').on('hidden.bs.dropdown', function() {
+                $('.dropdown-submenu .dropdown-menu').hide();
+            });
+        });
+    </script>
+</body>
+</html>
