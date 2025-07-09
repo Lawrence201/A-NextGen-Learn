@@ -380,13 +380,12 @@
                                 /* No background */
                             }
     
-                            .dropdown-submenu .dropdown-menu .dropdown-item:hover {
-                                color: orange !important;
-                                /* Text color on hover */
-                                background-color: transparent !important;
-                                /* Prevent orange background */
+                            .dropdown-submenu .dropdown-menu .dropdown-item:hover,
+                            .dropdown-submenu .dropdown-menu .dropdown-item.active {
+                                color: orange !important;            /* Text color on hover or when active */
+                             background-color: transparent !important;  /* Prevent background */
                             }
-    
+
     
     
                         }
@@ -454,12 +453,11 @@
                                     <div class="dropdown-submenu">
                                         <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-haspopup="true"
                                             aria-expanded="false">Past Questions</a>
-                                        <div class="dropdown-menu">
-                                            <a href="past_questions/past.html" class="dropdown-item active">Past Question
-                                                Papers</a>
-                                            <a href="pasco/pasco-exams.html" class="dropdown-item">Past Questions
-                                                Interactive Videos</a>
-                                        </div>
+                                            <div class="dropdown-menu">
+                                                <a href="past_questions/past.html" class="dropdown-item active">Past Question Papers</a>
+                                                <a href="past_questions/past_question_interactive_video/interractive.html#" class="dropdown-item">Past Questions
+                                                    Interactive Videos</a>
+                                            </div>
                                     </div>
     
                                     <div class="dropdown-submenu">
@@ -762,7 +760,7 @@
             <img src="image4.jpg" alt="Web Dev Illustration" />
         </div>
     </header>
-    <!-- Include AOS JS before </body> -->
+    <!-- Include AOS JS before  -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
