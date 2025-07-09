@@ -124,6 +124,283 @@
     </div>
 
 
+    <div id="course-filter" class="filter-container">
+        <input type="text" id="searchInput" placeholder="Search past questions..." class="filter-input">
+        <button onclick="resetFilter()" class="filter-button">Reset</button>
+    </div>
+    
+    
+    <!-- No Results Message -->
+    <div id="noResultsMessage" style="display: none; text-align: center; padding: 40px; color: #666; font-size: 18px;">
+        <p><strong>Not found</strong></p>
+        <p>No courses match your search criteria. Please try a different search term.</p>
+    </div>
+    
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterCourses() {
+            const term = searchInput.value.toLowerCase().trim();
+
+            // If input is empty, perform full reset
+            if (term === '') {
+                resetFilter();
+                return;
+            }
+
+            let anyMatch = false;
+
+            // Show all pages temporarily for filtering
+            document.querySelectorAll('.container-fluid.py-5').forEach(page => {
+                const courses = page.querySelectorAll('.col-lg-3');
+                let pageHasMatch = false;
+
+                courses.forEach(course => {
+                    const text = course.innerText.toLowerCase();
+                    const match = text.includes(term);
+                    course.style.display = match ? 'block' : 'none';
+                    if (match) pageHasMatch = true;
+                });
+
+                // Only show the page if it contains matching courses
+                page.classList.toggle('active', pageHasMatch);
+                if (pageHasMatch) anyMatch = true;
+            });
+
+            // Hide pagination when searching
+            const pagination = document.querySelector('.pagination');
+            if (pagination) {
+                pagination.style.display = 'none';
+            }
+
+            // Show/hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = anyMatch ? 'none' : 'block';
+            }
+
+            // Scroll to top if there's a result
+            if (anyMatch) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function performFullReset() {
+            // ✅ Clear input
+            searchInput.value = '';
+
+            // ✅ Hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = 'none';
+            }
+
+            // ✅ Show all courses and restore text
+            document.querySelectorAll('.col-lg-3').forEach(course => {
+                course.style.display = 'block';
+                const titleLink = course.querySelector('a.h6');
+                const originalText = titleLink.getAttribute('data-original-text');
+                if (originalText) {
+                    titleLink.innerHTML = originalText;
+                }
+            });
+
+            // ✅ Reset all pages: show only first
+            const pages = document.querySelectorAll('.container-fluid.py-5');
+            pages.forEach((page, index) => {
+                page.classList.remove('active');
+                if (index === 0) page.classList.add('active');
+            });
+
+            // ✅ Show pagination
+            const pagination = document.querySelector('.pagination');
+            if (pagination) pagination.style.display = 'flex';
+
+            // ✅ Set first pagination item active
+            document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
+                item.classList.toggle('active', index === 0);
+            });
+
+            // ✅ Scroll back to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetFilter() {
+            searchInput.value = '';
+
+            // Hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = 'none';
+            }
+
+            // Show all courses
+            document.querySelectorAll('.col-lg-3').forEach(course => {
+                course.style.display = 'block';
+            });
+
+            // Restore active page state to page-1
+            document.querySelectorAll('.container-fluid.py-5').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page-1').classList.add('active');
+
+            // Show pagination again
+            const pagination = document.querySelector('.pagination');
+            if (pagination) pagination.style.display = 'flex';
+
+            // Restore pagination active button
+            document.querySelectorAll('.pagination .page-item').forEach((item, i) => {
+                item.classList.toggle('active', i === 0);
+            });
+        }
+
+        // Event listener
+        searchInput.addEventListener('input', filterCourses);
+    </script>
+    
+    
+    <style>
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            /* More spacing between input and button */
+            padding: 30px 20px;
+            /* More vertical space */
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 700px;
+            margin: 40px auto;
+            /* Center it vertically on the page */
+        }
+    
+        .filter-input {
+            flex: 1 1 300px;
+            padding: 14px 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            outline: none;
+            min-width: 250px;
+        }
+    
+        .filter-input:focus {
+            border-color: #ff9800;
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+        }
+    
+        .filter-button {
+            padding: 14px 24px;
+            background: #ff9800;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    
+        .filter-button:hover {
+            background: #e68900;
+        }
+    
+        .highlight {
+            background-color: transparent;
+            color: orange;
+            font-weight: bold;
+        }
+    
+        .container-fluid.py-5 {
+            display: none;
+        }
+    
+        .container-fluid.py-5.active {
+            display: block;
+        }
+    
+        @media (max-width: 1028px) {
+            .filter-container {
+                gap: 12px;
+                padding: 20px;
+            }
+    
+            .filter-input {
+                flex: 1 1 200px;
+                min-width: 0;
+                font-size: 15px;
+                padding: 12px;
+            }
+    
+            .filter-button {
+                padding: 12px 16px;
+                font-size: 15px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .filter-container {
+                flex-wrap: nowrap;
+                padding: 16px;
+                gap: 10px;
+            }
+    
+            .filter-input {
+                flex: 1;
+                min-width: 0;
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+    
+            .filter-button {
+                padding: 10px 14px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+    
+        @media (max-width: 380px) {
+            .filter-container {
+                flex-wrap: nowrap;
+                gap: 8px;
+            }
+    
+            .filter-input {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+    
+            .filter-button {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+        }
+    
+        @media (max-width: 320px) {
+            .filter-container {
+                flex-wrap: nowrap;
+                gap: 6px;
+            }
+    
+            .filter-input {
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+    
+            .filter-button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+    
+    </style>
+
+
 <div id="page-1" class="container-fluid py-5" style="margin-top: -20px;">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
