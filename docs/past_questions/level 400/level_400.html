@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>A+ SOFTECK</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description"
         content="A+ SOFTECK is a learning platform offering tech tutorials, educational videos, document downloads, and booking for training sessions.">
     <!-- Optional keywords tag (not important for SEO) -->
@@ -260,29 +260,31 @@
     
     
     <style>
+        /* === Filter Container Styles === */
         .filter-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
             gap: 16px;
-            /* More spacing between input and button */
             padding: 30px 20px;
-            /* More vertical space */
             background: #f9f9f9;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             max-width: 700px;
             margin: 40px auto;
-            /* Center it vertically on the page */
+            overflow-x: auto;
+            /* allows horizontal scroll if content gets too wide */
         }
     
+        /* === Filter Input === */
         .filter-input {
             flex: 1 1 300px;
             padding: 14px 18px;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
+            /* Prevent mobile zoom */
             transition: border-color 0.3s ease;
             outline: none;
             min-width: 250px;
@@ -293,28 +295,33 @@
             box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
         }
     
+        /* === Filter Button === */
         .filter-button {
             padding: 14px 24px;
             background: #ff9800;
             color: white;
             font-weight: 600;
             font-size: 16px;
+            /* Prevent mobile zoom */
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.3s ease;
+            white-space: nowrap;
         }
     
         .filter-button:hover {
             background: #e68900;
         }
     
+        /* === Highlight Class === */
         .highlight {
             background-color: transparent;
             color: orange;
             font-weight: bold;
         }
     
+        /* === Pagination Page Sections === */
         .container-fluid.py-5 {
             display: none;
         }
@@ -323,6 +330,9 @@
             display: block;
         }
     
+        /* === Media Queries === */
+    
+        /* Slight layout adjustments for medium screens */
         @media (max-width: 1028px) {
             .filter-container {
                 gap: 12px;
@@ -332,16 +342,17 @@
             .filter-input {
                 flex: 1 1 200px;
                 min-width: 0;
-                font-size: 15px;
+                font-size: 16px;
                 padding: 12px;
             }
     
             .filter-button {
                 padding: 12px 16px;
-                font-size: 15px;
+                font-size: 16px;
             }
         }
     
+        /* Responsive layout for small screens (phones) */
         @media (max-width: 480px) {
             .filter-container {
                 flex-wrap: nowrap;
@@ -352,52 +363,52 @@
             .filter-input {
                 flex: 1;
                 min-width: 0;
-                font-size: 14px;
+                font-size: 16px;
                 padding: 10px 12px;
             }
     
             .filter-button {
+                font-size: 16px;
                 padding: 10px 14px;
-                font-size: 14px;
-                white-space: nowrap;
             }
         }
     
+        /* Very small phones (380px and below) */
         @media (max-width: 380px) {
             .filter-container {
-                flex-wrap: nowrap;
                 gap: 8px;
             }
     
             .filter-input {
-                font-size: 13px;
+                font-size: 16px;
                 padding: 8px 10px;
             }
     
             .filter-button {
-                font-size: 13px;
+                font-size: 16px;
                 padding: 8px 12px;
             }
         }
     
+        /* Ultra small devices (320px and below) */
         @media (max-width: 320px) {
             .filter-container {
-                flex-wrap: nowrap;
                 gap: 6px;
             }
     
             .filter-input {
-                font-size: 12px;
+                font-size: 16px;
                 padding: 6px 8px;
             }
     
             .filter-button {
-                font-size: 12px;
+                font-size: 16px;
                 padding: 6px 10px;
             }
         }
     
-     </style>
+    
+    </style>
 <div id="page-1" class="container-fluid py-5" style="margin-top: -20px;">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
