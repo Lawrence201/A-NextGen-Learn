@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contain {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    /* Try center if space-between feels too wide */
+    gap: 100px;
+}
+
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.cta-button {
+    background-color: #d2691e;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b8621b;
+    color: white;
+    text-decoration: none;
+    /* ← this stops underline on hover */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image video {
+    width: 130%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    margin: -30px auto 0 auto;
+    /* changed from -50px to 20px */
+    max-width: 1200px;
+    width: 100%;
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+        /* reduced from 32px */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card.yellow {
+    border-color: #ffc107;
+}
+
+.card.red {
+    border-color: #dc3545;
+}
+
+.card.orange {
+    border-color: #fd7e14;
+}
+
+.card.green {
+    border-color: #28a745;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.card-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: none;
+    /* remove bottom border */
+    transition: none;
+    /* remove transition if not needed */
+}
+
+.card-link:hover {
+    color: #007bff;
+    /* keep same color */
+    text-decoration: none;
+    /* ensure no underline */
+    border-bottom: none;
+    /* no border change */
+}
+
+
+
+.content {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.education-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-header {
+    padding: 15px 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.higher-education {
+    background-color: #1e3a8a;
+}
+
+.k12-education {
+    background-color: #16a34a;
+}
+
+.learning-research {
+    background-color: #0891b2;
+}
+
+.category-content {
+    padding: 20px;
+}
+
+.category-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.category-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.category-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.category-link:hover {
+    border-bottom-color: #007bff;
+}
+
+.news-section {
+    margin-top: 60px;
+}
+
+.news-title {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.news-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.news-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.news-link:hover {
+    border-bottom-color: #007bff;
+}
+
+.decorative-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+.shape {
+    position: absolute;
+    border: 2px solid #ccc;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    border-radius: 4px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 17px solid #ccc;
+}
+
+.star {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid #ccc;
+    transform: rotate(35deg);
+}
+
+.star:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid #ccc;
+    transform: rotate(-70deg);
+}
+
+.star:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 2px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid #ccc;
+    transform: rotate(70deg);
+}
