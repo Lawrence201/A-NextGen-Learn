@@ -29,8 +29,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="../../css/style.css">
 
-    <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -40,7 +38,8 @@
             <div class="col-lg-3">
                 <a href="" class="text-decoration-none">
                     <h1 class="m-0 d-flex align-items-center" style="overflow: hidden;">
-                        <img src="main.PNG" alt="A+ Logo" style="height: 95px; margin-right: 5px; object-fit: contain;">
+                        <img src="main.PNG" alt="A+ Logo"
+                            style="height: 95px; margin-right: 5px; object-fit: contain;">
                         <!-- Reduced image height -->
                         <span style="font-size: 1.5rem;">
                             <span style="display: inline-block; line-height: 1.1; vertical-align: middle;">
@@ -216,16 +215,17 @@
                         </style>
 
                         <style>
-                              @media (max-width: 1028px) {
+                            @media (max-width: 1028px) {
                                 .logo-heading img {
-                                   height: 90px;
-                                   margin-right: 3px;
+                                   height: 100px;
+                                   margin-right: 5px;
                                 }
 
                                 .logo-heading span {
-                                font-size: 1.8rem;
+                                  font-size: 2rem;
                                 }
                             }
+
                             @media (max-width: 850px) {
                                 .logo-heading img {
                                     height: 90px;
@@ -292,7 +292,8 @@
 
                     <!-- CSS -->
                     <style>
-                         @media (max-width: 1028px) {
+                        /* Large tablet & small laptop adjustments */
+                       @media (max-width: 1028px) {
                             .custom-toggler {
                            width: 70px;
                            height: 70px;
@@ -300,6 +301,7 @@
                            padding: 0.25rem 0.5rem;
                           }
                         }
+
                         /* Medium screen adjustments */
                         @media (max-width: 850px) {
                             .custom-toggler {
@@ -361,7 +363,6 @@
                             z-index: 1000;
                         }
 
-
                         /* Mobile/Tablet View (≤1028px) */
                         @media (max-width: 1028px) {
 
@@ -399,12 +400,12 @@
                                 /* No background */
                             }
 
-                            .dropdown-submenu .dropdown-menu .dropdown-item:hover,
-                            .dropdown-submenu .dropdown-menu .dropdown-item.active {
-                                color: orange !important;            /* Text color on hover or when active */
-                             background-color: transparent !important;  /* Prevent background */
+                            .dropdown-submenu .dropdown-menu .dropdown-item:hover {
+                                color: orange !important;
+                                /* Text color on hover */
+                                background-color: transparent !important;
+                                /* Prevent orange background */
                             }
-
 
 
 
@@ -457,33 +458,35 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="../../index.html" class="nav-item nav-link ">Home</a>
-                            <a href="../../about.html" class="nav-item nav-link">About</a>
-                        
+                            <a href="index.html" class="nav-item nav-link ">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+
                             <!-- Categories with Pasco Submenu -->
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">Categories</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Categories</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="../../course.html" class="dropdown-item">Courses</a>
-                        
-                        
+                                    <a href="course.html" class="dropdown-item active">Courses</a>
+
+
                                     <!-- Pasco Submenu -->
                                     <!-- Pasco Submenu -->
                                     <div class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Past Questions</a>
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            aria-haspopup="true" aria-expanded="false">Past Questions</a>
                                         <div class="dropdown-menu">
-                                            <a href="../past.html" class="dropdown-item ">Past Question Papers</a>
-                                            <a href="interractive.html#"
-                                                class="dropdown-item active">Past Questions
+                                            <a href="past_questions/past.html" class="dropdown-item">Past Question
+                                                Papers</a>
+                                            <a href="past_questions/past_question_interactive_video/interractive.html#"
+                                                class="dropdown-item">Past Questions
                                                 Interactive Videos</a>
                                         </div>
                                     </div>
-                        
+
                                     <div class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="past_questions/past.html" role="button"
-                                            aria-haspopup="true" aria-expanded="false">Lecture Materials</a>
+                                        <a class="dropdown-item dropdown-toggle" href="past_questions/past.html"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Lecture
+                                            Materials</a>
                                         <div class="dropdown-menu">
                                             <a href="pasco/pasco-courses.html" class="dropdown-item">Lecture Slides and
                                                 Textbooks</a>
@@ -491,23 +494,22 @@
                                                 Videos</a>
                                         </div>
                                     </div>
-                        
+
                                 </div>
                             </div>
-                        
-                            <a href="../../teacher.html" class="nav-item nav-link">Instructors</a>
-                        
+
+                            <a href="teacher.html" class="nav-item nav-link">Instructors</a>
+
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="../../blog.html" class="dropdown-item">Our Blog</a>
-                                    <a href="../../single.html" class="dropdown-item">Blog Detail</a>
+                                    <a href="blog.html" class="dropdown-item">Our Blog</a>
+                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
                                 </div>
                             </div>
-                        
-                            <a href="../../contact.html" class="nav-item nav-link">Contact</a>
+
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        
                         <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
                     </div>
 
@@ -541,7 +543,7 @@
 
     <!-- Navbar End -->
     <style>
-                 @media (max-width: 1028px) {
+        @media (max-width: 1028px) {
     #navbarCollapse .nav-link {
         font-size: 1.3rem;
         /* slightly smaller font for tablets/small laptops */
@@ -558,7 +560,7 @@
         /* moderate spacing */
     }
 }
-  
+
         @media (max-width: 850px) {
             #navbarCollapse .nav-link {
                 font-size: 1.2rem;
@@ -610,22 +612,131 @@
     </style>
     <!-- Navbar End -->
 
+    <style>
+        /* Default styles */
+        img.lecture-icon {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+    
+        h3.lecture-heading {
+            font-size: 3rem;
+        }
+    
+        .breadcrumb-text {
+            font-size: 1.2rem;
+            flex-wrap: wrap;
+            /* allow wrapping if needed */
+            flex-direction: row !important;
+            gap: 0.5rem;
+        }
+    
+        /* 1028px and below */
+        @media (max-width: 1028px) {
+            img.lecture-icon {
+                width: 60px;
+                height: 60px;
+            }
+    
+            h3.lecture-heading {
+                font-size: 2.5rem;
+            }
+    
+            .breadcrumb-text {
+                font-size: 1.1rem;
+                flex-direction: row !important;
+            }
+        }
+    
+        /* 480px and below */
+        @media (max-width: 480px) {
+            img.lecture-icon {
+                width: 50px;
+                height: 50px;
+            }
+    
+            h3.lecture-heading {
+                font-size: 2rem;
+            }
+    
+            .breadcrumb-text {
+                font-size: 1rem;
+                flex-direction: row !important;
+                justify-content: center;
+            }
+        }
+    
+        /* 380px and below */
+        @media (max-width: 380px) {
+            img.lecture-icon {
+                width: 45px;
+                height: 45px;
+            }
+    
+            h3.lecture-heading {
+                font-size: 1.8rem;
+            }
+    
+            .breadcrumb-text {
+                font-size: 0.95rem;
+                flex-direction: row !important;
+                justify-content: center;
+            }
+        }
+    
+        /* 320px and below */
+        @media (max-width: 320px) {
+            img.lecture-icon {
+                width: 40px;
+                height: 40px;
+            }
+    
+            h3.lecture-heading {
+                font-size: 1.6rem;
+            }
+    
+            .breadcrumb-text {
+                font-size: 0.9rem;
+                flex-direction: row !important;
+                justify-content: center;
+            }
+        }
+    </style>
+    
+    
+
 
     <!-- Header Start -->
     <div class="container-fluid page-header"
-        style="margin-bottom: 50px; background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image.webp') no-repeat center center; background-size: cover; height: 70vh;">
+        style="margin-bottom: 50px; background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image1.jpg') no-repeat center center; background-size: cover; height: 70vh;">
         <div class="container h-100">
-            <div class="d-flex flex-column justify-content-center align-items-center text-center h-100"
-                data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
-                <h3 class="display-4 text-white text-uppercase">Past Questions Interactive Videos</h3>
-                <div class="d-inline-flex text-white" style="font-size: 1.2rem;">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="../../index.html">Home</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase" style="color: #6f42c1;">Categories</p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase" style="color: orange;">Videos</p>
+            <div class="d-flex flex-column justify-content-center align-items-center text-center h-100" data-aos="fade-up"
+                data-aos-delay="0" data-aos-duration="800">
+            
+                <!-- ✅ Image goes here -->
+                <!-- Wrapper for only the content you want to move -->
+                <div style="margin-top: -30px;">
+                    <img src="books.png" alt="Lecture Banner" class="mb-4 lecture-icon" style="object-fit: contain;">
+                
+                    <h3 class="display-4 text-white text-uppercase lecture-heading">
+                        Lecture Slides and Textbooks
+                    </h3>
+                
+                    <div class="d-inline-flex text-white breadcrumb-text" style="font-size: 1.2rem;">
+                        <p class="m-0 text-uppercase">
+                            <a class="text-white" href="index.html">Home</a>
+                        </p>
+                        <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                        <p class="m-0 text-uppercase" style="color: #6f42c1;">Categories</p>
+                        <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                        <p class="m-0 text-uppercase" style="color: orange;">Textbooks</p>
+                    </div>
                 </div>
+                
+                
             </div>
+        
 
         </div>
     </div>
@@ -662,266 +773,13 @@
 
 
 
-    <style>
-        /* View More Button Styles */
-        .view-more-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .view-more-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #2a2a2a;
-            /* Orange */
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .view-more-btn:hover {
-            background-color: #1e1e1e;
-            color: #fff;
-            /* Darker orange on hover */
-        }
-
-        @media (max-width: 576px) {
-            .view-more-btn {
-                font-size: 14px;
-                padding: 10px 24px;
-            }
-        }
-
-        /* Category Item and Subject Row Styles */
-        .cat-item {
-            height: 180px;
-            width: 100%;
-            /* Let it stretch fully in column */
-            margin-bottom: 0px;
-            /* Remove spacing from item */
-        }
-
-        .cat-item img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .cat-overlay {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        /* Reduce gap between grid items */
-        .subject-row {
-            margin-left: -100px;
-            /* Or whatever small gutter you actually want */
-            margin-right: -100px;
-            row-gap: 0;
-        }
-
-        .subject-row>.col-lg-3,
-        .subject-row>.col-md-6 {
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-bottom: 0px;
-        }
-
-        /* Responsive adjustments for small screens */
-        @media (max-width: 768px) {
-            .cat-item {
-                width: 100%;
-                /* Less than full width */
-                margin: 0 auto;
-                /* Center it horizontally */
-            }
-
-            .subject-row {
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .subject-row>.col-md-6 {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        }
-
-        /* Responsive Heading */
-        .responsive-heading {
-            font-size: 45px;
-        }
-
-        @media (max-width: 992px) {
-            .responsive-heading {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .responsive-heading {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .responsive-heading {
-                font-size: 35px;
-            }
-        }
-    </style>
-
-
-    <div class="contain" style="margin-top: 80px;">
-        <header class="main-header">
-            <div class="text-content" data-aos="fade-right">
-                <h1>Access All <br />Past Questions Interactively</h1>
-                <p class="bounce-text">
-                    Dive into a complete collection of interactive past exam questions across a wide range of subjects and courses.
-                    Each paper is designed with clickable, student-friendly sections — making it easier to practice, review, and
-                    understand each question thoroughly.
-                    These interactive resources simulate real exam experiences and offer instant feedback where needed.
-                    Perfect for students aiming to sharpen their exam skills, boost confidence, and succeed academically.
-                    Start exploring and engaging with past questions like never before!
-                </p>
-            </div>
-            
-
-            <div class="header-image" data-aos="fade-left">
-                <img src="image-2.jpeg" alt="Web Dev Illustration" />
-            </div>
-        </header>
-        <!-- Include AOS JS before  -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000, // 1 second
-                once: true // animate only once
-            });
-        </script>
-
-        <style>
-            .start-course-btn {
-                text-decoration: none;
-            }
-
-            .start-course-btn:hover {
-                text-decoration: none;
-            }
-        </style>
-
-
-
-        <div class="frontend-title">Interactive Videos</div>
-        <section class="cards" style="margin-top: 40px; margin-bottom: 40px;">
-
-            <div class="course-card" data-aos="zoom-in" data-aos-delay="50">
-                <div class="course-image">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/video_1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="course-label">Interactive Videos</p>
-                <h2 class="course-title">Level 100<br> Past Questions</h2>
-                <p class="course-desc">
-                    Watch and learn with interactive videos covering real Level 100 exam questions—explained step by step.
-                </p>
-                
-                <a href="Past_questions_videos/level_100_videos/level_100.html" class="start-course-btn" rel="noopener noreferrer">
-                    Watch Videos
-                </a>
-                
-            </div>
-            
-
-            <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="course-image">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/video-2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="course-label">Interactive Videos</p>
-                <h2 class="course-title">Level 200<br> Past Questions</h2>
-                <p class="course-desc">
-                    Learn with interactive videos featuring real Level 200 exam questions across multiple subjects.
-                </p>
-                
-                <a href="Past_questions_videos/level_200_videos/level_200.html" class="start-course-btn" rel="noopener noreferrer">
-                    Watch Videos
-                </a>
-                
-            </div>
-
-            <div class="course-card" data-aos="zoom-in" data-aos-delay="150">
-                <div class="course-image">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/video-3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="course-label">Interactive Videos</p>
-                <h2 class="course-title">Level 300<br> Past Questions</h2>
-                <p class="course-desc">
-                    Prepare with interactive videos featuring real Level 200 past exam questions and guided solutions.
-                </p>
-
-                <a href="Past_questions_videos/level_300_videos/level_300.html" class="start-course-btn" rel="noopener noreferrer">
-                    Watch Videos
-                </a>
-                
-            </div>
-
-            <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="course-image">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/video-4.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="course-label">Interactive Videos</p>
-                <h2 class="course-title">Level 400<br> Past Questions</h2>
-                <p class="course-desc">
-                    Study smarter with interactive videos of Level 400 past questions and clear walkthroughs.
-                </p>
-
-                <a href="Past_questions_videos/level_400_videos/level_400.html" class="start-course-btn" rel="noopener noreferrer">
-                    Watch Videos
-                </a>
-                
-            </div>
-
-
-        </section>
-
-
-
-        <script>
 
 
 
 
-            AOS.init({
-                duration: 1000,
-                once: true,
-                easing: 'ease-in-out'
-            });
 
-        </script>
 
-    </div>
+
 
 
 

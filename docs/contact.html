@@ -215,6 +215,17 @@
                     </style>
 
                     <style>
+                          @media (max-width: 1028px) {
+                                .logo-heading img {
+                                   height: 100px;
+                                   margin-right: 5px;
+                                }
+
+                                .logo-heading span {
+                                  font-size: 2rem;
+                                }
+                         }
+
                         @media (max-width: 850px) {
                             .logo-heading img {
                                 height: 90px;
@@ -281,6 +292,14 @@
 
                 <!-- CSS -->
                 <style>
+                      @media (max-width: 1028px) {
+                            .custom-toggler {
+                           width: 70px;
+                           height: 70px;
+                           font-size: 1.7rem;
+                           padding: 0.25rem 0.5rem;
+                          }
+                        }
                     /* Medium screen adjustments */
                     @media (max-width: 850px) {
                         .custom-toggler {
@@ -520,6 +539,23 @@
 <!-- Navbar End -->
 
 <style>
+             @media (max-width: 1028px) {
+    #navbarCollapse .nav-link {
+        font-size: 1.3rem;
+        /* slightly smaller font for tablets/small laptops */
+    }
+
+    #navbarCollapse .btn {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+        /* slightly reduced button size */
+    }
+
+    .navbar-nav.py-0 > .nav-item {
+        margin-bottom: 12px;
+        /* moderate spacing */
+    }
+}
     @media (max-width: 850px) {
         #navbarCollapse .nav-link {
             font-size: 1.2rem;
