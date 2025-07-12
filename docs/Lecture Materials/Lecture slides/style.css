@@ -372,11 +372,12 @@
 
 @media (max-width: 480px) {
     .cards-section {
-        grid-template-columns: 1fr;
-        /* 1 column */
-        gap: 16px;
-        padding: 0 12px;
-    }
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0 12px;
+            margin-top: 30px;
+            /* added to move it downwards */
+        }
 
     .card {
         padding: 16px;
@@ -394,6 +395,12 @@
     .card-link {
         font-size: 0.95rem;
     }
+                                 .section-title {
+                                     margin-top: 100px;
+                                     /* Adds spacing above the heading */
+                                     transform: none;
+                                     /* Optional: reset transform if used elsewhere */
+                                 }
 }
 
 @media (max-width: 380px) {
