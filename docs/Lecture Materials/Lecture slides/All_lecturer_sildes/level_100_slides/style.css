@@ -426,699 +426,208 @@ header {
     }
 }
 
-
- @keyframes float {
-
-     0%,
-     100% {
-         transform: translateY(0px) rotateY(-15deg) rotateX(5deg);
-     }
-
-     50% {
-         transform: translateY(-20px) rotateY(-15deg) rotateX(5deg);
-     }
- }
-
-
- .subject-row {
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     column-gap: 15px;
-     /* Only increases horizontal spacing */
-     row-gap: 24px;
-     /* Keeps vertical spacing the same */
- }
-
-
-.book-3d {
-    width: 320px;
-    height: 380px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: float 6s ease-in-out infinite;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow:
-        0 0 20px rgba(255, 179, 71, 0.2),
-        0 0 40px rgba(255, 179, 71, 0.1),
-        0 0 60px rgba(255, 179, 71, 0.05);
+/* ── CARDS GRID ───────────────────────────────────────────────────────── */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
 }
 
-.book-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #4A90E2, #357ABD);
-    transform: translateZ(20px);
-    border-radius: 8px;
+/* ── COURSE CARD ──────────────────────────────────────────────────────── */
+.course-card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    width: var(--card-width);
+    padding: 1.2rem 1.2rem;
+    /* Reduce vertical space */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.course-image {
+    /* Removed background color */
     padding: 0;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--gap);
 }
 
+.course-image img {
+    width: 260px;
+    height: 150px;
+    border-radius: 10px;
+    /* adjust the value for more or less curve */
+}
 
- .book-back {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(135deg, #FFD580, #FFC966);
-     transform: translateZ(-20px) rotateY(180deg);
-     border-radius: 8px;
-     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
- }
+.course-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #5f6368;
+    margin-bottom: 0.25rem;
+}
 
- .book-spine {
-     position: absolute;
-     width: 40px;
-     height: 100%;
-     background: linear-gradient(to right, #FFC966, #FFB347, #FFC966);
-     transform: rotateY(-90deg) translateZ(20px);
-     border-radius: 8px 0 0 8px;
-     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
- }
+.course-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #202124;
+    margin-bottom: 0.75rem;
+}
 
- .book-top {
-     position: absolute;
-     width: 100%;
-     height: 40px;
-     background: linear-gradient(to bottom, #FFE5B4, #FFD580);
-     transform: rotateX(90deg) translateZ(20px);
-     border-radius: 8px 8px 0 0;
- }
+.course-desc {
+    font-size: 1rem;
+    color: #3c4043;
+    margin-bottom: calc(var(--gap) * 0.8);
+}
 
- .book-bottom {
-     position: absolute;
-     width: 100%;
-     height: 40px;
-     background: linear-gradient(to top, #FFC966, #FFD580);
-     transform: rotateX(-90deg) translateZ(340px);
-     border-radius: 0 0 8px 8px;
- }
-
- .cat-overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(45deg, rgba(255, 214, 153, 0.4), rgba(255, 183, 77, 0.3));
-     transition: all 0.3s ease;
- }
-
- .cat-item:hover .cat-overlay {
-     background: linear-gradient(45deg, rgba(255, 214, 153, 0.2), rgba(255, 183, 77, 0.2));
- }
-
- .bottom-section {
-     background: rgba(255, 255, 255, 0.95);
-     border-radius: 0 0 8px 8px;
-     backdrop-filter: blur(10px);
-     display: flex;
-     flex-direction: column;
-     gap: 2px;
-     flex-grow: 1;
- }
-
- .course-title a {
-     color: #ff9933;
-     /* light orange */
-     font-weight: bold;
-     font-size: 1.3rem;
-     text-decoration: none;
-     line-height: 1.4;
-     display: block;
-     margin-bottom: 0.5rem;
- }
-
- .course-title a:hover {
-     color: #e67e22;
-     /* deeper orange on hover */
- }
- .current-price {
-     color: #ff7f50;
-     margin: 0;
-     font-weight: bold;
-     font-size: 1.2rem;
- }
-
- .course-btn {
-     display: inline-block;
-     background: linear-gradient(135deg, #ffcc80, #ffb74d);
-     color: white;
-     padding: 12px 30px;
-     text-decoration: none;
-     border-radius: 25px;
-     font-weight: bold;
-     transition: all 0.3s ease;
-     box-shadow: 0 4px 15px rgba(255, 179, 71, 0.3);
-     border: none;
-     cursor: pointer;
- }
-
- .course-btn:hover {
-     background: linear-gradient(135deg, #ffb347, #ffa726);
-     transform: translateY(-2px);
-     box-shadow: 0 6px 20px rgba(255, 179, 71, 0.4);
-     color: white;
-     text-decoration: none;
- }
-
- .book-glow {
-     position: absolute;
-     width: 120%;
-     height: 120%;
-     top: -10%;
-     left: -10%;
-     background: radial-gradient(ellipse, rgba(255, 204, 128, 0.3) 0%, transparent 70%);
-     border-radius: 50%;
-     animation: glow 4s ease-in-out infinite alternate;
-     z-index: -1;
- }
-
- @keyframes glow {
-     0% {
-         opacity: 0.5;
-         transform: scale(0.9);
-     }
-
-     100% {
-         opacity: 0.8;
-         transform: scale(1.1);
-     }
- }
- .cat-item {
-     position: relative;
-     height: 200px;
-     overflow: hidden;
-     border-radius: 8px 8px 0 0;
-     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
- }
-
- .img-fluid {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     opacity: 0.8;
-     transition: all 0.3s ease;
- }
-
- .cat-overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(45deg, rgba(74, 144, 226, 0.3), rgba(53, 122, 189, 0.3));
-     transition: all 0.3s ease;
- }
-
- .cat-item:hover .img-fluid {
-     opacity: 1;
-     transform: scale(1.05);
- }
-
- .cat-item:hover .cat-overlay {
-     background: linear-gradient(45deg, rgba(74, 144, 226, 0.1), rgba(53, 122, 189, 0.1));
- }
-
- .bottom-section {
-     padding: 25px;
-     background: rgba(255, 255, 255, 0.95);
-     border-radius: 0 0 8px 8px;
-     backdrop-filter: blur(10px);
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     flex-grow: 1;
- }
-
- .course-title {
-     text-align: center;
-     margin-bottom: 20px;
- }
-
- .course-title a {
-     color: #ff9933;
-     /* light orange */
-     font-weight: bold;
-     font-size: 1.3rem;
-     text-decoration: none;
-     line-height: 1.4;
-     display: block;
-     margin-bottom: 0.5rem;
- }
-
- .course-title a:hover {
-     color: #e67e22;
-     /* deeper orange on hover */
- }
-
- .price-section {
-     display: flex;
-     align-items: baseline;
-     justify-content: space-between;
-     margin-bottom: 20px;
- }
-
- .original-price {
-     color: #6c757d;
-     margin: 0;
-     text-decoration: line-through;
-     font-size: 0.9rem;
- }
-
- .current-price {
-    color: #e67e22;
-     margin: 0;
-     font-weight: bold;
-     font-size: 1.2rem;
- }
-
- .purchase-section {
-     text-align: center;
- }
-.course-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff9933, #ff7f24);
-    /* deeper orange */
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 127, 36, 0.4);
-    /* deeper orange shadow */
-    border: none;
+/* ── BUTTON ───────────────────────────────────────────────────────────── */
+.start-course-btn {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: 2px solid rgb(246, 176, 47);
+    /* Orange border */
+    background: #fff;
+    color: rgb(246, 176, 47);
+    /* Orange text */
     cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
-.course-btn:hover {
-    background: linear-gradient(135deg, #e67300, #cc6600);
-    /* deeper hover tone */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 115, 0, 0.5);
-    color: white;
-    text-decoration: none;
+.start-course-btn:hover {
+    background: #f57c00;
+    /* Orange background on hover */
+    color: #fff;
+    /* White text on hover */
 }
- .pages-effect {
-     position: absolute;
-     right: -3px;
-     top: 5px;
-     bottom: 5px;
-     width: 6px;
-     background: repeating-linear-gradient(to bottom,
-             #fff 0px,
-             #fff 2px,
-             #f0f0f0 2px,
-             #f0f0f0 4px);
-     border-radius: 0 4px 4px 0;
-     transform: translateZ(19px);
-     box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
- }
 
- .book-glow {
-     position: absolute;
-     width: 120%;
-     height: 120%;
-     top: -10%;
-     left: -10%;
-     background: radial-gradient(ellipse, rgba(74, 144, 226, 0.3) 0%, transparent 70%);
-     border-radius: 50%;
-     animation: glow 4s ease-in-out infinite alternate;
-     z-index: -1;
- }
-
- @keyframes glow {
-     0% {
-         opacity: 0.5;
-         transform: scale(0.9);
-     }
-
-     100% {
-         opacity: 0.8;
-         transform: scale(1.1);
-     }
- }
-
- .math-overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="20" x="10" fill="rgba(255,255,255,0.1)" font-size="16" font-family="serif">∫</text><text y="40" x="70" fill="rgba(255,255,255,0.1)" font-size="12" font-family="serif">π</text><text y="60" x="20" fill="rgba(255,255,255,0.1)" font-size="14" font-family="serif">∑</text><text y="80" x="60" fill="rgba(255,255,255,0.1)" font-size="18" font-family="serif">√</text></svg>');
-     pointer-events: none;
-     opacity: 0.3;
- }
-
-
- @media (max-width: 1028px) {
-     .subject-row {
-         grid-template-columns: repeat(3, 1fr);
-         column-gap: 12px;
-         row-gap: 20px;
-     }
-
-     .book-3d {
-         width: 280px;
-         height: 340px;
-         box-shadow:
-             0 0 15px rgba(255, 179, 71, 0.2),
-             0 0 30px rgba(255, 179, 71, 0.1),
-             0 0 45px rgba(255, 179, 71, 0.05);
-     }
-
-     .book-spine {
-         width: 35px;
-         transform: rotateY(-90deg) translateZ(17px);
-     }
-
-     .book-top {
-         height: 35px;
-         transform: rotateX(90deg) translateZ(17px);
-     }
-
-     .book-bottom {
-         height: 35px;
-         transform: rotateX(-90deg) translateZ(305px);
-     }
-
-     .book-front {
-         transform: translateZ(17px);
-     }
-
-     .book-back {
-         transform: translateZ(-17px) rotateY(180deg);
-     }
-
-     .pages-effect {
-         width: 5px;
-         transform: translateZ(16px);
-     }
-
-     .cat-item {
-         height: 180px;
-     }
-
-     .bottom-section {
-         padding: 20px;
-     }
-
-     .course-title a {
-         font-size: 1.2rem;
-     }
-
-     .current-price {
-         font-size: 1.1rem;
-     }
-
-     .course-btn {
-         padding: 10px 25px;
-         font-size: 0.9rem;
-     }
-
-     .book-glow {
-         width: 115%;
-         height: 115%;
-         top: -7.5%;
-         left: -7.5%;
-     }
- }
-
-@media (max-width: 770px) {
-    .subject-row {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 items per row */
-        column-gap: 10px;
-        row-gap: 18px;
-        padding: 0 10px;
+/* ── RESPONSIVE ───────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .main-header {
+        flex-direction: column-reverse;
+        text-align: center;
     }
 
-    .book-3d {
-        width: 260px;
-        height: 320px;
-        box-shadow:
-            0 0 12px rgba(255, 179, 71, 0.2),
-            0 0 24px rgba(255, 179, 71, 0.1),
-            0 0 36px rgba(255, 179, 71, 0.05);
+    .header-image {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1028px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
     }
 
-    .book-spine {
-        width: 30px;
-        transform: rotateY(-90deg) translateZ(16px);
+    .course-card {
+        width: 100%;
+        max-width: 400px;
+        /* Prevent cards from becoming too wide */
+        padding: 1rem;
     }
 
-    .book-top {
-        height: 30px;
-        transform: rotateX(90deg) translateZ(16px);
+    .course-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 
-    .book-bottom {
-        height: 30px;
-        transform: rotateX(-90deg) translateZ(290px);
+    .course-title {
+        font-size: 1.5rem;
     }
 
-    .book-front {
-        transform: translateZ(16px);
-    }
-
-    .book-back {
-        transform: translateZ(-16px) rotateY(180deg);
-    }
-
-    .pages-effect {
-        width: 4.5px;
-        transform: translateZ(15px);
-    }
-
-    .cat-item {
-        height: 170px;
-    }
-
-    .bottom-section {
-        padding: 18px;
-    }
-
-    .course-title a {
-        font-size: 1.15rem;
-    }
-
-    .current-price {
+    .course-desc {
         font-size: 1.05rem;
     }
 
-    .course-btn {
-        padding: 10px 22px;
-        font-size: 0.88rem;
-    }
-
-    .book-glow {
-        width: 112%;
-        height: 112%;
-        top: -6%;
-        left: -6%;
+    .start-course-btn {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.25rem;
     }
 }
 
- @media (max-width: 480px) {
-     .subject-row {
-         grid-template-columns: 1fr;
-         /* One item per row */
-         column-gap: 0;
-         row-gap: 16px;
-         padding: 0 10px;
-         /* Optional: slight side padding */
-     }
+@media (max-width: 450px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+        /* Add horizontal padding to avoid edge-to-edge layout */
+        justify-items: center;
+    }
 
-     .book-3d {
-         width: 100%;
-         height: auto;
-         max-width: 100%;
-         aspect-ratio: 4 / 5;
-         /* Maintain shape while scaling */
-         box-shadow:
-             0 0 10px rgba(255, 179, 71, 0.2),
-             0 0 20px rgba(255, 179, 71, 0.1),
-             0 0 30px rgba(255, 179, 71, 0.05);
-     }
+    .course-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 0.9rem;
+    }
 
-     .book-front,
-     .book-back,
-     .book-spine,
-     .book-top,
-     .book-bottom {
-         width: 100%;
-     }
+    .course-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 
-     .book-spine {
-         width: 8%;
-         transform: rotateY(-90deg) translateZ(15px);
-     }
+    .course-title {
+        font-size: 1.5em;
+    }
 
-     .book-top,
-     .book-bottom {
-         height: 10%;
-         transform: rotateX(90deg) translateZ(15px);
-     }
+    .course-desc {
+        font-size: 1.0rem;
+    }
 
-     .book-front {
-         transform: translateZ(15px);
-     }
+    .start-course-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
 
-     .book-back {
-         transform: translateZ(-15px) rotateY(180deg);
-     }
+@media (max-width: 380px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        padding: 0 0.75rem;
+        justify-items: center;
+    }
 
-     .pages-effect {
-         width: 5px;
-         transform: translateZ(14px);
-     }
+    .course-card {
+        width: 100%;
+        max-width: 320px;
+        padding: 0.75rem;
+    }
 
-     .cat-item {
-         height: auto;
-         aspect-ratio: 3 / 2;
-     }
+    .course-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
 
-     .bottom-section {
-         padding: 16px;
-     }
+    .course-title {
+        font-size: 1.2rem;
+    }
 
-     .course-title a {
-         font-size: 1.2rem;
-     }
+    .course-desc {
+        font-size: 0.90rem;
+    }
 
-     .current-price {
-         font-size: 0.99rem;
-     }
-
-     .course-btn {
-         padding: 10px 16px;
-         font-size: 0.85rem;
-         width: 100%;
-     }
-
-     .book-glow {
-         width: 110%;
-         height: 110%;
-         top: -5%;
-         left: -5%;
-     }
- }
-
- @media (max-width: 380px) {
-     .subject-row {
-         padding: 0 8px;
-         row-gap: 14px;
-     }
-
-     .book-3d {
-         aspect-ratio: 4 / 5;
-         width: 100%;
-     }
-
-     .book-spine {
-         width: 7%;
-         transform: rotateY(-90deg) translateZ(13px);
-     }
-
-     .book-top,
-     .book-bottom {
-         height: 8%;
-         transform: rotateX(90deg) translateZ(13px);
-     }
-
-     .book-front {
-         transform: translateZ(13px);
-     }
-
-     .book-back {
-         transform: translateZ(-13px) rotateY(180deg);
-     }
-
-     .pages-effect {
-         width: 4px;
-         transform: translateZ(12px);
-     }
-
-     .cat-item {
-         aspect-ratio: 4 / 3;
-     }
-
-     .bottom-section {
-         padding: 14px;
-     }
-
-     .course-title a {
-         font-size: 1.1rem;
-     }
-
-     .current-price {
-         font-size: 0.95rem;
-     }
-
-     .course-btn {
-         padding: 8px 14px;
-         font-size: 0.8rem;
-     }
- }
-
- @media (max-width: 320px) {
-     .subject-row {
-         padding: 0 6px;
-         row-gap: 12px;
-     }
-
-     .book-3d {
-         width: 100%;
-         aspect-ratio: 3 / 4;
-     }
-
-     .book-spine {
-         width: 6%;
-         transform: rotateY(-90deg) translateZ(12px);
-     }
-
-     .book-top,
-     .book-bottom {
-         height: 7%;
-         transform: rotateX(90deg) translateZ(12px);
-     }
-
-     .book-front {
-         transform: translateZ(12px);
-     }
-
-     .book-back {
-         transform: translateZ(-12px) rotateY(180deg);
-     }
-
-     .pages-effect {
-         width: 3.5px;
-         transform: translateZ(11px);
-     }
-
-     .cat-item {
-         aspect-ratio: 4 / 3;
-     }
-
-     .bottom-section {
-         padding: 12px;
-     }
-
-     .course-title a {
-         font-size: 1rem;
-     }
-
-     .current-price {
-         font-size: 0.9rem;
-     }
-
-     .course-btn {
-         padding: 8px 12px;
-         font-size: 0.78rem;
-     }
- }
+    .start-course-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.9rem;
+    }
+}
