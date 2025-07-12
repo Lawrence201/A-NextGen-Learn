@@ -280,8 +280,7 @@
     gap: 24px;
     position: relative;
     margin: 10px auto 0 auto;
-        /* changed from -30px to -10px */
-    /* changed from -50px to 20px */
+    /* moved upwards */
     max-width: 1200px;
     width: 100%;
 }
@@ -452,7 +451,7 @@
      color: #333;
      line-height: 1.6;
     max-width: 1000px;
-    margin: 40px auto 0 auto;
+    margin: 90px auto 0 auto;
         /* added 20px top margin */
     padding: 40px 20px;
 }
