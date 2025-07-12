@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>A+ SOFTECK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="A+ SOFTECK is a learning platform offering tech tutorials, educational videos, document downloads, and booking for training sessions.">
+    <!-- Optional keywords tag (not important for SEO) -->
+    <meta name="keywords"
+        content="online learning, tech tutorials, educational videos, training, A+ SOFTECK, software education">
+    <meta name="apple-mobile-web-app-capable" content="no">
+
+
+    <!-- Favicon -->
+    <link href="Logo2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Your Style Tag Goes Here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+   
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <div class="container-fluid d-none d-lg-block">
+            <div class="row align-items-center py-2 px-xl-5"> <!-- Reduced vertical padding -->
+                <div class="col-lg-3">
+                    <a href="" class="text-decoration-none">
+                        <h1 class="m-0 d-flex align-items-center" style="overflow: hidden;">
+                            <img src="main.PNG" alt="A+ Logo"
+                                style="height: 95px; margin-right: 5px; object-fit: contain;">
+                            <!-- Reduced image height -->
+                            <span style="font-size: 1.5rem;">
+                                <span style="display: inline-block; line-height: 1.1; vertical-align: middle;">
+                                    <span style="font-size: 2rem;" class="text-primary">A+</span>NextGen<br>
+                                    Learn
+                                </span>
+                            </span>
+                        </h1>
+                    </a>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <div class="d-inline-flex align-items-center">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Locate Us</h6>
+                            <small>Accra-Dansoman</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <div class="d-inline-flex align-items-center">
+                        <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
+                            <small>lawrenceantwi63@gmail.com</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <div class="d-inline-flex align-items-center">
+                        <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
+                            <small>+233 534829203</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <div class="blue-banner">
+        Learn to build modern websites that look great and work flawlessly on any browser or device.
+    
+        <nav class="nav-links">
+            <a href="#" class="active">Past Questions</a>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <a href="../../course.html">Course</a>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <a href="#">About</a>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <a href="../../index.html">Home</a>
+        </nav>
+    </div>
+    
+    <div class="sub-banner">
+        Discover what’s new in tech — straight from A+Softeck <a href='#'>Watch now</a>
+    </div>
+
+
+    <div id="course-filter" class="filter-container">
+        <input type="text" id="searchInput" placeholder="Search past questions..." class="filter-input">
+        <button onclick="resetFilter()" class="filter-button">Reset</button>
+    </div>
+    
+    
+    <!-- No Results Message -->
+    <div id="noResultsMessage" style="display: none; text-align: center; padding: 40px; color: #666; font-size: 18px;">
+        <p><strong>Not found</strong></p>
+        <p>No courses match your search criteria. Please try a different search term.</p>
+    </div>
+    
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        function filterCourses() {
+            const term = searchInput.value.toLowerCase().trim();
+
+            // If input is empty, perform full reset
+            if (term === '') {
+                resetFilter();
+                return;
+            }
+
+            let anyMatch = false;
+
+            // Show all pages temporarily for filtering
+            document.querySelectorAll('.container-fluid.py-5').forEach(page => {
+                const courses = page.querySelectorAll('.col-lg-3');
+                let pageHasMatch = false;
+
+                courses.forEach(course => {
+                    const text = course.innerText.toLowerCase();
+                    const match = text.includes(term);
+                    course.style.display = match ? 'block' : 'none';
+                    if (match) pageHasMatch = true;
+                });
+
+                // Only show the page if it contains matching courses
+                page.classList.toggle('active', pageHasMatch);
+                if (pageHasMatch) anyMatch = true;
+            });
+
+            // Hide pagination when searching
+            const pagination = document.querySelector('.pagination');
+            if (pagination) {
+                pagination.style.display = 'none';
+            }
+
+            // Show/hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = anyMatch ? 'none' : 'block';
+            }
+
+            // Scroll to top if there's a result
+            if (anyMatch) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function performFullReset() {
+            // ✅ Clear input
+            searchInput.value = '';
+
+            // ✅ Hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = 'none';
+            }
+
+            // ✅ Show all courses and restore text
+            document.querySelectorAll('.col-lg-3').forEach(course => {
+                course.style.display = 'block';
+                const titleLink = course.querySelector('a.h6');
+                const originalText = titleLink.getAttribute('data-original-text');
+                if (originalText) {
+                    titleLink.innerHTML = originalText;
+                }
+            });
+
+            // ✅ Reset all pages: show only first
+            const pages = document.querySelectorAll('.container-fluid.py-5');
+            pages.forEach((page, index) => {
+                page.classList.remove('active');
+                if (index === 0) page.classList.add('active');
+            });
+
+            // ✅ Show pagination
+            const pagination = document.querySelector('.pagination');
+            if (pagination) pagination.style.display = 'flex';
+
+            // ✅ Set first pagination item active
+            document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
+                item.classList.toggle('active', index === 0);
+            });
+
+            // ✅ Scroll back to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetFilter() {
+            searchInput.value = '';
+
+            // Hide "Can't be found" message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (noResultsMessage) {
+                noResultsMessage.style.display = 'none';
+            }
+
+            // Show all courses
+            document.querySelectorAll('.col-lg-3').forEach(course => {
+                course.style.display = 'block';
+            });
+
+            // Restore active page state to page-1
+            document.querySelectorAll('.container-fluid.py-5').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page-1').classList.add('active');
+
+            // Show pagination again
+            const pagination = document.querySelector('.pagination');
+            if (pagination) pagination.style.display = 'flex';
+
+            // Restore pagination active button
+            document.querySelectorAll('.pagination .page-item').forEach((item, i) => {
+                item.classList.toggle('active', i === 0);
+            });
+        }
+
+        // Event listener
+        searchInput.addEventListener('input', filterCourses);
+    </script>
+    
+    
+    <style>
+        /* === Filter Container Styles === */
+        .filter-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 30px 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 700px;
+            margin: 40px auto;
+            overflow-x: auto;
+            /* allows horizontal scroll if content gets too wide */
+        }
+    
+        /* === Filter Input === */
+        .filter-input {
+            flex: 1 1 300px;
+            padding: 14px 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            /* Prevent mobile zoom */
+            transition: border-color 0.3s ease;
+            outline: none;
+            min-width: 250px;
+        }
+    
+        .filter-input:focus {
+            border-color: #ff9800;
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+        }
+    
+        /* === Filter Button === */
+        .filter-button {
+            padding: 14px 24px;
+            background: #ff9800;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            /* Prevent mobile zoom */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            white-space: nowrap;
+        }
+    
+        .filter-button:hover {
+            background: #e68900;
+        }
+    
+        /* === Highlight Class === */
+        .highlight {
+            background-color: transparent;
+            color: orange;
+            font-weight: bold;
+        }
+    
+        /* === Pagination Page Sections === */
+        .container-fluid.py-5 {
+            display: none;
+        }
+    
+        .container-fluid.py-5.active {
+            display: block;
+        }
+    
+        /* === Media Queries === */
+    
+        /* Slight layout adjustments for medium screens */
+        @media (max-width: 1028px) {
+            .filter-container {
+                gap: 12px;
+                padding: 20px;
+            }
+    
+            .filter-input {
+                flex: 1 1 200px;
+                min-width: 0;
+                font-size: 16px;
+                padding: 12px;
+            }
+    
+            .filter-button {
+                padding: 12px 16px;
+                font-size: 16px;
+            }
+        }
+    
+        /* Responsive layout for small screens (phones) */
+        @media (max-width: 480px) {
+            .filter-container {
+                flex-wrap: nowrap;
+                padding: 16px;
+                gap: 10px;
+            }
+    
+            .filter-input {
+                flex: 1;
+                min-width: 0;
+                font-size: 16px;
+                padding: 10px 12px;
+            }
+    
+            .filter-button {
+                font-size: 16px;
+                padding: 10px 14px;
+            }
+        }
+    
+        /* Very small phones (380px and below) */
+        @media (max-width: 380px) {
+            .filter-container {
+                gap: 8px;
+            }
+    
+            .filter-input {
+                font-size: 16px;
+                padding: 8px 10px;
+            }
+    
+            .filter-button {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+        }
+    
+        /* Ultra small devices (320px and below) */
+        @media (max-width: 320px) {
+            .filter-container {
+                gap: 6px;
+            }
+    
+            .filter-input {
+                font-size: 16px;
+                padding: 6px 8px;
+            }
+    
+            .filter-button {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+        }
+    
+    
+    </style>
+
+
+<div id="page-1" class="container-fluid py-5" style="margin-top: -20px;">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;"
+                data-aos="fade-up" data-aos-delay="0">
+
+                <!-- Left orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+                <!-- Center orange text -->
+                <h5 class="text-uppercase mb-0" style="letter-spacing: 2px; color: #FFA500; font-weight: bold;">All Lecture Slides
+                </h5>
+
+                <!-- Right orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="responsive-heading" data-aos="fade-up" data-aos-delay="100">LEVEL 300 LECTURE SLIDE</h1>
+        </div>
+
+        <div class="row subject-row">
+             
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+            
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="ai.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            ARTIFICIAL INTELLIGENCE
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/artificial-intelligence-zgktom" class="course-btn" target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="database.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            DATABASE DESIGN II
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/database-ii-nepzpz" class="course-btn" target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="multimedia.webp" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            FOUNDATIONS OF MULTIMEDIA
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵100</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/foundations-of-multimedia-ycbdql" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="java.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            JAVA PROGRAMMING
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵100</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/java-programming-zbxywm" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="750">
+            
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="os.jpeg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            OPERATING SYSTEMS
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵250
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/introduction-to-operating-systems-kvgfsn" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="900">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="software.png" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            SOFTWARE ENGINEERING
+
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/software-engineering-tmmqwc" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1050">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Advanced_Java.png" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            ADVANCED JAVA 
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/advanced-java-technologies-lrppfx" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div> 
+             </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1200">
+            
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Advanced_Vb.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            Advanced Visual Basic
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/advanced-visual-basics-acnyxv" class="course-btn"
+                        target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="page-2" class="container-fluid py-5" style="margin-top: -20px;">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;"
+                data-aos="fade-up" data-aos-delay="0">
+        
+                <!-- Left orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+        
+                <!-- Center orange text -->
+                <h5 class="text-uppercase mb-0" style="letter-spacing: 2px; color: #FFA500; font-weight: bold;">Page Two
+            
+                </h5>
+        
+                <!-- Right orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+        
+            </div>
+        
+            <!-- Main heading -->
+            <h1 class="responsive-heading" data-aos="fade-up" data-aos-delay="100">LEVEL 200 LECTURE SLIDE</h1>
+        </div>
+
+        <div class="row subject-row">
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="african.jpeg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            AFRICAN STUDIES
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵100</h6>
+                    </div>
+            
+                    <div class="text-center">
+                            <a href="https://paystack.com/buy/african-studies-rbopgm" class="course-btn"
+                                target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+            
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="internet.webp" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            INTERNET TECHNOLOGIES
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/internet-technology-and-web-design-rbwith" class="course-btn" target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+            
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Research.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            RESEARCH METHODS
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵330
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵300</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/research-methods-gkcvbb" class="course-btn" target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Software-Reliability.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            SOFTWARE RELIABILITY
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/software-reliability-dkntib" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div> 
+             </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="750">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="visual.jpeg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            VISUAL BASIC PROGRAMMING
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵330
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵300</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/visual-basic-programming-bsbswv" class="course-btn" target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="900">
+            
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Accounting.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            PRINCIPLES OF ACCOUNTING
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/principles-of-accounting-and-management-xvkkks" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1050">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="interraction.jpg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            HUMAN COMPUTER INTERACTION
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵230
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵200</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/human-computer-interaction-fiyhzk" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="1200">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="open.webp" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2" 
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            OPEN SOURCE OPERATING SYSTEMS
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵100</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/open-source-dxinmd" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="page-3" class="container-fluid py-5" style="margin-top: -20px;">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px;"
+                data-aos="fade-up" data-aos-delay="0">
+
+                <!-- Left orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+                <!-- Center orange text -->
+                <h5 class="text-uppercase mb-0" style="letter-spacing: 2px; color: #FFA500; font-weight: bold;">Page Three
+
+                </h5>
+
+                <!-- Right orange lines -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div style="width: 20px; height: 2px; background-color: #FFA500; margin-bottom: 3px;"></div>
+                    <div style="width: 40px; height: 2px; background-color: #FFA500;"></div>
+                </div>
+
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="responsive-heading" data-aos="fade-up" data-aos-delay="100">LEVEL 300 LECTURE SLIDE</h1>
+        </div>
+
+        <div class="row subject-row">
+
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="cat-item position-relative overflow-hidden rounded-top">
+                    <img class="img-fluid" src="Attachment.jpeg" alt="">
+                    <a class="cat-overlay text-white text-decoration-none"></a>
+                </div>
+            
+                <div class="bottom-section p-4 m-0 rounded-bottom">
+                    <div style="text-align: center;">
+                        <a class="h6 d-block mb-2"
+                            style="line-height: 1.4; font-weight: bolder; font-size: 1.1rem; text-decoration: none;">
+                            SUPERVISED INDUSTRIAL ATTACHMENT
+
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-baseline">
+                        <h6 class="text-muted m-0" style="text-decoration: line-through;">
+                            GH₵130
+                        </h6>
+                        <h6 class="m-0 ml-auto">GH₵100</h6>
+                    </div>
+            
+                    <div class="text-center">
+                        <a href="https://paystack.com/buy/supervised-industrial-attachment-jaiutq" class="course-btn"
+                            target="_blank">Purchase</a>
+                    </div>
+                </div>  
+            </div>
+
+           
+
+           
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Pagination -->
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center mt-4" style="margin-bottom: 60px;">
+        <li class="page-item active">
+            <a class="page-link" href="#" data-target="page-1">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" data-target="page-2">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" data-target="page-3">3</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Show the first section by default
+        document.getElementById('page-1').classList.add('active');
+
+        const links = document.querySelectorAll('.pagination .page-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Remove 'active' class from all sections
+                document.querySelectorAll('.container-fluid.py-5').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Remove 'active' class from all page items
+                document.querySelectorAll('.pagination .page-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Add 'active' class to clicked page item
+                this.parentElement.classList.add('active');
+
+                // Show the targeted section
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+
+                // Scroll to top smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
+
+      
+  
+
+<!-- Include AOS JS before -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+<!-- Category Start -->
+
+<style>
+  .course-btn {
+    display: inline-block;
+    padding: 8px 18px; /* A bit bigger than before */
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem; /* Slightly larger text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+    .bottom-section {
+        background-color: white;
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 1rem 0;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    /* Small devices (phones, less than 576px) */
+    @media (max-width: 490px) {
+        .course-btn {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .cat-item,
+        .bottom-section {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        .bottom-section {
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+
+    }
+
+    @media (max-width: 370px) {
+        .course-btn {
+            padding: 7px 14px;
+            font-size: 13px;
+        }
+
+        .cat-item,
+        .bottom-section {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        .bottom-section {
+            padding: 0.65rem 0;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    @media (max-width: 870px) {
+        .course-btn {
+            padding: 9px 18px;
+            font-size: 15px;
+        }
+
+        .cat-item,
+        .bottom-section {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        .bottom-section {
+            padding: 0.85rem 0;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+</style>
+
+<style>
+    /* View More Button Styles */
+    .view-more-container {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .view-more-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #2a2a2a;
+        /* Orange */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+        background-color: #1e1e1e;
+        color: #fff;
+        /* Darker orange on hover */
+    }
+
+    @media (max-width: 576px) {
+        .view-more-btn {
+            font-size: 14px;
+            padding: 10px 24px;
+        }
+    }
+
+    /* Category Item and Subject Row Styles */
+    .cat-item {
+        height: 180px;
+        width: 100%;
+        /* Let it stretch fully in column */
+        margin-bottom: 0px;
+        /* Remove spacing from item */
+    }
+
+    .cat-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cat-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    /* Reduce gap between grid items */
+    .subject-row {
+        margin-left: -100px;
+        /* Or whatever small gutter you actually want */
+        margin-right: -100px;
+        row-gap: 0;
+    }
+
+    .subject-row>.col-lg-3,
+    .subject-row>.col-md-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 0px;
+    }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 768px) {
+        .cat-item {
+            width: 100%;
+            /* Less than full width */
+            margin: 0 auto;
+            /* Center it horizontally */
+        }
+
+        .subject-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .subject-row>.col-md-6 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* Responsive Heading */
+    .responsive-heading {
+        font-size: 45px;
+    }
+
+    @media (max-width: 992px) {
+        .responsive-heading {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .responsive-heading {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .responsive-heading {
+            font-size: 35px;
+        }
+    }
+</style>
+
+<!-- Footer Start -->
+<div class="contain-fluid bg-charcoal text-white py-5 px-sm-4 px-lg-5" style="background-color: #2c2c2c;">
+    <div class="row">
+        <!-- Contact Info -->
+        <div class="col-lg-4 mb-4">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Contact Us</h5>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Accra-Ghana</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+233 534829203</p>
+            <p><i class="fa fa-envelope mr-2"></i>A+ SOFTEK@gmail.com</p>
+            <div class="mt-4">
+                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-4 mb-4">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Quick Links</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>System
+                        Administrator</a></li>
+                <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Software
+                        Developer</a></li>
+                <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Network
+                        Engineer</a></li>
+                <li class="mb-2"><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Cybersecurity
+                        Analyst</a></li>
+                <li><a href="#" class="text-white"><i class="fa fa-angle-right mr-2"></i>Technical Support
+                        Specialist</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="col-lg-4 mb-4">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Newsletter</h5>
+            <p>Stay updated with our latest news, courses, and special offers. Subscribe to our newsletter today.</p>
+            <form class="mt-3">
+                <div class="input-group">
+                    <input type="email" class="form-control border-light" placeholder="Your Email Address"
+                        style="padding: 15px;" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary px-4" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom Bar -->
+<div class="container-fluid bg-charcoal text-white py-3" style="background-color: #232323;">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+            <small>&copy; 2025 <a href="#" class="text-primary">A+ NextGen Learn</a>. All Rights Reserved.</small>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+            <ul class="nav justify-content-center justify-content-md-end">
+                <li class="nav-item"><a class="nav-link text-white py-0" href="#">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link text-white py-0" href="#">Terms of Use</a></li>
+                <li class="nav-item"><a class="nav-link text-white py-0" href="#">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link text-white py-0" href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="../../../../js/main.js"></script>
+
+</body>
+</html>
