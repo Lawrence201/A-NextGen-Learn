@@ -37,6 +37,48 @@
 </head>
 
 <body>
+
+
+    <!-- Hidden Audio Div -->
+    <div class="audio-wrapper" style="display: none;">
+        <audio id="auto-audio" autoplay preload="auto">
+            <source src="Lecture Materials\Audio_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('auto-audio');
+
+            // Important: Ensure audio continues playing when tab is inactive
+            audio.loop = false; // Set to true if you want it to loop
+            audio.volume = 1.0;
+            audio.muted = false;
+
+            // Try to autoplay
+            audio.play().catch(() => {
+                // If autoplay is blocked, wait for user interaction
+                document.body.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+
+            // Optional: Log when tab is hidden or shown (for debugging)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    console.log('Tab is hidden, but audio will continue.');
+                } else {
+                    console.log('Tab is visible.');
+                }
+            });
+        });
+    </script>
+
+
+
+
+
     <!-- Topbar Start -->
     <div class="container-fluid d-none d-lg-block">
         <div class="row align-items-center py-2 px-xl-5"> <!-- Reduced vertical padding -->
@@ -2434,10 +2476,11 @@
        
 
             <div class="mt-4">
-                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="https://x.com/aplussoftekit?t=_cgoXDhc-JZoTjEsSCDgrw&s=09"><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="https://www.facebook.com/share/1CAxJTjCbm/"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="https://youtube.com/@asoftekitconsult?si=9Es2NICjiwAuZ0Lg"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-light btn-square mr-2" href="https://www.tiktok.com/@aplussoftekitconsult?_t=ZM-8vpSoEGaLCf&_r=1"><i class="fab fa-tiktok"></i></a>
+ 
             </div>
         </div>
 
