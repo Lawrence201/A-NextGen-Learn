@@ -61,19 +61,30 @@
             <div class="col-lg-3 text-right">
                 <div class="d-inline-flex align-items-center">
                     <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+            
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                        <small>lawrenceantwi63@gmail.com</small>
+                        <small>
+                            <a href="mailto:aplussoftekitconsult@gmail.com" style="color: gray;">aplussoftekitconsult@gmail.com</a>
+                        </small>
                     </div>
+            
                 </div>
             </div>
             <div class="col-lg-3 text-right">
                 <div class="d-inline-flex align-items-center">
                     <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+            
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
-                        <small>+233 534829203</small>
+                        <small>
+                            <a href="tel:+233534829203" style="color: gray;">+233 534829203</a> /
+                            <a href="tel:+233553324105" style="color: gray;">+233 534829203</a>
+                        </small>
                     </div>
+            
+            
+            
                 </div>
             </div>
         </div>
@@ -606,7 +617,7 @@
         <div class="container h-100">
             <div class="d-flex flex-column justify-content-center align-items-center text-center h-100" data-aos="fade-up"
                 data-aos-delay="0" data-aos-duration="800">
-                <h3 class="display-4 text-white text-uppercase" style="font-size: 3rem;">About</h3>
+                <h3 class="display-4 text-white text-uppercase" style="font-size: 3rem;">About Us</h3>
                 <div class="d-inline-flex text-white" style="font-size: 1.2rem;">
                     <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -1156,149 +1167,353 @@
     </script>
     <!-- About End -->
 
-    <div id="about-content" style="display: none;">
+    <style>
+        /* Container for the full section */
+        .about-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+              margin-top: -70px; /* Moves it up */
+        }
+    
+        /* General content layout */
+        .content {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 90px auto 0 auto;
+            padding: 40px 20px;
+        }
+    
+        /* Grid for education categories */
+        .education-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 per row on large screens */
+            gap: 30px;
+             margin-top: -50px; /* Moves it up */
+        }
+    
+        /* Individual card */
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        /* Hover animation */
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        /* Header block */
+        .category-header {
+            padding: 4px 8px;
+        }
+    
+        /* Category-specific header background colors */
+        .higher-education {
+            background-color: #1e3a8a;
+        }
+    
+        .k12-education {
+            background-color: #16a34a;
+        }
+    
+        .learning-research {
+            background-color: #0891b2;
+        }
 
-        <section id="about-us" class="about-container">
-            <header class="about-header" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
-                <h1>A+ Next Gen Learn</h1>
-                <p>Empowering the Next Generation with Cutting-Edge Learning Solutions</p>
-            </header>
-        
-        
-            <div class="about-mv">
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="svg-icon">
-                        <!-- Target / Goal SVG Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 12v.01M9.172 14.828a4 4 0 0 1 5.656 0M7.05 16.95a8 8 0 0 1 9.9 0M4.222 19.778a12 12 0 0 1 15.556 0M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-13.414l.707.707m12.02 12.02l-.707.707" />
-                        </svg>
-                    </div>
-                    <h2>Our Mission</h2>
-                    <p>
-                        To deliver innovative, accessible, and high-quality educational resources that inspire lifelong learning
-                        and empower students worldwide.
-                        We believe in blending technology with creativity to make learning engaging and effective.
+        .learning-happy {
+            background-color: orange;
+        }
+        .learning-researching {
+            background-color: yellow;
+        }
+        .learning-research {
+            background-color: #0891b2;
+        }
+
+    
+        /* Card content */
+        .category-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+    
+        /* Image styling */
+        .category-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    
+        /* Title */
+        .category-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 12px 0px 12px 8px;
+            color: #222;
+        }
+    
+        /* Description */
+        .category-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+    
+        /* Link */
+        .category-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+    
+        .category-link:hover {
+            text-decoration: none;
+            color: #007bff;
+            border-bottom: none;
+        }
+    
+        /* Responsive – Tablet */
+        @media (max-width: 1028px) {
+    
+            .about-container,
+            .content {
+                padding: 30px 16px;
+                margin-top: 30px;
+            }
+    
+            .education-categories {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 per row */
+                gap: 24px;
+            }
+    
+            .category-title {
+                font-size: 1rem;
+                margin: 10px 0 10px 6px;
+            }
+    
+            .category-content {
+                padding: 16px;
+            }
+    
+            .category-description {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+    
+            .category-link {
+                font-size: 0.95rem;
+            }
+        }
+    
+        /* Responsive – Mobile */
+        @media (max-width: 480px) {
+    
+            .about-container,
+            .content {
+                padding: 20px 12px;
+                margin-top: 20px;
+            }
+    
+            .education-categories {
+                grid-template-columns: 1fr;
+                /* 1 per row */
+                gap: 20px;
+            }
+    
+            .category-title {
+                font-size: 0.95rem;
+                margin: 8px 0 8px 4px;
+            }
+    
+            .category-content {
+                padding: 14px;
+            }
+    
+            .category-description {
+                font-size: 0.9rem;
+                margin-bottom: 14px;
+            }
+    
+            .category-link {
+                font-size: 0.9rem;
+            }
+        }
+    
+        /* Small phones */
+        @media (max-width: 380px) {
+    
+            .content,
+            .about-container {
+                padding: 18px 10px;
+            }
+    
+            .education-categories {
+                gap: 16px;
+            }
+    
+            .category-title {
+                font-size: 0.9rem;
+            }
+    
+            .category-content {
+                padding: 12px;
+            }
+    
+            .category-description {
+                font-size: 0.85rem;
+            }
+    
+            .category-link {
+                font-size: 0.85rem;
+            }
+        }
+    
+        /* Very small screens */
+        @media (max-width: 320px) {
+    
+            .content,
+            .about-container {
+                padding: 16px 8px;
+            }
+    
+            .education-categories {
+                gap: 12px;
+            }
+    
+            .category-title {
+                font-size: 0.85rem;
+            }
+    
+            .category-content {
+                padding: 10px;
+            }
+    
+            .category-description {
+                font-size: 0.8rem;
+            }
+    
+            .category-link {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+
+<div id="about-content" style="display: none;">
+    <section id="about-us" class="about-container">
+        <header class="about-header" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+            <h1>A+ Next Gen Learn</h1>
+            <p>Empowering the Next Generation with Cutting-Edge Learning Solutions</p>
+        </header>
+
+        <div class="education-categories">
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="0">
+                <div class="category-header higher-education"></div>
+                <h3 class="category-title">University & Tertiary Resources</h3>
+                <div class="category-content">
+                    <img src="img/resource.jpeg" alt="Higher Education" class="category-image">
+                    <p class="category-description">
+                        A+ Next Gen Learn offers top-tier academic resources for university students, helping them excel
+                        through peer-reviewed textbooks, e-libraries, and scholarly tools.
                     </p>
-                </article>
-        
-        
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="svg-icon">
-                        <!-- Telescope / Vision SVG Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 2l-7 7m-2.5 1.5L9 12 3 21l9-6 1.5-2.5M16.5 3.5L20.5 7.5" />
-                        </svg>
-                    </div>
-                    <h2>Our Vision</h2>
-                    <p>
-                        To become the leading platform for next-gen learning by continuously evolving with technology and
-                        fostering a community of curious minds.
-                        We envision a world where education knows no boundaries and every learner has the tools to succeed.
-                    </p>
-                </article>
-        
-        
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="svg-icon">
-                        <!-- Values / Balance / Justice Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 3v2m0 0c3.866 0 7 3.134 7 7 0 2.623-1.42 4.915-3.5 6.32M12 5a7 7 0 00-7 7c0 2.623 1.42 4.915 3.5 6.32M5 21h14" />
-                        </svg>
-                    </div>
-                    <h2>Our Values</h2>
-                    <ul>
-                        <li><strong>Innovation:</strong> Embracing the latest technology to enhance learning experiences.</li>
-                        <li><strong>Inclusivity:</strong> Making education accessible to everyone, everywhere.</li>
-                        <li><strong>Integrity:</strong> Building trust through transparency and quality content.</li>
-                        <li><strong>Passion:</strong> Driving change through dedication to education.</li>
-                    </ul>
-                </article>
-        
-        
-        
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="400">
-                    <div class="svg-icon">
-                        <!-- Graduation Cap Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-7" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21v-7" />
-                        </svg>
-                    </div>
-                    <h2>Our Commitment</h2>
-                    <p>
-                        We provide innovative and accessible educational tools designed to empower learners at every stage.
-                        Through cutting-edge technology and engaging content, we aim to unlock potential and foster lifelong
-                        learning.
-                    </p>
-                </article>
-        
-        
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="500">
-                    <div class="svg-icon" style="margin-bottom: 1rem;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 22s8-4 8-10V7l-8-4-8 4v5c0 6 8 10 8 10z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
-                        </svg>
-                    </div>
-        
-                    <h2>Why Choose Us?</h2>
-                    <ul class="choose-list">
-                        <li><strong>Expert Educators:</strong> Our team consists of passionate professionals dedicated to your
-                            success.
-                        </li>
-                        <li><strong>Advanced Technology:</strong> We use the latest tools to deliver interactive and adaptive
-                            learning.
-                        </li>
-                        <li><strong>Student-Centered Approach:</strong> Personalized learning paths to suit every student’s
-                            needs.
-                        </li>
-                    </ul>
-                </article>
-        
-                <article class="mv-box" data-aos="fade-up" data-aos-delay="600">
-                    <div class="svg-icon">
-                        <!-- Target / Goal SVG Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" viewBox="0 0 24 24"
-                            stroke="#ffa65e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 21v-6l-3 3 1.5-7.5 7.5-1.5-3 3h6l-9 9z" />
-                            <path d="M13 7l4-4" />
-                            <path d="M16 3l2 2" />
-                        </svg>
-                    </div>
-                    <h2>Experience</h2>
-                    <p>
-                        The A+ NEXTGEN PROJECT has been an enriching journey, filled with innovative collaborations, real-world
-                        challenges,
-                        and impactful learning moments. Through teamwork, creativity, and problem-solving, we explored advanced
-                        technologies
-                        and developed solutions that address real educational needs. This experience has empowered us to grow as
-                        forward-thinking
-                        professionals ready to shape the future of learning.
-                    </p>
-                </article>
-        
-        
-        
-        
+                    <a  class="category-link">Browse University Library</a>
+                </div>
             </div>
-        
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="category-header k12-education"></div>
+                <h3 class="category-title">Academic & Career Development</h3>
+                <div class="category-content">
+                    <img src="img/world.jpeg" alt="K12 Education" class="category-image">
+                    <p class="category-description">
+                        Discover practical guides, skill-building lessons, and career launch resources tailored for
+                        students preparing to transition from school to the real world.
+                    </p>
+                    <a  class="category-link">Advance Your Career</a>
+                </div>
+            </div>
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="category-header learning-happy"></div>
+                <h3 class="category-title">Learning Insights & Research</h3>
+                <div class="category-content">
+                    <img src="img/research.jpg" alt="Learning Research" class="category-image">
+                    <p class="category-description">
+                        Track your learning behavior, monitor your progress, and discover the smartest ways to retain
+                        knowledge using our AI-powered learning insights tools.
+                    </p>
+                    <a  class="category-link">Start Your Smart Learning</a>
+                </div>
+            </div>
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="category-header learning-researching"></div>
+                <h3 class="category-title">Past Questions & Uni Study Packs</h3>
+                <div class="category-content">
+                    <img src="img/past.jpeg" alt="University Past Questions" class="category-image">
+                    <p class="category-description">
+                        Download a wide range of past questions, solved papers, and course materials designed to help university
+                        students prepare smarter and ace their exams with confidence.
+                    </p>
+                    <a  class="category-link">Browse Past Questions</a>
+                </div>
+            </div>
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="category-header learning-research"></div>
+                <h3 class="category-title">Explore Our Course</h3>
+                <div class="category-content">
+                    <img src="img/course.avif" alt="A+ Next Gen Courses" class="category-image">
+                    <p class="category-description">
+                        Dive into a variety of well-structured courses ranging from beginner to advanced levels — including web
+                        development, digital skills, coding, and academic topics tailored for all learners.
+                    </p>
+                    <a  class="category-link">Start Learning Now</a>
+                </div>
+            </div>
+
+
             
-        </section>
 
-    </div>
+      
 
-    <section class="team-section" aria-label="Meet the Team">
+
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="category-header higher-education"></div>
+                <h3 class="category-title">Built for African Learners</h3>
+                <div class="category-content">
+                    <img src="img/lear.webp" alt="African Education" class="category-image">
+                    <p class="category-description">
+                         We localize global knowledge to suit the unique needs of
+                        students across Ghana and the continent.
+                    </p>
+                    <a  class="category-link">Discover Our Mission</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+    <section class="team-section" aria-label="Meet the Team" style="margin-top: 60px;">
         <h2 data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">Meet Our Team</h2>
     
         <div class="team-grid">
@@ -1723,27 +1938,32 @@
                 <!-- Left Text Section -->
                 <div class="col-lg-7 text-white mb-5 mb-lg-0" data-aos="fade-right">
                     <div class="mb-4">
-                        <h5 class="text-warning text-uppercase mb-3" style="letter-spacing: 3px;">Explore Our Courses</h5>
-                        <h1 class="display-4 fw-bold" style="color: rgb(242, 174, 49);">Get 30% Off For New Students</h1>
-    
+                        <h5 class="text-warning text-uppercase mb-3" style="letter-spacing: 3px;">Join VIP Community</h5>
+                        <h1 class="display-4 fw-bold" style="color: rgb(242, 174, 49);">Sign Up to Join Our Telegram Channel
+                        </h1>
                     </div>
-                    <p class="lead">Start your learning journey today with our professionally crafted eLearning programs.
-                        Sign up now and enjoy an exclusive discount on your first course!</p>
+                    <p class="lead">
+                        Stay updated with the latest tech tips, coding tutorials, and exclusive content from A+ Next Gen.
+                        Join our Telegram channel and connect with fellow learners and developers!
+                    </p>
                     <ul class="list-unstyled mt-4">
-                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Interactive and engaging
-                            lessons</li>
-                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Expert instructors with
-                            real-world experience</li>
-                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Flexible learning on your
-                            schedule</li>
+                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Exclusive coding resources</li>
+                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Live Q&A sessions and support
+                        </li>
+                        <li class="mb-2"><i class="fa fa-check-circle text-warning mr-2"></i>Community challenges and
+                            contests</li>
                     </ul>
+                    <a href="https://t.me/YourTelegramChannelLink" target="_blank" class="btn btn-warning mt-3 fw-bold">
+                        Join Now
+                    </a>
                 </div>
+    
     
                 <!-- Right Form Section -->
                 <div class="col-lg-5">
                     <div class="card shadow-lg border-0" data-aos="fade-left" data-aos-delay="200">
                         <div class="card-header bg-white text-center py-4">
-                            <h2 class="text-primary m-0">Sign Up Now</h2>
+                            <h2 class="text-primary m-0">Join Our Telegram Channel</h2>
                         </div>
                         <div class="card-body bg-light px-5 py-4 rounded-bottom">
                             <form>
@@ -1751,24 +1971,24 @@
                                     <input type="text" class="form-control p-3" placeholder="Your Full Name" required />
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="email" class="form-control p-3" placeholder="Your Email Address"
-                                        required />
+                                    <input type="text" class="form-control p-3"
+                                        placeholder="Your Telegram Username (without @)" required />
                                 </div>
                                 <div class="form-group mb-4">
-                                    <select class="form-control p-3" required>
-                                        <option value="" disabled selected>Select a Course</option>
-                                        <option value="1">Web Development</option>
-                                        <option value="2">Graphic Design</option>
-                                        <option value="3">Data Science</option>
-                                    </select>
+                                    <input type="email" class="form-control p-3"
+                                        placeholder="Your Email Address (optional)" />
                                 </div>
                                 <button class="btn btn-primary btn-block py-3 fw-bold" type="submit">
-                                    Sign Up Now <i class="fa fa-arrow-right ml-2"></i>
+                                    Join Telegram <i class="fa fa-telegram ml-2"></i>
                                 </button>
                             </form>
+                            <p class="mt-3 text-center text-muted" style="font-size: 0.9rem;">
+                                We'll send you a Telegram invite link after you sign up.
+                            </p>
                         </div>
                     </div>
                 </div>
+    
             </div>
         </div>
     </div>
@@ -1872,9 +2092,16 @@
             <!-- Contact Info -->
             <div class="col-lg-4 mb-4">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 4px;">Contact Us</h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Accra-Ghana</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+233 534829203</p>
-                <p><i class="fa fa-envelope mr-2"></i>A+ SOFTEK@gmail.com</p>
+                <p>
+                    <i class="fa fa-phone-alt mr-2"></i>
+                    <a href="tel:+233534829203" style="color: white;">+233 534829203</a> /
+                    <a href="tel:+233553324105" style="color: white;">+233 534829203</a>
+                </p>
+                
+                <p>
+                    <i class="fa fa-envelope mr-2"></i>
+                    <a href="mailto:aplussoftekitconsult@gmail.com" style="color: white;">aplussoftekitconsult@gmail.com</a>
+                </p>
                 <div class="mt-4">
                     <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-x-twitter"></i></a>
                     <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
